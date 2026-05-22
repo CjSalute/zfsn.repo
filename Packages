@@ -1,10 +1,58 @@
 Package: com.iosdump.shellx
+Version: 0.0.2
+Architecture: iphoneos-arm64
+Maintainer: iosdump
+Installed-Size: 576
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/com.iosdump.shellx_0.0.2_iphoneos-arm64.deb
+Size: 72298
+MD5sum: 992c1eafa85a905292c5573203540595
+SHA1: cda43a920f5eb70da084b209d9a645906b25bbf6
+SHA256: a4125473b7dd4b598a962fb9985a29e9a6e81ebe87dcc2d0bdbd8e0ac35c0981
+Section: Tweaks
+Description: 录屏/截图，自动套壳、水印工具，支持iOS14-17所有越狱
+Author: iosdump
+Name: SHELLX
+
+Package: com.iosdump.shellx
+Version: 0.0.2
+Architecture: iphoneos-arm64e
+Maintainer: iosdump
+Installed-Size: 576
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/com.iosdump.shellx_0.0.2_iphoneos-arm64e.deb
+Size: 70652
+MD5sum: 243f1d439042c5b5d20cf5fe96eced2e
+SHA1: a2bc1656f5d5de6b4401c04210fd945b1261ad08
+SHA256: acbd56c8f3f2f9778870cf139db98121f1672787876d79e76a72308c90692b4f
+Section: Tweaks
+Description: 录屏/截图，自动套壳、水印工具，支持iOS14-17所有越狱
+Author: iosdump
+Name: SHELLX
+
+Package: com.iosdump.shellx
+Version: 0.0.2
+Architecture: iphoneos-arm
+Maintainer: iosdump
+Installed-Size: 576
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/com.iosdump.shellx_0.0.2_iphoneos-arm.deb
+Size: 72484
+MD5sum: 1bb57c2c1f6f57a4a5168d0f9e499d3a
+SHA1: 62d0bb55a72b8bd7e7e22e6c654350c4688eb1c3
+SHA256: d98fc3edc292c719e016e8b64fb7f7174d7276c2ff4f0d1ce5209adbe44558c1
+Section: Tweaks
+Description: 录屏/截图，自动套壳、水印工具，支持iOS14-17所有越狱
+Author: iosdump
+Name: SHELLX
+
+Package: com.iosdump.shellx
 Version: 0.0.5
 Architecture: iphoneos-arm64
 Maintainer: iosdump
 Installed-Size: 608
 Depends: mobilesubstrate, preferenceloader
-Filename: debs/shellx/0.0.5/com.iosdump.shellx_0.0.5_iphoneos-arm64.deb
+Filename: ./debs/com.iosdump.shellx_0.0.5_iphoneos-arm64.deb
 Size: 81438
 MD5sum: 7898f7f99bf48fb7f576a40a6af41e2e
 SHA1: 0b4772f947ddc7d23780cea9130647dd49b8dc38
@@ -20,7 +68,7 @@ Architecture: iphoneos-arm64e
 Maintainer: iosdump
 Installed-Size: 608
 Depends: mobilesubstrate, preferenceloader
-Filename: debs/shellx/0.0.5/com.iosdump.shellx_0.0.5_iphoneos-arm64e.deb
+Filename: ./debs/com.iosdump.shellx_0.0.5_iphoneos-arm64e.deb
 Size: 79990
 MD5sum: c6240cb0cd4aa3426e35c93f4fac2bc5
 SHA1: 73a6f8353480d6b2ecc492720ef2320c92fab5e6
@@ -36,7 +84,7 @@ Architecture: iphoneos-arm
 Maintainer: iosdump
 Installed-Size: 608
 Depends: mobilesubstrate, preferenceloader
-Filename: debs/shellx/0.0.5/com.iosdump.shellx_0.0.5_iphoneos-arm.deb
+Filename: ./debs/com.iosdump.shellx_0.0.5_iphoneos-arm.deb
 Size: 81686
 MD5sum: 290f58bf1877f8f3cc7aa696cf087242
 SHA1: 38a2d42f09d039cb49ed0bce3a8fc6fbe681d638
