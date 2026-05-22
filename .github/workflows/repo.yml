@@ -3,7 +3,7 @@ name: Build Repo
 on:
   push:
     paths:
-      - 'debs/*.deb'
+      - 'debs/**/*.deb'
 
 jobs:
   build:
@@ -23,7 +23,7 @@ jobs:
 
     - name: Generate Packages
       run: |
-        dpkg-scanpackages debs /dev/null > Packages
+        dpkg-scanpackages -m debs /dev/null > Packages
         gzip -kf Packages
 
     - name: Generate Release
