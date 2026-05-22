@@ -94,3 +94,55 @@ Description: 录屏/截图，自动套壳、水印工具，支持iOS14-17所有�
 Author: iosdump
 Name: SHELLX
 
+Package: com.m4fn3.k2gecamen
+Version: 1.0.5
+Architecture: iphoneos-arm64e
+Maintainer: mafu
+Installed-Size: 6204
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.ccsupport
+Filename: ./debs/com.m4fn3.k2gecamen_1.0.5_iphoneos-arm64e.deb
+Size: 2118500
+MD5sum: 4fd0959a8ee7694494ff2f5cfe620d28
+SHA1: a8a3298a755c1541c2b53ff58452f716b17d9732
+SHA256: 83a5406753e0ac0d0bb38caab442b4719cc60107c29b72e9a37898fcae8b9c75
+Section: Tweaks
+Description: Capture moments with photos, videos, and audio in the background with ease.
+Author: mafu
+Icon: https://m4fn3.github.io/repo/web/images/K2gecamen.png
+Name: K2gecamen (简体中文版)
+
+Package: com.m4fn3.k2gecamen
+Version: 1.0.5
+Architecture: iphoneos-arm64
+Maintainer: mafu
+Installed-Size: 6204
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.ccsupport
+Filename: ./debs/com.m4fn3.k2gecamen_1.0.5_iphoneos-arm64.deb
+Size: 2114008
+MD5sum: ccaa07fef06df165c1094052fae113c8
+SHA1: 76d72e95c13f3bc6bb22e5f21c00061dd4d84766
+SHA256: fac146216ffc6fc2bc8dc2cbe453e873a803ef8121850dc29b6a38d2720ff185
+Section: Tweaks
+Description: Capture moments with photos, videos, and audio in the background with ease.
+Author: mafu
+Icon: https://m4fn3.github.io/repo/web/images/K2gecamen.png
+Name: K2gecamen (简体中文版)
+
+Package: com.m4fn3.k2gecamen
+Version: 1.0.5
+Architecture: iphoneos-arm
+Maintainer: mafu
+Installed-Size: 6220
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.ccsupport
+Filename: ./debs/com.m4fn3.k2gecamen_1.0.5_iphoneos-arm.deb
+Size: 2113536
+MD5sum: ddcd681c995a36622fe52027aa8f7d6d
+SHA1: fa9d00fa20541faf3a1baf9898efdcf98eaba863
+SHA256: e8e3c129809b60bd556f7e665cc383f0497dc00060b3f12ec541ec69a328a789
+Section: Tweaks
+Description: Capture moments with photos, videos, and audio in the background with ease.
+Author: mafu
+Icon: https://m4fn3.github.io/repo/web/images/K2gecamen.png
+Name: K2gecamen (简体中文版)
+
