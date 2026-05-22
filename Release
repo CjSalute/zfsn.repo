@@ -1,7 +1,8 @@
-Origin: CRCTDD Repo
-Label: CRCTDD Repo
+Origin: crctdd Repo
+Label: crctdd Repo
 Suite: stable
 Version: 1.0
 Codename: ios
-Architecture: iphoneos-arm64
-Description: CRCTDD Jailbreak Repo
+Architectures: iphoneos-arm iphoneos-arm64 iphoneos-arm64e
+Components: main
+Description: crctdd Repo
