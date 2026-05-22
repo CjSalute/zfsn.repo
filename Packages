@@ -615,3 +615,55 @@ Description: Adds a button to switch account in App Store account page on iOS 11
 Author: subdiox
 Name: StoreSwitcher 2
 
+Package: com.vita.wchook
+Version: 1.0-1
+Architecture: iphoneos-arm
+Maintainer: vita
+Installed-Size: 204
+Depends: firmware (>= 5.0), mobilesubstrate
+Filename: ./debs/com.vita.wchook_1.0-1_iphoneos-arm.deb
+Size: 21688
+MD5sum: 3ec5bf07620dfccee864f7072474b47a
+SHA1: 36f6a9d777e69445a49614a96f109b822aa862bd
+SHA256: 55d85bbd68374fd789a3b1a2bfbc64c93424f43a8bc95ad793ed61d02daa87dd
+Section: Tweaks
+Priority: optional
+Description: 重构简化代码，微信聊天左滑引用消息，无设置页，安装默认生效
+Author: vita
+Name: WCHook (微信左滑引用)
+
+Package: com.vita.wchook
+Version: 1.0-1
+Architecture: iphoneos-arm64
+Maintainer: vita
+Installed-Size: 204
+Depends: firmware (>= 5.0), mobilesubstrate
+Filename: ./debs/com.vita.wchook_1.0-1_iphoneos-arm64.deb
+Size: 21752
+MD5sum: 7fb47d588fd4412702cd1c231c60546b
+SHA1: 31adeb4d6b4385339c13e3298fc8418858fbf954
+SHA256: 0351281c0ac8cfd7cc9176819db7c9e1295a8f7c1eb423e4132e90df604c0ee5
+Section: Tweaks
+Priority: optional
+Description: 重构简化代码，微信聊天左滑引用消息，无设置页，安装默认生效
+Author: vita
+Name: WCHook (微信左滑引用)
+
+Package: com.vita.wchook
+Version: 1.0-1
+Architecture: iphoneos-arm64e
+Maintainer: vita
+Installed-Size: 204
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: firmware (>= 5.0), mobilesubstrate
+Filename: ./debs/com.vita.wchook_1.0-1_iphoneos-arm64e.deb
+Size: 22540
+MD5sum: 29eda4837feffc0d6b781321a747665b
+SHA1: 9b37c0a8250a9809dfaa1c2d571c191f705ba67c
+SHA256: cd825efce4e682e5e8dde15e6f3aa68b3f529aa40d11ab2d9fed3fbbd4cfc724
+Section: Tweaks
+Priority: optional
+Description: 重构简化代码，微信聊天左滑引用消息，无设置页，安装默认生效
+Author: vita
+Name: WCHook (微信左滑引用)
+
