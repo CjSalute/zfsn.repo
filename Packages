@@ -46,6 +46,42 @@ Description: CocoaTop汉化插件，适配官版和真皮4个修改版
 Author: 来了老弟
 Name: CocoaTop (汉化插件)
 
+Package: cn.zqbb.ccatop
+Version: 2.3
+Architecture: iphoneos-arm64e
+Maintainer: SXX, Domo
+Installed-Size: 840
+Conflicts: ru.domo.cocoatop, ru.domo.cocoatop64, cn.zqbb.cocoatop64.inject.roothide, zp.cocoatop64.unject, zp.cocoatop64.unject.xina, zp.cocoatop64.inject
+Filename: ./debs/cn.zqbb.ccatop_2.3_iphoneos-arm64e.deb
+Size: 198900
+MD5sum: 1b706747c410d52123b50de0bc7067b8
+SHA1: db55326ce872a583dbfd154176247d1da260ffeb
+SHA256: 16417a1bdcca305f359988ba80e25cabf9179041574c6ac56debb556fc6e6cba
+Section: Utilities
+Description: Process Viewer for iOS GUI, updated for iOS 13 by SXX.
+Author: Domo, SXX
+Icon: https://apt.002599.xyz/web/icon/cn.zqbb.ccatop.png
+Name: CocoaTop
+Sileodepiction: https://apt.002599.xyz/web/cn.zqbb.ccatop
+
+Package: cn.zqbb.ccatop
+Version: 2.3
+Architecture: iphoneos-arm64
+Maintainer: SXX, Domo
+Installed-Size: 840
+Conflicts: ru.domo.cocoatop, ru.domo.cocoatop64, cn.zqbb.cocoatop64.inject.roothide, zp.cocoatop64.unject, zp.cocoatop64.unject.xina, zp.cocoatop64.inject
+Filename: ./debs/cn.zqbb.ccatop_2.3_iphoneos-arm64.deb
+Size: 198836
+MD5sum: 0da071f8dfba9df0312d531f63367e51
+SHA1: a9f6fa5fce62d3b124675f83cd2ed3809bc93cf2
+SHA256: 41b0824a07d955de8e3feb42e443ea6c9ebea9bf8ed0f5646e90693126165459
+Section: Utilities
+Description: Process Viewer for iOS GUI, updated for iOS 13 by SXX.
+Author: Domo, SXX
+Icon: https://apt.002599.xyz/web/icon/cn.zqbb.ccatop.png
+Name: CocoaTop
+Sileodepiction: https://apt.002599.xyz/web/cn.zqbb.ccatop
+
 Package: com.anthopak.pancake-rootless
 Version: 2.3
 Architecture: iphoneos-arm64e
@@ -655,6 +691,87 @@ Author: mafu
 Icon: https://m4fn3.github.io/repo/web/images/K2gecamen.png
 Name: K2gecamen (简体中文版)
 
+Package: com.nathan.internalstoragesettings
+Version: 1.0.1
+Architecture: iphoneos-arm64e
+Maintainer: Nathan Senter
+Installed-Size: 136
+Pre-Depends: rootless-compat(>= 0.9)
+Filename: ./debs/com.nathan.internalstoragesettings_1.0.1_iphoneos-arm64e.deb
+Size: 3568
+MD5sum: fb1d22f5b80557904831f0aff6107531
+SHA1: 865bacab54871d2450acf6b213de18811e0e725a
+SHA256: 38e829feac46a2ae2c489dd6aca199e2e004792c701c305f5c581e199790291b
+Section: Tweaks
+Description: Tweak to enable the hidden storage settings
+Author: Nathan Senter
+Name: InternalStorageSettings
+
+Package: com.nathan.internalstoragesettings
+Version: 1.0.1
+Architecture: iphoneos-arm
+Maintainer: Nathan Senter
+Installed-Size: 136
+Filename: ./debs/com.nathan.internalstoragesettings_1.0.1_iphoneos-arm.deb
+Size: 2318
+MD5sum: 552fb81437fd8ddf539447bd683d19f9
+SHA1: 2476a1b1264e67849d5c204fbd68b81de8a45759
+SHA256: 3e8bdac1338210554a6eacc44175088c6c6f3572a2f078d1f913c9c7e64e4143
+Section: Tweaks
+Description: Tweak to enable the hidden storage settings
+Author: Nathan Senter
+Name: InternalStorageSettings
+
+Package: com.nathan.internalstoragesettings
+Version: 1.0.1
+Architecture: iphoneos-arm64
+Maintainer: Nathan Senter
+Installed-Size: 136
+Filename: ./debs/com.nathan.internalstoragesettings_1.0.1_iphoneos-arm64.deb
+Size: 2400
+MD5sum: 923ac9ffd7a582476be85a95fd85a2b1
+SHA1: ef529a805315edbd2029ceed08f4eb8c587a612f
+SHA256: 0f2658be2188d0ffae93a637291a78e97d5521bdd94268c29c46b8a40fbdbe80
+Section: Tweaks
+Description: Tweak to enable the hidden storage settings
+Author: Nathan Senter
+Name: InternalStorageSettings
+
+Package: com.netskao.filzacrack
+Version: 1.1-9
+Architecture: iphoneos-arm64e
+Maintainer: Nets
+Installed-Size: 120
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: firmware (>= 15.0), mobilesubstrate
+Filename: ./debs/com.netskao.filzacrack_1.1-9_iphoneos-arm64e.deb
+Size: 39678
+MD5sum: 492cabddeea28bced218e4773fe43828
+SHA1: 68bd0ddcbbd80ec116daccb5e5fb856bd8587b3f
+SHA256: d6f2f178588cd86e03550e60c0c29059da7e0615d6f3fa78b069f9de769e98f3
+Section: Netskao-Tweaks
+Description: Filza Crack
+Author: Netskao
+Name: Filza Crack
+Sileodepiction: https://jailrepo.initnil.com/api?Package=com.netskao.filzacrack
+
+Package: com.netskao.filzacrack
+Version: 1.1-9
+Architecture: iphoneos-arm64
+Maintainer: Nets
+Installed-Size: 120
+Depends: firmware (>= 15.0), mobilesubstrate
+Filename: ./debs/com.netskao.filzacrack_1.1-9_iphoneos-arm64.deb
+Size: 28732
+MD5sum: 3af07506bc39a1bba25ad37c4623479d
+SHA1: d1aac2b82d95c13b30217ac22af51df0089fb5e5
+SHA256: 9d0b7969ab3b48c384306e55a10cf310a6feebd2a0c8c35d75e1392e16a1f9a0
+Section: Netskao-Tweaks
+Description: Filza Crack
+Author: Netskao
+Name: Filza Crack
+Sileodepiction: https://jailrepo.initnil.com/api?Package=com.netskao.filzacrack
+
 Package: com.roothide.lockdown
 Version: 1.0.1
 Architecture: iphoneos-arm64e
@@ -719,6 +836,24 @@ Description: JSC security hardening for WebContent process. Configures JavaScrip
 Author: roothide
 Name: lockdown
 
+Package: com.sini921.disabledwarning
+Version: 0.0.1-2
+Architecture: iphoneos-arm64e
+Maintainer: SINI
+Installed-Size: 168
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.sini921.disabledwarning_0.0.1-2_iphoneos-arm64e.deb
+Size: 3442
+MD5sum: 24532e1b0e77d804cae93ee14ee5190b
+SHA1: 87e17eba522d9bff8a7a41e236c22808324f8637
+SHA256: ddc938891b8656fb9190eafa715f9a82a9361ba710529ea1980ae2c06b73fef3
+Section: 越狱插件
+Description: RootHide(黑名单)与RootHideInject(白名单)每次打开都让我卸载openssh，卸载是不可能卸载的，所以去掉这个警告弹窗
+Author: SINI
+Icon: https://sini921.github.io/repo/sileodepiction/icon/disabledwarning.png
+Name: DisabledWarning(roothide)
+Sileodepiction: https://sini921.github.io/repo/sileodepiction/disabledwarning/js.json
+
 Package: com.subdiox.storeswitcher2
 Version: 1.0.1
 Architecture: iphoneos-arm64e
@@ -767,6 +902,57 @@ Section: Tweaks
 Description: Adds a button to switch account in App Store account page on iOS 11+.
 Author: subdiox
 Name: StoreSwitcher 2
+
+Package: com.tigisoftware.filza64bit
+Version: 4.0.1-4
+Architecture: iphoneos-arm64
+Maintainer: TIGI Software
+Installed-Size: 23200
+Recommends: zip, unzip, gzip, p7zip, unrar, xz-utils
+Conflicts: com.tigisoftware.filza, com.tigisoftware.filza39
+Filename: ./debs/com.tigisoftware.filza64bit_4.0.1-4_iphoneos-arm64.deb
+Size: 8700882
+MD5sum: 3ba64c6c17e4a92c3afc89a95a224532
+SHA1: edaaf4766eeafcbc2186eecdc99a519b8eca2ed5
+SHA256: 5d354834ad5d44fcd2c1e3bdb4d082c25df6f8ba48f837745c2be1aec3f8f981
+Section: Utilities
+Description: File Manager for iPhone, iPad, iPod Touch. Supports iOS 11+. This version only supports 64-bit devices
+Author: TIGI Software
+Name: Filza File Manager 64-bit
+
+Package: com.tigisoftware.filza64bit
+Version: 4.0.1-4
+Architecture: iphoneos-arm
+Maintainer: TIGI Software
+Installed-Size: 23200
+Recommends: zip, unzip, gzip, p7zip, unrar, xz-utils
+Conflicts: com.tigisoftware.filza, com.tigisoftware.filza39
+Filename: ./debs/com.tigisoftware.filza64bit_4.0.1-4_iphoneos-arm.deb
+Size: 8701068
+MD5sum: f7d33ec0b35a3398401d5755165a4298
+SHA1: d34724796db536b91a6f1ed242088f0bfaeb1995
+SHA256: 1a20cd1ca85ac0f5d7069d548438b4efa82ecce5d7bd640b3a7f07af1f5faca0
+Section: Utilities
+Description: File Manager for iPhone, iPad, iPod Touch. Supports iOS 11+. This version only supports 64-bit devices
+Author: TIGI Software
+Name: Filza File Manager 64-bit
+
+Package: com.tigisoftware.filza64bit
+Version: 4.0.1-4~roothide
+Architecture: iphoneos-arm64e
+Maintainer: TIGI Software
+Pre-Depends: patches-com.tigisoftware.filza64bit(= 4.0.1-4~roothide)
+Recommends: zip, unzip, gzip, p7zip, unrar, xz-utils
+Conflicts: com.tigisoftware.filza, com.tigisoftware.filza39
+Filename: ./debs/com.tigisoftware.filza64bit_4.0.1-4_iphoneos-arm64e.deb
+Size: 6972652
+MD5sum: 6391c39283f2cc45dcecf101228d4e28
+SHA1: 718d5c9bb34d0c749ca311e4917736804fe217ec
+SHA256: 35be3aa392b06cd7ed53dd3aa05bf5c3ddaa126ee692b33fba67321fc6cec28d
+Section: Utilities
+Description: File Manager for iPhone, iPad, iPod Touch. Supports iOS 11+. This version only supports 64-bit devices
+Author: TIGI Software
+Name: Filza File Manager 64-bit
 
 Package: com.vita.wchook
 Version: 1.0-1
@@ -819,6 +1005,25 @@ Priority: optional
 Description: 重构简化代码，微信聊天左滑引用消息，无设置页，安装默认生效
 Author: vita
 Name: WCHook (微信左滑引用)
+
+Package: roothide.patches.filza
+Version: 0.5-4
+Architecture: iphoneos-arm64e
+Maintainer: roothide
+Installed-Size: 268
+Depends: com.roothide.patchloader
+Recommends: com.tigisoftware.filza64bit(= 4.0.1-4~roothide)
+Conflicts: com.tigisoftware.filza64bit(>> 4.0.1-4~roothide), com.tigisoftware.filza64bit(<< 4.0.1-4~roothide)
+Provides: patches-com.tigisoftware.filza64bit(= 4.0.1-4~roothide)
+Filename: ./debs/Patches for Filza 64bit-0.5-4-iphoneos-arm64e.deb
+Size: 32594
+MD5sum: c225dbb9660a7922190dd6218c77d542
+SHA1: 6f7f5c42f685c7566fb6da5c2a13f494c039c0f9
+SHA256: f1e84b534cf2c085d231779f7177065affc7e0cb0ab92998836797f378448249
+Section: RootHide Patches
+Description: RootHide Dynamic Patches For Filza
+Author: roothide
+Name: Patches for Filza 64bit
 
 Package: ws.hbang.newterm3
 Version: 3.0~beta1
