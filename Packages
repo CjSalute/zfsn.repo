@@ -46,6 +46,47 @@ Description: CocoaTop汉化插件，适配官版和真皮4个修改版
 Author: 来了老弟
 Name: CocoaTop (汉化插件)
 
+Package: com.anthopak.pancake-rootless
+Version: 2.3
+Architecture: iphoneos-arm64e
+Maintainer: AnthoPak <anthopakdev@gmail.com>
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: firmware (>=11.0), mobilesubstrate, ws.hbang.common (>= 1.14), com.opa334.altlist, firmware (>= 11.0)
+Filename: ./debs/com.anthopak.pancake-roothide_2.3_iphoneos-arm64e.deb
+Size: 115760
+MD5sum: 61b59bd2290a408d43d79ea6f1bffbed
+SHA1: 9ac6607ef999654a46ecc706e643eca320a13826
+SHA256: a9ba966ea405bc7528ef84f62cd3633d807750d1c25e1f2f4b4e6492235513fd
+Section: Tweaks
+Homepage: https://repo.anthopak.dev
+Description: Interactive dismiss gesture on the whole screen in all apps and ability to restore previous page
+Author: AnthoPak <anthopakdev@gmail.com>
+Depiction: https://repo.anthopak.dev/depiction/web/com.anthopak.pancake-rootless.php
+Icon: https://repo.anthopak.dev/assets/com.anthopak.pancake-rootless/icon.png
+Moderndepiction: https://repo.anthopak.dev/depiction/native/com.anthopak.pancake-rootless.json
+Name: PanCake (简体中文版)
+Sileodepiction: https://repo.anthopak.dev/depiction/native/com.anthopak.pancake-rootless.json
+
+Package: com.anthopak.pancake-rootless
+Version: 2.3
+Architecture: iphoneos-arm64
+Maintainer: AnthoPak <anthopakdev@gmail.com>
+Depends: firmware (>=11.0), mobilesubstrate, ws.hbang.common (>= 1.14), com.opa334.altlist, firmware (>= 11.0)
+Filename: ./debs/com.anthopak.pancake-rootless_2.3_iphoneos-arm64.deb
+Size: 112240
+MD5sum: b05558b8b622f4e8c32ae1e4feca74ff
+SHA1: 45c98c81cc6467defe1b1db5fcfd44961f02b6be
+SHA256: 1f7838d13eb93144b759f30f1133abdae79a87eb992e4f6fab1f1174ed1121be
+Section: Tweaks
+Homepage: https://repo.anthopak.dev
+Description: Interactive dismiss gesture on the whole screen in all apps and ability to restore previous page
+Author: AnthoPak <anthopakdev@gmail.com>
+Depiction: https://repo.anthopak.dev/depiction/web/com.anthopak.pancake-rootless.php
+Icon: https://repo.anthopak.dev/assets/com.anthopak.pancake-rootless/icon.png
+Moderndepiction: https://repo.anthopak.dev/depiction/native/com.anthopak.pancake-rootless.json
+Name: PanCake (简体中文版)
+Sileodepiction: https://repo.anthopak.dev/depiction/native/com.anthopak.pancake-rootless.json
+
 Package: com.iosdump.appdata
 Version: 2.0.1
 Architecture: iphoneos-arm
