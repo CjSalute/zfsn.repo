@@ -4,34 +4,36 @@ on:
   push:
     paths:
       - 'debs/**/*.deb'
+  workflow_dispatch: 
 
 permissions:
   contents: write
   pages: write
   id-token: write
+  actions: read
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-    - name: Install dpkg tools
-      run: |
-        sudo apt update
-        sudo apt install dpkg-dev -y
+      - name: Install dpkg tools
+        run: |
+          sudo apt update && sudo apt install dpkg-dev -y
 
-    - name: Generate Packages
-      run: |
-        mkdir -p repo
-        dpkg-scanpackages -m debs /dev/null > repo/Packages
-        gzip -kf repo/Packages
+      - name: Generate Packages
+        run: |
+          mkdir -p repo
+          dpkg-scanpackages -m debs /dev/null > repo/Packages || true
+          gzip -kf repo/Packages || true
 
-    - name: Generate Release
-      run: |
-        cat > repo/Release << EOF
+      - name: Generate Release
+        run: |
+          cat > repo/Release << EOF
 Origin: crctdd Repo
 Label: crctdd Repo
 Suite: stable
@@ -41,15 +43,18 @@ Components: main
 Description: crctdd Repo
 EOF
 
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: repo
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./repo
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
-
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-    - name: Deploy to GitHub Pages
-      uses: actions/deploy-pages@v4
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
