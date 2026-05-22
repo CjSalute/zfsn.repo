@@ -3,7 +3,7 @@ name: Build Repo
 on:
   push:
     paths:
-      - 'debs/**/**/*.deb'
+      - 'debs/**/*.deb'
 
 permissions:
   contents: write
