@@ -1,35 +1,69 @@
-name: Build Repo
+name: "refresh"
 
 on:
+  workflow_run:
+    workflows: ["pages-build-deployment"]
+    types: 
+      - completed
   push:
     paths:
       - 'debs/**/*.deb'
-  workflow_dispatch:  
-
-permissions:
-  contents: write
-  pages: write
-  id-token: write
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name != 'workflow_run' }}
     steps:
-      - uses: actions/checkout@v4
-      - name: Install dpkg
-        run: sudo apt update && sudo apt install dpkg-dev -y
-      - name: Make repo files
-        run: |
-          mkdir -p repo
-          dpkg-scanpackages -m debs /dev/null > repo/Packages || true
-          gzip -kf repo/Packages || true
-          echo -e "Origin: crctdd Repo\nLabel: crctdd Repo\nSuite: stable\nCodename: ios\nArchitectures: iphoneos-arm64\nComponents: main\nDescription: crctdd Repo" > repo/Release
-      - uses: actions/upload-pages-artifact@v3
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
-          path: repo
+          submodules: recursive
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/deploy-pages@v4
+      - name: Install Dependencies
+        if: success()
+        run: |
+          sudo apt update -qq
+          sudo apt install dpkg-dev bzip2 xz-utils zstd -y
+
+      - name: Refresh Packages
+        if: success()
+        run: |
+          rm -rf ./Packages*
+          dpkg-scanpackages -m ./debs /dev/null >./Packages
+          bzip2 -v -k -9 Packages
+          xz -v -k -9 --extreme Packages
+          zstd --ultra -22 -k Packages -o Packages.zst
+
+      - name: Configure Git
+        if: success()
+        run: |
+          git config --global user.email 'action@github.com'
+          git config --global user.name 'GitHub Action'
+
+      - name: Commit Changes
+        if: success()
+        run: |
+          git add .
+          if ! git diff --staged --exit-code 1>>/dev/null; then
+            git commit -m 'Refresh Packages'
+          fi
+
+      - name: Push Changes
+        if: success() && github.ref == 'refs/heads/main'
+        run: |
+          git push origin main
+
+      - name: Download remove_all_actions
+        if: success()
+        run: |
+          sudo curl -L -o '/usr/bin/remove_all_actions' 'https://raw.githubusercontent.com/invalidunit/action/main/remove_all_actions'
+          sudo chmod -R 0755 '/usr/bin/remove_all_actions'
+
+      - name: Remove All Old Actions
+        if: success()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          remove_all_actions
