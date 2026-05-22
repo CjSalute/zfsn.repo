@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - 'debs/**/*.deb'
-  workflow_dispatch: 
+  workflow_dispatch:  # 允许手动触发
 
 permissions:
   contents: write
@@ -53,7 +53,6 @@ EOF
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
