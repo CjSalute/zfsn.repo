@@ -16,9 +16,10 @@ jobs:
         run: |
           sudo apt update -qq
           sudo apt install dpkg-dev bzip2 xz-utils zstd -y
-      - name: Refresh Packages
+      - name: Refresh Packages (同步所有版本)
         run: |
           mkdir -p repo
+          find ./debs -name "*.deb" -type f | sort
           dpkg-scanpackages -a -m ./debs /dev/null >./repo/Packages
           bzip2 -v -k -9 ./repo/Packages
           xz -v -k -9 --extreme ./repo/Packages
