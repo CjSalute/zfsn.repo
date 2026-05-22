@@ -3,7 +3,7 @@ name: Build Repo
 on:
   push:
     paths:
-      - 'debs/**/*.deb'
+      - 'debs/**/**/*.deb'
 
 permissions:
   contents: write
@@ -26,7 +26,7 @@ jobs:
     - name: Generate Packages
       run: |
         mkdir -p repo
-        dpkg-scanpackages debs /dev/null > repo/Packages
+        dpkg-scanpackages -m debs /dev/null > repo/Packages
         gzip -kf repo/Packages
 
     - name: Generate Release
