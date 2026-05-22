@@ -566,6 +566,70 @@ Author: mafu
 Icon: https://m4fn3.github.io/repo/web/images/K2gecamen.png
 Name: K2gecamen (简体中文版)
 
+Package: com.roothide.lockdown
+Version: 1.0.1
+Architecture: iphoneos-arm64e
+Maintainer: roothide
+Installed-Size: 136
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.roothide.lockdown_1.0.1_iphoneos-arm64e.deb
+Size: 3844
+MD5sum: d4d43f8506f883f4ed52643001c8afad
+SHA1: 8cdca398587dd2d0a35e30d4743527f89a1557f9
+SHA256: c79cd9b5b495f6d2666baaa119f42e4f4f184fee1b6586c7d0bb1d8796d76916
+Section: Tweaks
+Description: JSC security hardening for WebContent process. Configures JavaScriptCore options to eliminate exploit primitives (addrof/fakeobj, JIT type confusion, GC UAF). Three security levels: balanced, strict, maximum.
+Author: roothide
+Name: lockdown
+
+Package: com.roothide.lockdown
+Version: 1.0.2
+Architecture: iphoneos-arm64e
+Maintainer: roothide
+Installed-Size: 136
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.roothide.lockdown_1.0.2_iphoneos-arm64e.deb
+Size: 5060
+MD5sum: 434e47fae60fae222f91f3a4093e1faa
+SHA1: fff3822db8f6d4dcdb71f9313e7beb65fe57ad29
+SHA256: 0b1be1a6d788c7c7c752148d098eabe2c2bda35a973c5ad050aca95ec2558d3b
+Section: Tweaks
+Description: JSC security hardening for WebContent process. Configures JavaScriptCore options to eliminate exploit primitives (addrof/fakeobj, JIT type confusion, GC UAF). Three security levels: balanced, strict, maximum.
+Author: roothide
+Name: lockdown
+
+Package: com.roothide.lockdown
+Version: 1.0.3
+Architecture: iphoneos-arm64e
+Maintainer: roothide
+Installed-Size: 136
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.roothide.lockdown_1.0.3_iphoneos-arm64e.deb
+Size: 5064
+MD5sum: 2f3697d23296b2c433c02c2ccbe9af94
+SHA1: 93c577dda008d11ece40b6e3545d89a2c4bb2053
+SHA256: 4dec2a9cbff90c11e2a866dacc2b5d934b3f6910f1fee4cc1375b0133cde6506
+Section: Tweaks
+Description: JSC security hardening for WebContent process. Configures JavaScriptCore options to eliminate exploit primitives (addrof/fakeobj, JIT type confusion, GC UAF). Enabled by default!
+Author: roothide
+Name: lockdown
+
+Package: com.roothide.lockdown
+Version: 2.0
+Architecture: iphoneos-arm64e
+Maintainer: roothide
+Installed-Size: 136
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.roothide.lockdown_2.0_iphoneos-arm64e.deb
+Size: 5256
+MD5sum: 6b62ffea6abd0054b8d32d3d32789c37
+SHA1: 1a5fdb1dbbf1389db596c2eb6b3aca3491a01818
+SHA256: 503928cc010c1b4c037ec31d714581ce59470837a8b6f225d3cc17509c317ac4
+Section: Tweaks
+Description: JSC security hardening for WebContent process. Configures JavaScriptCore options to eliminate exploit primitives (addrof/fakeobj, JIT type confusion, GC UAF). Enabled by default!
+Author: roothide
+Name: lockdown
+
 Package: com.subdiox.storeswitcher2
 Version: 1.0.1
 Architecture: iphoneos-arm64e
