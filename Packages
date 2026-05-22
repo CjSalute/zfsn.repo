@@ -805,6 +805,72 @@ Author: Netskao
 Name: Filza Crack
 Sileodepiction: https://jailrepo.initnil.com/api?Package=com.netskao.filzacrack
 
+Package: com.nx.accode
+Version: 1.0
+Architecture: iphoneos-arm64e
+Maintainer: Crassna
+Installed-Size: 204
+Depends: firmware (>= 16.1) | org.swift.libswift (>= 5.0)
+Filename: ./debs/com.nx.accode_1.0_iphoneos-arm64e.deb
+Size: 19388
+MD5sum: 04ac0b010f91dfa794b69a29b4e7c48b
+SHA1: fc353d0fcdfe2c4df963f0cb657325df4328b48e
+SHA256: fc36618227753688bac3cb33c6ae54847f5dfe233935e82f8beb32ed56b0b3b4
+Section: System
+Description: 使用方法：用终端输入stheno+空格+udid，获取激活码。再下载旧版stheno激活，激活成功 卸载旧版，注销后再下载新版即可。
+Tag: role::hacker
+Author: Crassna
+Name: Stheno激活码生成器
+
+Package: com.nx.accode
+Version: 1.0
+Architecture: iphoneos-arm64
+Maintainer: Crassna
+Installed-Size: 204
+Depends: firmware (>= 16.1) | org.swift.libswift (>= 5.0)
+Filename: ./debs/com.nx.accode_1.0_iphoneos-arm64.deb
+Size: 19444
+MD5sum: f52cafa3cd8779082a9c03ff08f59bf5
+SHA1: 2457c0ff1678660cea7e3f90ec167cc57480d074
+SHA256: 1176f4a975681615b08adb57084c30541e498754b856d78efb7a66e34ecdb575
+Section: System
+Description: 使用方法：用终端输入stheno+空格+udid，获取激活码。再下载旧版stheno激活，激活成功 卸载旧版，注销后再下载新版即可。
+Tag: role::hacker
+Author: Crassna
+Name: Stheno激活码生成器
+
+Package: com.nx.stheno
+Version: 1.0-END
+Architecture: iphoneos-arm64
+Maintainer: Crassna
+Installed-Size: 2788
+Depends: dev.theos.orion (>= 1.0.0), firmware (>= 16.1)
+Filename: ./debs/com.nx.stheno_1.0-END_iphoneos-arm64.deb
+Size: 530628
+MD5sum: 406a974ed1d14e4d5b1a73bb333a220c
+SHA1: 956eea6ef202ff63727ef3cfd45128c1f19ad34f
+SHA256: 2204894bda5d1d78b234242198ff31ef9f78ed4be573cf6106d52420b818088e
+Section: Tweaks
+Description: 最终版Stheno分屏 (免费)
+Author: Crassna
+Name: Stheno (最终版)
+
+Package: com.nx.stheno
+Version: 1.0-END
+Architecture: iphoneos-arm64e
+Maintainer: Crassna
+Installed-Size: 2788
+Depends: dev.theos.orion (>= 1.0.0), firmware (>= 16.1)
+Filename: ./debs/com.nx.stheno_1.0-END_iphoneos-arm64e.deb
+Size: 528344
+MD5sum: 83392b710164ed5df211e880505e4bdf
+SHA1: 22029e65a53f4ce9880e131fec55d3577b392a6d
+SHA256: 9a1b74da48f48684a20a937e9e95f5537c4baf2050460370b56a31e02b9d3402
+Section: Tweaks
+Description: 最终版Stheno分屏 (免费)
+Author: Crassna
+Name: Stheno (最终版)
+
 Package: com.roothide.lockdown
 Version: 1.0.1
 Architecture: iphoneos-arm64e
