@@ -156,6 +156,39 @@ Description: TrollOpen 的越狱版本，支持 ios16 及以上，免费公开�
 Author: Charlie Leung
 Name: TrollOpen
 
+Package: com.huami.ChoicyConfigPin
+Version: 1.0-2
+Architecture: iphoneos-arm64e
+Maintainer: huami
+Installed-Size: 168
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: mobilesubstrate (>= 0.9.5000), com.opa334.choicy, com.opa334.altlist
+Filename: ./debs/ChoicyConfigPin_1.0-2_iphoneos-arm64e.deb
+Size: 9174
+MD5sum: 190d6e7def846d515782da0d3bd62937
+SHA1: 244323590ad6f69033c35d0e224369f314ac063d
+SHA256: 965e91c11a148be852429e63a3410aa0708b715953a40504b31dc30dbb6e00b2
+Section: Tweaks
+Description: Pin apps with custom tweak configuration to the top in Choicy
+Author: huami
+Name: ChoicyConfigPin
+
+Package: com.huami.ChoicyConfigPin
+Version: 1.0-2
+Architecture: iphoneos-arm64
+Maintainer: huami
+Installed-Size: 168
+Depends: mobilesubstrate (>= 0.9.5000), com.opa334.choicy, com.opa334.altlist
+Filename: ./debs/ChoicyConfigPin_1.0-2_iphoneos-arm64.deb
+Size: 6772
+MD5sum: d1a14e8425c8058e8f26b0b8e4772ccd
+SHA1: 7fe4394931521c7d2482ff9a80c2dae1b391756e
+SHA256: 9f9ba000f2042d90bab6840a854058cc18629ab020d0f53d3653fbe68d220ad5
+Section: Tweaks
+Description: Pin apps with custom tweak configuration to the top in Choicy
+Author: huami
+Name: ChoicyConfigPin
+
 Package: com.iosdump.appdata
 Version: 2.0.1
 Architecture: iphoneos-arm
