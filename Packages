@@ -832,6 +832,27 @@ Description: 录屏/截图，自动套壳、水印工具，支持iOS14-17所有�
 Author: iosdump
 Name: SHELLX
 
+Package: com.jakeashacks.bounceit
+Version: 1.0.4
+Architecture: iphoneos-arm64
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Installed-Size: 143
+Depends: firmware (>= 11.0), mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.zfsn.duangduang_0.0.1_iphoneos-arm.deb.deb
+Size: 5640
+MD5sum: 79077ad0ede603066250c80afe80e2c6
+SHA1: 6ebc946bcc124d7e549e5be786e4cda49726cd17
+SHA256: e778b82f092ad693179e988621aa48bcc456bbccbfb9e290fd97c416a84d5238
+Section: Tweaks
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=bounceitDp
+Description: Add bouncing effect animations on iOS 11/12
+Tag: purpose::extension, compatible::ios11, compatible::ios12, compatible::ios13
+Author: Jake James <jakeashacks@gmail.com>
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=bounceitDp
+Dev: jakeashacks
+Name: Bounce It!
+Sponsor: thebigboss.org <http://thebigboss.org>
+
 Package: com.m4fn3.k2gecamen
 Version: 1.0.5
 Architecture: iphoneos-arm64e
