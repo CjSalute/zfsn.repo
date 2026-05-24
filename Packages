@@ -1154,6 +1154,24 @@ Description: JSC security hardening for WebContent process. Configures JavaScrip
 Author: roothide
 Name: lockdown
 
+Package: com.sini.3dappversionspoofer
+Version: 2.1.1
+Architecture: iphoneos-arm64
+Maintainer: 0xkuj
+Installed-Size: 408
+Depends: com.opa334.altlist
+Filename: ./debs/com.sini.3dappversionspoofer_2.1.1_iphoneos-arm64.deb
+Size: 60172
+MD5sum: dcd52638c38a8713919b68f15ab642c9
+SHA1: eb35f384fd8931be4858fb1d5acfbbae26fae2d4
+SHA256: 34c5a699be71512a7c3b5ba4462d578b5cf42ec9848df3032a4581a7f675369c
+Section: 越狱插件
+Description: 暂无汉化
+Author: 0xkuj
+Icon: https://sini921.github.io/repo/sileodepiction/icon/3dappversionspoofer.png
+Name: 3DAppVersionSpoofer(rootless)
+Sileodepiction: https://sini921.github.io/repo/sileodepiction/3dappversionspoofer/js.json
+
 Package: com.sini921.disabledwarning
 Version: 0.0.1-2
 Architecture: iphoneos-arm64e
