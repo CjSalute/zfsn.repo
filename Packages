@@ -16,6 +16,22 @@ Name: CocoaTop (汉化插件)
 
 Package: cn.llld.cocoatop
 Version: 0.0.2
+Architecture: iphoneos-arm
+Maintainer: 来了老弟
+Installed-Size: 200
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/cn.llld.cocoatop_0.0.2_iphoneos-arm.deb
+Size: 17880
+MD5sum: 7c512b0d666df94119a2e52e62f4b0d1
+SHA1: d0ab334133edbc8eed4c6aef5a01c7dcbb8e6ca4
+SHA256: 102f159706bea38efcbbf86920d2ade2fff25bfaffbb8f5d05b852daa232218e
+Section: rootful汉化补丁
+Description: CocoaTop汉化插件，适配官版和真皮4个修改版
+Author: 来了老弟
+Name: CocoaTop (汉化插件)
+
+Package: cn.llld.cocoatop
+Version: 0.0.2
 Architecture: iphoneos-arm64e
 Maintainer: 来了老弟
 Installed-Size: 240
@@ -30,21 +46,23 @@ Description: CocoaTop汉化插件，适配官版和真皮4个修改版
 Author: 来了老弟
 Name: CocoaTop (汉化插件)
 
-Package: cn.llld.cocoatop
-Version: 0.0.2
-Architecture: iphoneos-arm
-Maintainer: 来了老弟
-Installed-Size: 200
-Depends: mobilesubstrate (>= 0.9.5000)
-Filename: ./debs/cn.llld.cocoatop_0.0.2_iphoneos-arm.deb
-Size: 17880
-MD5sum: 7c512b0d666df94119a2e52e62f4b0d1
-SHA1: d0ab334133edbc8eed4c6aef5a01c7dcbb8e6ca4
-SHA256: 102f159706bea38efcbbf86920d2ade2fff25bfaffbb8f5d05b852daa232218e
-Section: rootful汉化补丁
-Description: CocoaTop汉化插件，适配官版和真皮4个修改版
-Author: 来了老弟
-Name: CocoaTop (汉化插件)
+Package: cn.zqbb.ccatop
+Version: 2.3
+Architecture: iphoneos-arm64
+Maintainer: SXX, Domo
+Installed-Size: 840
+Conflicts: ru.domo.cocoatop, ru.domo.cocoatop64, cn.zqbb.cocoatop64.inject.roothide, zp.cocoatop64.unject, zp.cocoatop64.unject.xina, zp.cocoatop64.inject
+Filename: ./debs/cn.zqbb.ccatop_2.3_iphoneos-arm64.deb
+Size: 198836
+MD5sum: 0da071f8dfba9df0312d531f63367e51
+SHA1: a9f6fa5fce62d3b124675f83cd2ed3809bc93cf2
+SHA256: 41b0824a07d955de8e3feb42e443ea6c9ebea9bf8ed0f5646e90693126165459
+Section: Utilities
+Description: Process Viewer for iOS GUI, updated for iOS 13 by SXX.
+Author: Domo, SXX
+Icon: https://apt.002599.xyz/web/icon/cn.zqbb.ccatop.png
+Name: CocoaTop
+Sileodepiction: https://apt.002599.xyz/web/cn.zqbb.ccatop
 
 Package: cn.zqbb.ccatop
 Version: 2.3
@@ -64,23 +82,21 @@ Icon: https://apt.002599.xyz/web/icon/cn.zqbb.ccatop.png
 Name: CocoaTop
 Sileodepiction: https://apt.002599.xyz/web/cn.zqbb.ccatop
 
-Package: cn.zqbb.ccatop
-Version: 2.3
+Package: com.0xkuj.bettercccrashprotect
+Version: 1.0.0
 Architecture: iphoneos-arm64
-Maintainer: SXX, Domo
-Installed-Size: 840
-Conflicts: ru.domo.cocoatop, ru.domo.cocoatop64, cn.zqbb.cocoatop64.inject.roothide, zp.cocoatop64.unject, zp.cocoatop64.unject.xina, zp.cocoatop64.inject
-Filename: ./debs/cn.zqbb.ccatop_2.3_iphoneos-arm64.deb
-Size: 198836
-MD5sum: 0da071f8dfba9df0312d531f63367e51
-SHA1: a9f6fa5fce62d3b124675f83cd2ed3809bc93cf2
-SHA256: 41b0824a07d955de8e3feb42e443ea6c9ebea9bf8ed0f5646e90693126165459
-Section: Utilities
-Description: Process Viewer for iOS GUI, updated for iOS 13 by SXX.
-Author: Domo, SXX
-Icon: https://apt.002599.xyz/web/icon/cn.zqbb.ccatop.png
-Name: CocoaTop
-Sileodepiction: https://apt.002599.xyz/web/cn.zqbb.ccatop
+Maintainer: 0xkuj
+Installed-Size: 168
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.0xkuj.bettercccrashprotect_1.0.0_iphoneos-arm64.deb
+Size: 3466
+MD5sum: ea717e091b138d78c445461f0de5fc3a
+SHA1: 4ba0defc436f6e87b17651062ee6997cfc2cd26b
+SHA256: b11732aac7d4a5164421b10725d8ab9ca3084130032b2f2fe5d5a76e5e37ae31
+Section: Tweaks
+Description: Prevent Weather Module with BetterCC crash your idevice
+Author: 0xkuj
+Name: BetterCCCrashProtect
 
 Package: com.anthopak.pancake-rootless
 Version: 2.3
@@ -195,15 +211,14 @@ Sponsor: Curtin <https://qr.alipay.com/2m612122dnnr9q6o488dgab>
 
 Package: com.curtin.pkc.rootless
 Version: 0.9-5
-Architecture: iphoneos-arm64e
+Architecture: iphoneos-arm64
 Maintainer: curtinlv@126.com
-Pre-Depends: rootless-compat(>= 0.9)
 Depends: firmware (>= 5.0)
-Filename: ./debs/com.curtin.pkc.roothide_0.9-5_iphoneos-arm64e.deb
-Size: 3484416
-MD5sum: ec0ec436cfbebf5486aecfd5e06817ab
-SHA1: f332f277c2ec9216f40f51bbbc2d50384a6af4a8
-SHA256: 545df426caf0f1f30e2166d2e5f63394f28dab5023a8f90b6da5c44a214bf0f1
+Filename: ./debs/com.curtin.pkc.rootless_0.9-5_iphoneos-arm64.deb
+Size: 1271080
+MD5sum: e05dc523bec90a8574b1e00b392df2a8
+SHA1: e5bf29f66f2990bf3e8d54f043bb4e7f53632431
+SHA256: 52efcd6bcad56eb058a482fced850ee07635dcfc8f8e4ec07ef5fd560cb023e9
 Section: PKC-插件
 Priority: optional
 Homepage: https://github.com/curtinlv
@@ -214,14 +229,15 @@ Name: PKC_无根
 
 Package: com.curtin.pkc.rootless
 Version: 0.9-5
-Architecture: iphoneos-arm64
+Architecture: iphoneos-arm64e
 Maintainer: curtinlv@126.com
+Pre-Depends: rootless-compat(>= 0.9)
 Depends: firmware (>= 5.0)
-Filename: ./debs/com.curtin.pkc.rootless_0.9-5_iphoneos-arm64.deb
-Size: 1271080
-MD5sum: e05dc523bec90a8574b1e00b392df2a8
-SHA1: e5bf29f66f2990bf3e8d54f043bb4e7f53632431
-SHA256: 52efcd6bcad56eb058a482fced850ee07635dcfc8f8e4ec07ef5fd560cb023e9
+Filename: ./debs/com.curtin.pkc.roothide_0.9-5_iphoneos-arm64e.deb
+Size: 3484416
+MD5sum: ec0ec436cfbebf5486aecfd5e06817ab
+SHA1: f332f277c2ec9216f40f51bbbc2d50384a6af4a8
+SHA256: 545df426caf0f1f30e2166d2e5f63394f28dab5023a8f90b6da5c44a214bf0f1
 Section: PKC-插件
 Priority: optional
 Homepage: https://github.com/curtinlv
@@ -271,6 +287,22 @@ Sponsor: Curtin <https://qr.alipay.com/2m612122dnnr9q6o488dgab>
 
 Package: com.huami.ChoicyConfigPin
 Version: 1.0-2
+Architecture: iphoneos-arm64
+Maintainer: huami
+Installed-Size: 168
+Depends: mobilesubstrate (>= 0.9.5000), com.opa334.choicy, com.opa334.altlist
+Filename: ./debs/ChoicyConfigPin_1.0-2_iphoneos-arm64.deb
+Size: 6772
+MD5sum: d1a14e8425c8058e8f26b0b8e4772ccd
+SHA1: 7fe4394931521c7d2482ff9a80c2dae1b391756e
+SHA256: 9f9ba000f2042d90bab6840a854058cc18629ab020d0f53d3653fbe68d220ad5
+Section: Tweaks
+Description: Pin apps with custom tweak configuration to the top in Choicy
+Author: huami
+Name: ChoicyConfigPin
+
+Package: com.huami.ChoicyConfigPin
+Version: 1.0-2
 Architecture: iphoneos-arm64e
 Maintainer: huami
 Installed-Size: 168
@@ -286,38 +318,53 @@ Description: Pin apps with custom tweak configuration to the top in Choicy
 Author: huami
 Name: ChoicyConfigPin
 
-Package: com.huami.ChoicyConfigPin
-Version: 1.0-2
+Package: com.hw.gh
+Version: 0.0.1
 Architecture: iphoneos-arm64
-Maintainer: huami
-Installed-Size: 168
-Depends: mobilesubstrate (>= 0.9.5000), com.opa334.choicy, com.opa334.altlist
-Filename: ./debs/ChoicyConfigPin_1.0-2_iphoneos-arm64.deb
-Size: 6772
-MD5sum: d1a14e8425c8058e8f26b0b8e4772ccd
-SHA1: 7fe4394931521c7d2482ff9a80c2dae1b391756e
-SHA256: 9f9ba000f2042d90bab6840a854058cc18629ab020d0f53d3653fbe68d220ad5
+Maintainer: 🄷🅆
+Installed-Size: 588
+Depends: mobilesubstrate
+Filename: ./debs/com.zfsn.gh_0.0.1_iphoneos-arm64.deb
+Size: 82286
+MD5sum: 876bdd5cebee37e981d53aaa363ef21b
+SHA1: ab0ab5f3c7d18807f34a0e4898207c63fb1aafab
+SHA256: c6a6fbe4b0d84ec672a4c07e8ee4896256540677c8200276264faeb63d0e519e
 Section: Tweaks
-Description: Pin apps with custom tweak configuration to the top in Choicy
-Author: huami
-Name: ChoicyConfigPin
+Description: TG：@HelloWorld_1024
+Author: 🄷🅆
+Name: 🄷🅆 GH
 
-Package: com.iosdump.appdata
-Version: 2.0.1
-Architecture: iphoneos-arm
-Maintainer: iosdump
-Depends: firmware (>= 11.0), mobilesubstrate, preferenceloader
-Conflicts: com.netskao.appdatas, com.netskao.appdata, cn.zqbb.appdata, com.fouadraheb.appdata
-Filename: ./debs/com.iosdump.appdata_2.0.1_iphoneos-arm.deb
-Size: 384990
-MD5sum: c47dabc89310ad7567fb56c8a018fb84
-SHA1: bda4c2935a9c8d4ad424954b60d817f02f274829
-SHA256: 70f09086482a4bee6a789cc8304ec4deecab02ffbbe7384ddba48344f396babc
+Package: com.hw.jh
+Version: 0.0.1
+Architecture: iphoneos-arm64
+Maintainer: 🄷🅆
+Installed-Size: 364
+Depends: mobilesubstrate
+Filename: ./debs/com.zfsn.jh_0.0.1_iphoneos-arm64.deb
+Size: 53618
+MD5sum: 0187539580e356f3ecc50cde8190cd3c
+SHA1: 459d239d9813a7addde4d23689400427cca398c1
+SHA256: ea2191dce93d5a944bc47521ee4c4ae818295d0edb5759febec8b7b1fff93c31
 Section: Tweaks
-Description: 从主屏幕查看和管理应用数据
-Author: Fouad Raheb
-Icon: file:///Library/PreferenceBundles/AppDataPrefs.bundle/AppData@3x.png
-Name: AppData
+Description: TG：@HelloWorld_1024
+Author: 🄷🅆
+Name: 🄷🅆 JH
+
+Package: com.hw.zgnyyh
+Version: 0.0.1
+Architecture: iphoneos-arm64
+Maintainer: 🄷🅆
+Installed-Size: 2072
+Depends: mobilesubstrate
+Filename: ./debs/com.zfsn.nh_0.0.1_iphoneos-arm64.deb
+Size: 360716
+MD5sum: 95063d1212b0c5d6ccca90903ab05481
+SHA1: ddcdbf03c37a67ecef06b36122462850d70484fe
+SHA256: 83f40ecbf9b2d37032d4f1397277226b268bfe663f5e9d9a02d2a5060761f752
+Section: Tweaks
+Description: 关闭任何屏蔽、安装即用、测试支持10.2.1版本！TG：@HelloWorld_1024
+Author: 🄷🅆
+Name: 🄷🅆  农行
 
 Package: com.iosdump.appdata
 Version: 2.0.1
@@ -331,6 +378,23 @@ Size: 318252
 MD5sum: ac70815687a57fc384e1362fd90c1437
 SHA1: 8cf8f4d166d624f9439b8fa262cf0b3e8d9889dd
 SHA256: 71b52a032c98ff6f87a361373f95dd44c3566c40050c9c927632677d2afc1aa0
+Section: Tweaks
+Description: 从主屏幕查看和管理应用数据
+Author: Fouad Raheb
+Icon: file:///Library/PreferenceBundles/AppDataPrefs.bundle/AppData@3x.png
+Name: AppData
+
+Package: com.iosdump.appdata
+Version: 2.0.1
+Architecture: iphoneos-arm
+Maintainer: iosdump
+Depends: firmware (>= 11.0), mobilesubstrate, preferenceloader
+Conflicts: com.netskao.appdatas, com.netskao.appdata, cn.zqbb.appdata, com.fouadraheb.appdata
+Filename: ./debs/com.iosdump.appdata_2.0.1_iphoneos-arm.deb
+Size: 384990
+MD5sum: c47dabc89310ad7567fb56c8a018fb84
+SHA1: bda4c2935a9c8d4ad424954b60d817f02f274829
+SHA256: 70f09086482a4bee6a789cc8304ec4deecab02ffbbe7384ddba48344f396babc
 Section: Tweaks
 Description: 从主屏幕查看和管理应用数据
 Author: Fouad Raheb
@@ -373,22 +437,6 @@ Name: CustomCallBg
 
 Package: com.iosdump.customcallbg
 Version: 0.0.1
-Architecture: iphoneos-arm
-Maintainer: iosdump
-Installed-Size: 408
-Depends: mobilesubstrate, preferenceloader
-Filename: ./debs/com.iosdump.customcallbg_0.0.1_iphoneos-arm.deb
-Size: 28850
-MD5sum: 0816aaa2fa9dd94a9e6110dd3265303b
-SHA1: a089ac5001dd69637a7e2b905bbd7a3dc292e3c0
-SHA256: d955f50173a9510dd6d93cffa87419155cedbd7c4c57e55d27f4076c56c86ea1
-Section: Tweaks
-Description: iOS 14-17 自定义来去电背景插件
-Author: iosdump
-Name: CustomCallBg
-
-Package: com.iosdump.customcallbg
-Version: 0.0.1
 Architecture: iphoneos-arm64
 Maintainer: iosdump
 Installed-Size: 408
@@ -404,16 +452,16 @@ Author: iosdump
 Name: CustomCallBg
 
 Package: com.iosdump.customcallbg
-Version: 0.0.2
-Architecture: iphoneos-arm64e
+Version: 0.0.1
+Architecture: iphoneos-arm
 Maintainer: iosdump
-Installed-Size: 424
+Installed-Size: 408
 Depends: mobilesubstrate, preferenceloader
-Filename: ./debs/com.iosdump.customcallbg_0.0.2_iphoneos-arm64e.deb
-Size: 31088
-MD5sum: 1a66525de098ea3868e5d9c3cc48b89c
-SHA1: a638f755f2b42bf2b045e7e661808da23a9a6469
-SHA256: a923d7b75456395a2077685b8cfa4a73aaa16fa0667c287c901de7852d9225b2
+Filename: ./debs/com.iosdump.customcallbg_0.0.1_iphoneos-arm.deb
+Size: 28850
+MD5sum: 0816aaa2fa9dd94a9e6110dd3265303b
+SHA1: a089ac5001dd69637a7e2b905bbd7a3dc292e3c0
+SHA256: d955f50173a9510dd6d93cffa87419155cedbd7c4c57e55d27f4076c56c86ea1
 Section: Tweaks
 Description: iOS 14-17 自定义来去电背景插件
 Author: iosdump
@@ -452,6 +500,22 @@ Author: iosdump
 Name: CustomCallBg
 
 Package: com.iosdump.customcallbg
+Version: 0.0.2
+Architecture: iphoneos-arm64e
+Maintainer: iosdump
+Installed-Size: 424
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/com.iosdump.customcallbg_0.0.2_iphoneos-arm64e.deb
+Size: 31088
+MD5sum: 1a66525de098ea3868e5d9c3cc48b89c
+SHA1: a638f755f2b42bf2b045e7e661808da23a9a6469
+SHA256: a923d7b75456395a2077685b8cfa4a73aaa16fa0667c287c901de7852d9225b2
+Section: Tweaks
+Description: iOS 14-17 自定义来去电背景插件
+Author: iosdump
+Name: CustomCallBg
+
+Package: com.iosdump.customcallbg
 Version: 0.0.3
 Architecture: iphoneos-arm
 Maintainer: iosdump
@@ -469,22 +533,6 @@ Name: CustomCallBg
 
 Package: com.iosdump.customcallbg
 Version: 0.0.3
-Architecture: iphoneos-arm64
-Maintainer: iosdump
-Installed-Size: 428
-Depends: mobilesubstrate, preferenceloader
-Filename: ./debs/com.iosdump.customcallbg_0.0.3_iphoneos-arm64.deb
-Size: 30586
-MD5sum: eeb3d24208e0d6a73589ef427425a8c8
-SHA1: 241a8d78c63abaee727eee96fc770487942ca0e8
-SHA256: 1dbe37676ef6a6def24c18966e5a290dfe7a3379f74a969d16c1a4bc267122a9
-Section: Tweaks
-Description: iOS 14-17 自定义来去电背景插件
-Author: iosdump
-Name: CustomCallBg
-
-Package: com.iosdump.customcallbg
-Version: 0.0.3
 Architecture: iphoneos-arm64e
 Maintainer: iosdump
 Installed-Size: 408
@@ -494,6 +542,22 @@ Size: 28954
 MD5sum: 7f601aaade69d595976d266b207dce36
 SHA1: c78cf1512498c45a4bc808283f50c87c71f7bd7a
 SHA256: 789a721be281ad1c7d3fed4b93119e8247b6f10876f352240b6042c631c79d32
+Section: Tweaks
+Description: iOS 14-17 自定义来去电背景插件
+Author: iosdump
+Name: CustomCallBg
+
+Package: com.iosdump.customcallbg
+Version: 0.0.3
+Architecture: iphoneos-arm64
+Maintainer: iosdump
+Installed-Size: 428
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/com.iosdump.customcallbg_0.0.3_iphoneos-arm64.deb
+Size: 30586
+MD5sum: eeb3d24208e0d6a73589ef427425a8c8
+SHA1: 241a8d78c63abaee727eee96fc770487942ca0e8
+SHA256: 1dbe37676ef6a6def24c18966e5a290dfe7a3379f74a969d16c1a4bc267122a9
 Section: Tweaks
 Description: iOS 14-17 自定义来去电背景插件
 Author: iosdump
@@ -565,22 +629,6 @@ Name: CustomCallBg
 
 Package: com.iosdump.customcallbg
 Version: 0.0.5
-Architecture: iphoneos-arm64e
-Maintainer: iosdump
-Installed-Size: 460
-Depends: mobilesubstrate, preferenceloader
-Filename: ./debs/com.iosdump.customcallbg_0.0.5_iphoneos-arm64e.deb
-Size: 39818
-MD5sum: 847d752462d9edd86f391aa85b13a1b0
-SHA1: 646d38c36950f26f3fdb8d6969da623d1341af1e
-SHA256: 1526958b3f01861d9b0bec81505148ffc6e4b23993399275e66f62ae045f4a3c
-Section: Tweaks
-Description: iOS 14-17 自定义来去电背景插件
-Author: iosdump
-Name: CustomCallBg
-
-Package: com.iosdump.customcallbg
-Version: 0.0.5
 Architecture: iphoneos-arm64
 Maintainer: iosdump
 Installed-Size: 460
@@ -590,6 +638,22 @@ Size: 41346
 MD5sum: 391965c1386f43c102a83a04fc5b0ee7
 SHA1: 8a0d7542e4de4b4883792fb862d58dead6abb6fb
 SHA256: dbb5e29627d12a075e9bfa0974d0ccb9fd81de8db3cda17bf282f8ac12be2ebe
+Section: Tweaks
+Description: iOS 14-17 自定义来去电背景插件
+Author: iosdump
+Name: CustomCallBg
+
+Package: com.iosdump.customcallbg
+Version: 0.0.5
+Architecture: iphoneos-arm64e
+Maintainer: iosdump
+Installed-Size: 460
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/com.iosdump.customcallbg_0.0.5_iphoneos-arm64e.deb
+Size: 39818
+MD5sum: 847d752462d9edd86f391aa85b13a1b0
+SHA1: 646d38c36950f26f3fdb8d6969da623d1341af1e
+SHA256: 1526958b3f01861d9b0bec81505148ffc6e4b23993399275e66f62ae045f4a3c
 Section: Tweaks
 Description: iOS 14-17 自定义来去电背景插件
 Author: iosdump
@@ -642,6 +706,22 @@ Name: Filza Open (shell)
 
 Package: com.iosdump.shellx
 Version: 0.0.2
+Architecture: iphoneos-arm
+Maintainer: iosdump
+Installed-Size: 576
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/com.iosdump.shellx_0.0.2_iphoneos-arm.deb
+Size: 72484
+MD5sum: 1bb57c2c1f6f57a4a5168d0f9e499d3a
+SHA1: 62d0bb55a72b8bd7e7e22e6c654350c4688eb1c3
+SHA256: d98fc3edc292c719e016e8b64fb7f7174d7276c2ff4f0d1ce5209adbe44558c1
+Section: Tweaks
+Description: 录屏/截图，自动套壳、水印工具，支持iOS14-17所有越狱
+Author: iosdump
+Name: SHELLX
+
+Package: com.iosdump.shellx
+Version: 0.0.2
 Architecture: iphoneos-arm64
 Maintainer: iosdump
 Installed-Size: 576
@@ -673,22 +753,6 @@ Author: iosdump
 Name: SHELLX
 
 Package: com.iosdump.shellx
-Version: 0.0.2
-Architecture: iphoneos-arm
-Maintainer: iosdump
-Installed-Size: 576
-Depends: mobilesubstrate, preferenceloader
-Filename: ./debs/com.iosdump.shellx_0.0.2_iphoneos-arm.deb
-Size: 72484
-MD5sum: 1bb57c2c1f6f57a4a5168d0f9e499d3a
-SHA1: 62d0bb55a72b8bd7e7e22e6c654350c4688eb1c3
-SHA256: d98fc3edc292c719e016e8b64fb7f7174d7276c2ff4f0d1ce5209adbe44558c1
-Section: Tweaks
-Description: 录屏/截图，自动套壳、水印工具，支持iOS14-17所有越狱
-Author: iosdump
-Name: SHELLX
-
-Package: com.iosdump.shellx
 Version: 0.0.3
 Architecture: iphoneos-arm64e
 Maintainer: iosdump
@@ -699,22 +763,6 @@ Size: 71910
 MD5sum: e07b70eb84a834b51290d19af7e1b8cc
 SHA1: 11a1ce8c1204bcb673b14604dd578613005bbc68
 SHA256: b8c4cde03c20755fa341ca81bc12474d721f5762ea6c993b869e67043b178ac9
-Section: Tweaks
-Description: 录屏/截图，自动套壳、水印工具，支持iOS14-17所有越狱
-Author: iosdump
-Name: SHELLX
-
-Package: com.iosdump.shellx
-Version: 0.0.3
-Architecture: iphoneos-arm
-Maintainer: iosdump
-Installed-Size: 576
-Depends: mobilesubstrate, preferenceloader
-Filename: ./debs/com.iosdump.shellx_0.0.3_iphoneos-arm.deb
-Size: 73708
-MD5sum: 2f47978caf1d5a39ad4d7df3b8e29365
-SHA1: 31891bec839837278b2bc105d53002293f0a518c
-SHA256: 6057610a43834ec2742b90fbd1a6ad401a7984af338df7b448e384e960a27306
 Section: Tweaks
 Description: 录屏/截图，自动套壳、水印工具，支持iOS14-17所有越狱
 Author: iosdump
@@ -737,16 +785,16 @@ Author: iosdump
 Name: SHELLX
 
 Package: com.iosdump.shellx
-Version: 0.0.5
-Architecture: iphoneos-arm64
+Version: 0.0.3
+Architecture: iphoneos-arm
 Maintainer: iosdump
-Installed-Size: 608
+Installed-Size: 576
 Depends: mobilesubstrate, preferenceloader
-Filename: ./debs/com.iosdump.shellx_0.0.5_iphoneos-arm64.deb
-Size: 81438
-MD5sum: 7898f7f99bf48fb7f576a40a6af41e2e
-SHA1: 0b4772f947ddc7d23780cea9130647dd49b8dc38
-SHA256: ec0fd70e642b326fa16fede65bfc8cbce3ec9b934ddf17fa47016b28b3eb76df
+Filename: ./debs/com.iosdump.shellx_0.0.3_iphoneos-arm.deb
+Size: 73708
+MD5sum: 2f47978caf1d5a39ad4d7df3b8e29365
+SHA1: 31891bec839837278b2bc105d53002293f0a518c
+SHA256: 6057610a43834ec2742b90fbd1a6ad401a7984af338df7b448e384e960a27306
 Section: Tweaks
 Description: 录屏/截图，自动套壳、水印工具，支持iOS14-17所有越狱
 Author: iosdump
@@ -785,16 +833,16 @@ Author: iosdump
 Name: SHELLX
 
 Package: com.iosdump.shellx
-Version: 1.0.0
-Architecture: iphoneos-arm64e
+Version: 0.0.5
+Architecture: iphoneos-arm64
 Maintainer: iosdump
-Installed-Size: 764
+Installed-Size: 608
 Depends: mobilesubstrate, preferenceloader
-Filename: ./debs/com.iosdump.shellx_1.0.0_iphoneos-arm64e.deb
-Size: 126828
-MD5sum: 63387223d12630b55d7cc16a568ba34a
-SHA1: b37b681c2a52169b24b83a92520e813015b3820b
-SHA256: 41dec083e2a72b98015f841f4d0b4dd88f73bcfcde3639127cd10eea1f1e8330
+Filename: ./debs/com.iosdump.shellx_0.0.5_iphoneos-arm64.deb
+Size: 81438
+MD5sum: 7898f7f99bf48fb7f576a40a6af41e2e
+SHA1: 0b4772f947ddc7d23780cea9130647dd49b8dc38
+SHA256: ec0fd70e642b326fa16fede65bfc8cbce3ec9b934ddf17fa47016b28b3eb76df
 Section: Tweaks
 Description: 录屏/截图，自动套壳、水印工具，支持iOS14-17所有越狱
 Author: iosdump
@@ -832,6 +880,87 @@ Description: 录屏/截图，自动套壳、水印工具，支持iOS14-17所有�
 Author: iosdump
 Name: SHELLX
 
+Package: com.iosdump.shellx
+Version: 1.0.0
+Architecture: iphoneos-arm64e
+Maintainer: iosdump
+Installed-Size: 764
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/com.iosdump.shellx_1.0.0_iphoneos-arm64e.deb
+Size: 126828
+MD5sum: 63387223d12630b55d7cc16a568ba34a
+SHA1: b37b681c2a52169b24b83a92520e813015b3820b
+SHA256: 41dec083e2a72b98015f841f4d0b4dd88f73bcfcde3639127cd10eea1f1e8330
+Section: Tweaks
+Description: 录屏/截图，自动套壳、水印工具，支持iOS14-17所有越狱
+Author: iosdump
+Name: SHELLX
+
+Package: com.iosdump.zone
+Version: 0.0.8
+Architecture: iphoneos-arm64
+Maintainer: iosdump
+Installed-Size: 664
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/com.iosdump.zone_0.0.8_iphoneos-arm64.deb
+Size: 129782
+MD5sum: e2c15180f0f0ecd27a8ac01a67d700af
+SHA1: 10e103cbccead6a9c0a0693584c59ef111f8d100
+SHA256: e185d85a6919e6a2efdc7cfd300204a1420bfc5819d8b50ddee4e05629e5459d
+Section: Tweaks
+Description: Zone 插件用于设置.tendies交互壁纸/视频壁纸 支持iOS14-17
+Author: iosdump
+Name: Zone
+
+Package: com.iosdump.zone
+Version: 0.0.8
+Architecture: iphoneos-arm64e
+Maintainer: iosdump
+Installed-Size: 648
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/com.iosdump.zone_0.0.8_iphoneos-arm64e.deb
+Size: 129230
+MD5sum: 280450961fb44da6980a3154d1370504
+SHA1: b28fe6c85e7c4a02eb2b1129611ed000ea6a0bb4
+SHA256: b79a8fca79d3a51516dc6fa35d011a863c0a711edd79b4eb3ee6e73d17974b8b
+Section: Tweaks
+Description: Zone 插件用于设置.tendies交互壁纸/视频壁纸 支持iOS14-17
+Author: iosdump
+Name: Zone
+
+Package: com.iosdump.zone
+Version: 0.0.8
+Architecture: iphoneos-arm
+Maintainer: iosdump
+Installed-Size: 664
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/com.iosdump.zone_0.0.8_iphoneos-arm.deb
+Size: 129766
+MD5sum: 958193c3bc4b87f9de5c6e865822c944
+SHA1: d75ebb06b3c23d33439164d616e168534ba434e7
+SHA256: a1759b2feb9dea11dd072e4c4766ac30782cda34a252277cd7056a03bc7d836c
+Section: Tweaks
+Description: Zone 插件用于设置.tendies交互壁纸/视频壁纸 支持iOS14-17
+Author: iosdump
+Name: Zone
+
+Package: com.m4fn3.k2gecamen
+Version: 1.0.5
+Architecture: iphoneos-arm
+Maintainer: mafu
+Installed-Size: 6220
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.ccsupport
+Filename: ./debs/com.m4fn3.k2gecamen_1.0.5_iphoneos-arm.deb
+Size: 2113536
+MD5sum: ddcd681c995a36622fe52027aa8f7d6d
+SHA1: fa9d00fa20541faf3a1baf9898efdcf98eaba863
+SHA256: e8e3c129809b60bd556f7e665cc383f0497dc00060b3f12ec541ec69a328a789
+Section: Tweaks
+Description: Capture moments with photos, videos, and audio in the background with ease.
+Author: mafu
+Icon: https://m4fn3.github.io/repo/web/images/K2gecamen.png
+Name: K2gecamen (简体中文版)
+
 Package: com.m4fn3.k2gecamen
 Version: 1.0.5
 Architecture: iphoneos-arm64e
@@ -867,22 +996,22 @@ Author: mafu
 Icon: https://m4fn3.github.io/repo/web/images/K2gecamen.png
 Name: K2gecamen (简体中文版)
 
-Package: com.m4fn3.k2gecamen
-Version: 1.0.5
-Architecture: iphoneos-arm
-Maintainer: mafu
-Installed-Size: 6220
-Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.ccsupport
-Filename: ./debs/com.m4fn3.k2gecamen_1.0.5_iphoneos-arm.deb
-Size: 2113536
-MD5sum: ddcd681c995a36622fe52027aa8f7d6d
-SHA1: fa9d00fa20541faf3a1baf9898efdcf98eaba863
-SHA256: e8e3c129809b60bd556f7e665cc383f0497dc00060b3f12ec541ec69a328a789
+Package: com.miguelaka95.bettercc.rootless
+Version: 0.0.54
+Architecture: iphoneos-arm64
+Maintainer: 来了老弟 h_h_x_t
+Installed-Size: 1828
+Depends: mobilesubstrate, firmware (>= 14), ws.hbang.common (>= 1.17), com.opa334.ccsupport
+Filename: ./debs/com.miguelaka95.bettercc.rootless_0.0.54_iphoneos-arm64.deb
+Size: 317664
+MD5sum: 574880a359d97f41c4831767c3ed6484
+SHA1: 5cfe23ac88085b4d75034749e8eb736e804b98e4
+SHA256: 4602e6868e45e1c50538fd559270b725a74400d9f8b7fc0b4a6ddfa1eb87f293
 Section: Tweaks
-Description: Capture moments with photos, videos, and audio in the background with ease.
-Author: mafu
-Icon: https://m4fn3.github.io/repo/web/images/K2gecamen.png
-Name: K2gecamen (简体中文版)
+Description: Customize your Control Center! Invisible Modules.RearrangeConnectivity Toggles.Change Modules Size.Weather Widget.2023-10-13 Fixed weather display null problem，控制中心音乐模块占位，数据链接排版，增加天气等等,2023-10-13修复天气显示null问题_________仅测试，有问题请卸载，作者没对rootless支持，勿扰他
+Author: Miguelaka95
+Name: BetterCC(Rootless)
+Sponsor: 来了老弟 h_h_x_t
 
 Package: com.nathan.internalstoragesettings
 Version: 1.0.1
@@ -895,21 +1024,6 @@ Size: 3568
 MD5sum: fb1d22f5b80557904831f0aff6107531
 SHA1: 865bacab54871d2450acf6b213de18811e0e725a
 SHA256: 38e829feac46a2ae2c489dd6aca199e2e004792c701c305f5c581e199790291b
-Section: Tweaks
-Description: Tweak to enable the hidden storage settings
-Author: Nathan Senter
-Name: InternalStorageSettings
-
-Package: com.nathan.internalstoragesettings
-Version: 1.0.1
-Architecture: iphoneos-arm
-Maintainer: Nathan Senter
-Installed-Size: 136
-Filename: ./debs/com.nathan.internalstoragesettings_1.0.1_iphoneos-arm.deb
-Size: 2318
-MD5sum: 552fb81437fd8ddf539447bd683d19f9
-SHA1: 2476a1b1264e67849d5c204fbd68b81de8a45759
-SHA256: 3e8bdac1338210554a6eacc44175088c6c6f3572a2f078d1f913c9c7e64e4143
 Section: Tweaks
 Description: Tweak to enable the hidden storage settings
 Author: Nathan Senter
@@ -930,23 +1044,20 @@ Description: Tweak to enable the hidden storage settings
 Author: Nathan Senter
 Name: InternalStorageSettings
 
-Package: com.netskao.filzacrack
-Version: 1.1-9
-Architecture: iphoneos-arm64e
-Maintainer: Nets
-Installed-Size: 120
-Pre-Depends: rootless-compat(>= 0.9)
-Depends: firmware (>= 15.0), mobilesubstrate
-Filename: ./debs/com.netskao.filzacrack_1.1-9_iphoneos-arm64e.deb
-Size: 39678
-MD5sum: 492cabddeea28bced218e4773fe43828
-SHA1: 68bd0ddcbbd80ec116daccb5e5fb856bd8587b3f
-SHA256: d6f2f178588cd86e03550e60c0c29059da7e0615d6f3fa78b069f9de769e98f3
-Section: Netskao-Tweaks
-Description: Filza Crack
-Author: Netskao
-Name: Filza Crack
-Sileodepiction: https://jailrepo.initnil.com/api?Package=com.netskao.filzacrack
+Package: com.nathan.internalstoragesettings
+Version: 1.0.1
+Architecture: iphoneos-arm
+Maintainer: Nathan Senter
+Installed-Size: 136
+Filename: ./debs/com.nathan.internalstoragesettings_1.0.1_iphoneos-arm.deb
+Size: 2318
+MD5sum: 552fb81437fd8ddf539447bd683d19f9
+SHA1: 2476a1b1264e67849d5c204fbd68b81de8a45759
+SHA256: 3e8bdac1338210554a6eacc44175088c6c6f3572a2f078d1f913c9c7e64e4143
+Section: Tweaks
+Description: Tweak to enable the hidden storage settings
+Author: Nathan Senter
+Name: InternalStorageSettings
 
 Package: com.netskao.filzacrack
 Version: 1.1-9
@@ -959,6 +1070,24 @@ Size: 28732
 MD5sum: 3af07506bc39a1bba25ad37c4623479d
 SHA1: d1aac2b82d95c13b30217ac22af51df0089fb5e5
 SHA256: 9d0b7969ab3b48c384306e55a10cf310a6feebd2a0c8c35d75e1392e16a1f9a0
+Section: Netskao-Tweaks
+Description: Filza Crack
+Author: Netskao
+Name: Filza Crack
+Sileodepiction: https://jailrepo.initnil.com/api?Package=com.netskao.filzacrack
+
+Package: com.netskao.filzacrack
+Version: 1.1-9
+Architecture: iphoneos-arm64e
+Maintainer: Nets
+Installed-Size: 120
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: firmware (>= 15.0), mobilesubstrate
+Filename: ./debs/com.netskao.filzacrack_1.1-9_iphoneos-arm64e.deb
+Size: 39678
+MD5sum: 492cabddeea28bced218e4773fe43828
+SHA1: 68bd0ddcbbd80ec116daccb5e5fb856bd8587b3f
+SHA256: d6f2f178588cd86e03550e60c0c29059da7e0615d6f3fa78b069f9de769e98f3
 Section: Netskao-Tweaks
 Description: Filza Crack
 Author: Netskao
@@ -1051,26 +1180,6 @@ Name: Stheno (最终版)
 
 Package: com.ps.recordpauses
 Version: 2.0.3
-Architecture: iphoneos-arm64
-Maintainer: PoomSmart
-Installed-Size: 168
-Depends: mobilesubstrate, firmware (>= 14.0), firmware (<< 18.0)
-Conflicts: org.thebigboss.recordpause, com.spicat.recordpause, com.ps.recordpause
-Replaces: org.thebigboss.recordpause, com.spicat.recordpause, com.ps.recordpause
-Provides: org.thebigboss.recordpause, com.spicat.recordpause,com.ps.recordpause
-Filename: ./debs/com.ps.recordpauses_2.0.3_iphoneos-arm64.deb
-Size: 10132
-MD5sum: c6774dc21f1183070116a989689b50c6
-SHA1: 01057a62d3cdc3de4238ce255903173909fbb7f4
-SHA256: b0a9d5e6c8074f54a898f8d82a99d217c213983d44a1a79685ab3c53ecff02d4
-Section: Tweaks
-Description: 录像暂停 Pause/resume video recording in iOS Camera app.
-Author: PoomSmart
-Icon: https://TrollStoreX.Github.io/sileodepiction/repo_pic/camera.png
-Name: 录像暂停 RecordPause
-
-Package: com.ps.recordpauses
-Version: 2.0.3
 Architecture: iphoneos-arm64e
 Maintainer: PoomSmart
 Installed-Size: 168
@@ -1084,6 +1193,26 @@ Size: 13536
 MD5sum: 10feb2a7d54ec5b3229d4e8f62fab08c
 SHA1: 7812ea0eb6caf119d99eacc0f8f2b612baf6fa6b
 SHA256: d5250873021ccaf715efc81ecc724405d643f4e725a8825fab0d8f108bb4ee14
+Section: Tweaks
+Description: 录像暂停 Pause/resume video recording in iOS Camera app.
+Author: PoomSmart
+Icon: https://TrollStoreX.Github.io/sileodepiction/repo_pic/camera.png
+Name: 录像暂停 RecordPause
+
+Package: com.ps.recordpauses
+Version: 2.0.3
+Architecture: iphoneos-arm64
+Maintainer: PoomSmart
+Installed-Size: 168
+Depends: mobilesubstrate, firmware (>= 14.0), firmware (<< 18.0)
+Conflicts: org.thebigboss.recordpause, com.spicat.recordpause, com.ps.recordpause
+Replaces: org.thebigboss.recordpause, com.spicat.recordpause, com.ps.recordpause
+Provides: org.thebigboss.recordpause, com.spicat.recordpause,com.ps.recordpause
+Filename: ./debs/com.ps.recordpauses_2.0.3_iphoneos-arm64.deb
+Size: 10132
+MD5sum: c6774dc21f1183070116a989689b50c6
+SHA1: 01057a62d3cdc3de4238ce255903173909fbb7f4
+SHA256: b0a9d5e6c8074f54a898f8d82a99d217c213983d44a1a79685ab3c53ecff02d4
 Section: Tweaks
 Description: 录像暂停 Pause/resume video recording in iOS Camera app.
 Author: PoomSmart
@@ -1154,6 +1283,40 @@ Description: JSC security hardening for WebContent process. Configures JavaScrip
 Author: roothide
 Name: lockdown
 
+Package: com.simon.ccmusic
+Version: 1.0.5
+Architecture: iphoneos-arm64
+Maintainer: simon
+Installed-Size: 428
+Depends: mobilesubstrate, firmware (>= 13.0)
+Filename: ./debs/com.simon.ccmusic_1.0.5_iphoneos-arm64.deb
+Size: 28812
+MD5sum: 937a5058e592ac9c39e6c105fca4bfc7
+SHA1: c1f7b8bcbaf2cb2a788d62dc6949959147d6608d
+SHA256: 7e812ac28768f632955efca11ab064c8e1a457fd8b21abac1325dc4e66445bbf
+Section: 你的iPhone不止于此
+Description: 为控制中心的音乐模块添加动画
+Author: simon
+Icon: https://qi-ting-zhang.github.io/sileo/images/icon/yymk.png
+Name: 控制中心音乐模块动画
+Sileodepiction: https://qi-ting-zhang.github.io/sileo/sileodepiction/yymk.json
+
+Package: com.simon.ccweathermodule
+Version: 1.0.4
+Architecture: iphoneos-arm64
+Maintainer: simon
+Installed-Size: 356
+Depends: mobilesubstrate, firmware (>= 14.0)
+Filename: ./debs/com.simon.ccweathermodule_1.0.4_iphoneos-arm64.deb
+Size: 92602
+MD5sum: 5f02e4b95febca197e076807f58364e3
+SHA1: d508a400b1dadf035d527fb7f982d265b93cb306
+SHA256: 77bdda036184bd87b9559ba799a41f6473b10a33dcbac7f6ea38e999a53d448d
+Section: Tweaks
+Description: 控制中心的天气模块。 显示当前天气、温度和每小时预报。
+Author: simon
+Name: CCWeather Module
+
 Package: com.sini.3dappversionspoofer
 Version: 2.1.1
 Architecture: iphoneos-arm64
@@ -1209,22 +1372,6 @@ Name: StoreSwitcher 2
 
 Package: com.subdiox.storeswitcher2
 Version: 1.0.1
-Architecture: iphoneos-arm
-Maintainer: iosdump
-Installed-Size: 216
-Depends: firmware (>= 11), mobilesubstrate
-Filename: ./debs/com.subdiox.storeswitcher2_1.0.1_iphoneos-arm.deb
-Size: 22866
-MD5sum: e7241586827de4795cc7ec36175b9c5e
-SHA1: 4333ef162044a9c138dd5962ad38039df74d8451
-SHA256: cdcf86736f4b851ef78efb5aa7cc2814a56e0db5f1c038a2499cb6b8446e2737
-Section: Tweaks
-Description: Adds a button to switch account in App Store account page on iOS 11+.
-Author: subdiox
-Name: StoreSwitcher 2
-
-Package: com.subdiox.storeswitcher2
-Version: 1.0.1
 Architecture: iphoneos-arm64
 Maintainer: iosdump
 Installed-Size: 216
@@ -1234,6 +1381,22 @@ Size: 22860
 MD5sum: c1c74bcdb70a422b7ded0d1c26f25459
 SHA1: 7b02f5c0331389bebd440d2996684ae90d8f80a8
 SHA256: 3a07ed55194913121f5bb0ff27703d9fa86e06972b3f012ea8e813104a6eace6
+Section: Tweaks
+Description: Adds a button to switch account in App Store account page on iOS 11+.
+Author: subdiox
+Name: StoreSwitcher 2
+
+Package: com.subdiox.storeswitcher2
+Version: 1.0.1
+Architecture: iphoneos-arm
+Maintainer: iosdump
+Installed-Size: 216
+Depends: firmware (>= 11), mobilesubstrate
+Filename: ./debs/com.subdiox.storeswitcher2_1.0.1_iphoneos-arm.deb
+Size: 22866
+MD5sum: e7241586827de4795cc7ec36175b9c5e
+SHA1: 4333ef162044a9c138dd5962ad38039df74d8451
+SHA256: cdcf86736f4b851ef78efb5aa7cc2814a56e0db5f1c038a2499cb6b8446e2737
 Section: Tweaks
 Description: Adds a button to switch account in App Store account page on iOS 11+.
 Author: subdiox
@@ -1308,23 +1471,6 @@ Name: Filza File Manager 64-bit
 
 Package: com.vita.wchook
 Version: 1.0-1
-Architecture: iphoneos-arm
-Maintainer: vita
-Installed-Size: 204
-Depends: firmware (>= 5.0), mobilesubstrate
-Filename: ./debs/com.vita.wchook_1.0-1_iphoneos-arm.deb
-Size: 21688
-MD5sum: 3ec5bf07620dfccee864f7072474b47a
-SHA1: 36f6a9d777e69445a49614a96f109b822aa862bd
-SHA256: 55d85bbd68374fd789a3b1a2bfbc64c93424f43a8bc95ad793ed61d02daa87dd
-Section: Tweaks
-Priority: optional
-Description: 重构简化代码，微信聊天左滑引用消息，无设置页，安装默认生效
-Author: vita
-Name: WCHook (微信左滑引用)
-
-Package: com.vita.wchook
-Version: 1.0-1
 Architecture: iphoneos-arm64
 Maintainer: vita
 Installed-Size: 204
@@ -1334,6 +1480,23 @@ Size: 21752
 MD5sum: 7fb47d588fd4412702cd1c231c60546b
 SHA1: 31adeb4d6b4385339c13e3298fc8418858fbf954
 SHA256: 0351281c0ac8cfd7cc9176819db7c9e1295a8f7c1eb423e4132e90df604c0ee5
+Section: Tweaks
+Priority: optional
+Description: 重构简化代码，微信聊天左滑引用消息，无设置页，安装默认生效
+Author: vita
+Name: WCHook (微信左滑引用)
+
+Package: com.vita.wchook
+Version: 1.0-1
+Architecture: iphoneos-arm
+Maintainer: vita
+Installed-Size: 204
+Depends: firmware (>= 5.0), mobilesubstrate
+Filename: ./debs/com.vita.wchook_1.0-1_iphoneos-arm.deb
+Size: 21688
+MD5sum: 3ec5bf07620dfccee864f7072474b47a
+SHA1: 36f6a9d777e69445a49614a96f109b822aa862bd
+SHA256: 55d85bbd68374fd789a3b1a2bfbc64c93424f43a8bc95ad793ed61d02daa87dd
 Section: Tweaks
 Priority: optional
 Description: 重构简化代码，微信聊天左滑引用消息，无设置页，安装默认生效
