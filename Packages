@@ -98,6 +98,24 @@ Description: Prevent Weather Module with BetterCC crash your idevice
 Author: 0xkuj
 Name: BetterCCCrashProtect
 
+Package: com.Axs.ccaudioplay
+Version: 0.0.1-94+debug
+Architecture: iphoneos-arm64
+Maintainer: Axs
+Installed-Size: 29540
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.Axs.ccaudioplay_0.0.1-94+debug_iphoneos-arm64.deb
+Size: 25090852
+MD5sum: 6173a6c3780916fff1a046077ba38e14
+SHA1: 54d7c3fe28c733a900adff57dca21145d56383c0
+SHA256: ce49c801fbd504679d3797daa65af198abdae1067dc8631395d5de3f2e7e2d07
+Section: 控制中心
+Description: 播放器美化 不支IOS15
+Author: thefool
+Icon: https://axs66.github.io/pro/icon/ccaudioplay.png
+Name: CCAudioPlay控制中心播放器
+Sileodepiction: https://axs66.github.io/pro/sileodepiction/ccaudioplay/js.json
+
 Package: com.anthopak.pancake-rootless
 Version: 2.3
 Architecture: iphoneos-arm64e
@@ -138,6 +156,71 @@ Icon: https://repo.anthopak.dev/assets/com.anthopak.pancake-rootless/icon.png
 Moderndepiction: https://repo.anthopak.dev/depiction/native/com.anthopak.pancake-rootless.json
 Name: PanCake (简体中文版)
 Sileodepiction: https://repo.anthopak.dev/depiction/native/com.anthopak.pancake-rootless.json
+
+Package: com.axs.ios16dao
+Version: 5.2.0-205
+Architecture: iphoneos-arm64
+Maintainer: Axs
+Installed-Size: 664
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist
+Filename: ./debs/com.zfsn.dongtaidao_0.0.1_iphoneos-arm64.deb
+Size: 78328
+MD5sum: d6c8ab29cf4b566451c5deb4f1982523
+SHA1: 4671249bd0defcc1d7cd0d69233ab327c60adfa9
+SHA256: 6d560bb58d1657780214dea49cabdeeeb7a9016b404eaa2526a28205ce900b9b
+Section: 灵动岛
+Description: 灵动岛媒体美化增强，支持 PNG/JPG/GIF/MP4,录屏隐藏原生岛与阴影兼容控制。集成授权校验联系:VCR66T
+Author: Axs
+Icon: https://axs66.github.io/pro/icon/dynamicnotland.png
+Name: ios16灵动岛
+Sileodepiction: https://axs66.github.io/pro/sileodepiction/ios16dao/js.json
+
+Package: com.axs.screenrecording
+Version: 5.2.0-35
+Architecture: iphoneos-arm64
+Maintainer: Axs
+Installed-Size: 508
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader
+Filename: ./debs/com.zfsn.taoke_0.0.1_iphoneos-arm64.deb
+Size: 46396
+MD5sum: 8db00ea2cae55545d67cc9a45e255050
+SHA1: eb13ae79fba1203ee86bdc0ca10d2cf3c3e02192
+SHA256: 0e648846b7e8f40413637027daa5d9f1f0e5e627cd3e7711d909c0ef9a33796b
+Section: Tweaks
+Description: 全局录屏自动添加你预先放好的水印和套壳素材，让你的分享更加专业。
+Author: Axs
+Icon: https://axs66.github.io/pro/icon/screenrecording.png
+Name: 全局水印&套壳『截屏.录屏』
+Sileodepiction: https://axs66.github.io/pro/sileodepiction/screenrecording/js.json
+
+Package: com.axs.switchicon
+Version: 5.2.0-131
+Architecture: iphoneos-arm64
+Maintainer: Axs
+Installed-Size: 836
+Depends: mobilesubstrate, preferenceloader, firmware (>= 15.0)
+Filename: ./debs/com.zfsn.kaiguan_0.0.1_iphoneos-arm64.deb
+Size: 122528
+MD5sum: ab68e821f2630db3ae297f49732e978a
+SHA1: 54b7b2d01ec634d93b465c5f5b565030f11b8f76
+SHA256: 35de138df50dae2c4c160bfbd63bd0189d31d2cda2ca8f14836cca8962f53dc4
+Section: Tweaks
+Description: 一个强大的全局 UISwitch 开关控件，让原生开关显示更有个性；付费插件，需要请联系微信：VCR66T
+ * 一、纯代码开关组
+ * 1. 动态组：昼夜开关、血瞳开关、液态开关，支持流畅的过渡动画与动态视觉效果；
+ * 2. 静态组：日月开关、水滴开关、立体开关、温度开关、星月开关，覆盖多种精致静态样式；
+ * 3. 液态开关：复刻 iOS 26 风格，并支持开启状态颜色自定义；
+ * 4. 日月开关：支持太阳、云朵、月亮、星星颜色自定义，一个开关也能千变万化。
+ * 二、素材开关组
+ * 1. 素材开关：在指定路径放置 on.png/off.png 开关素材；
+ * 2. 支持创建多套，在插件面板自由切换。
+ * 三、温馨提示
+ * 1. 早买早享受，后续免费更新；
+ * 2. 后续增加新样式，新用户可能面临涨价。
+Author: Axs
+Icon: https://axs66.github.io/pro/icon/switchicon.png
+Name: Switch Icon
+Sileodepiction: https://axs66.github.io/pro/sileodepiction/switchicon/js.json
 
 Package: com.charlieleung.trollopenjb
 Version: 1.3.7
