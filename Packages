@@ -164,6 +164,24 @@ Icon: https://axs66.github.io/pro/icon/ccaudioplay.png
 Name: CCAudioPlay控制中心播放器
 Sileodepiction: https://axs66.github.io/pro/sileodepiction/ccaudioplay/js.json
 
+Package: com.Axs.kzmh
+Version: 1.0.8
+Architecture: iphoneos-arm64
+Maintainer: Axs
+Installed-Size: 392
+Depends: mobilesubstrate, firmware (>= 15.0)
+Filename: ./debs/com.zfsn.kzzx_0.0.1_iphoneos-arm64.deb
+Size: 25672
+MD5sum: ea686e6c80e0f66c35ce8484728ba587
+SHA1: 36e5d65057a17c29df82b2f11bdcc31d1baa053f
+SHA256: bc313483a4e573d7da9903d276a3b31cf04cfdb2901545bdbfe71f4c2fb45d6c
+Section: 控制中心
+Description: 控制中心美化。
+Author: binglan
+Icon: https://axs66.github.io/pro/icon/kzmh.png
+Name: 控制中心美化
+Sileodepiction: https://axs66.github.io/pro/sileodepiction/kzmh/js.json
+
 Package: com.anthopak.pancake-rootless
 Version: 2.3
 Architecture: iphoneos-arm64e
