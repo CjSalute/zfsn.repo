@@ -339,6 +339,40 @@ Description: TrollOpen 的越狱版本，支持 ios16 及以上，免费公开�
 Author: Charlie Leung
 Name: TrollOpen
 
+Package: com.crctdd.surgectl
+Version: 0.0.1
+Architecture: iphoneos-arm64
+Maintainer: RrrankkK
+Installed-Size: 720
+Depends: firmware (>= 14.0), com.opa334.ccsupport
+Filename: ./debs/com.crctdd.surgectl_0.0.1_iphoneos-arm64.deb
+Size: 22106
+MD5sum: 77d5936b67b630691b842cbead1222f8
+SHA1: 7d462570b9bf015fab22c808aac35cb2d3ce262a
+SHA256: f90e97f972c965663fc55454987f73c5f01fbd7fa4233f1fa24519cd4f87994a
+Section: Utilities
+Priority: optional
+Description: 终端切换Surge流量模式并附带控制中心组件。终端使用: surgectl [direct|rule|proxy|status]。控制中心: 在设置中添加对应按钮。
+Author: RrrankkK
+Name: SurgeCTL
+
+Package: com.crctdd.surgectl
+Version: 0.0.1
+Architecture: iphoneos-arm64e
+Maintainer: RrrankkK
+Installed-Size: 720
+Depends: firmware (>= 14.0), com.opa334.ccsupport
+Filename: ./debs/com.crctdd.surgectl_0.0.1_iphoneos-arm64e.deb
+Size: 20692
+MD5sum: 06a2cfeb814ccd8d78a3433a167084bb
+SHA1: 6989720a2fdffc95cc592543211c4b705178c2da
+SHA256: 11dd236f11288208a9c25c457dd7a2dbf0d52c1d448b8fbcb27eb91da4f39ee9
+Section: Utilities
+Priority: optional
+Description: 终端切换Surge流量模式并附带控制中心组件。终端使用: surgectl [direct|rule|proxy|status]。控制中心: 在设置中添加对应按钮。
+Author: RrrankkK
+Name: SurgeCTL
+
 Package: com.curtin.pkc
 Version: 0.9-5
 Architecture: iphoneos-arm
@@ -1810,40 +1844,6 @@ Description: 通过点击主屏幕背景快速锁定，锁定/解锁的触觉反
 Author: dvntm
 Icon: https://raw.githubusercontent.com/dayanch96/FastLock/refs/heads/main/Sileo/icon.png
 Name: FastLock
-
-Package: com.zfsn.surgectl
-Version: 0.0.1-1
-Architecture: iphoneos-arm64e
-Maintainer: 追风少年
-Installed-Size: 4
-Depends: firmware (>= 14.0)
-Filename: ./debs/com.zfsn.surgectl_0.0.1-1_iphoneos-arm64e.deb
-Size: 1238
-MD5sum: 976129d47907477d0d9ef2c1228b0626
-SHA1: 6d4e4ec740159bc3e9e6934bdaf7a2d62453e722
-SHA256: 3e57ee14da46991e08d6d037c4e6e9e699f779633b2a2b4149d093b262118110
-Section: Utilities
-Priority: optional
-Description: 终端切换Surge流量模式。使用方法：终端输入surgectl direct切换直连、surgectl rule切换规则、surgectl proxy切换全局、surgectl status查看当前模式
-Author: 追风少年
-Name: SurgeCTL (追风少年)
-
-Package: com.zfsn.surgectl
-Version: 0.0.1-1
-Architecture: iphoneos-arm64
-Maintainer: 追风少年
-Installed-Size: 4
-Depends: firmware (>= 14.0)
-Filename: ./debs/com.zfsn.surgectl_0.0.1-1_iphoneos-arm64.deb
-Size: 1270
-MD5sum: 0b21359d9b1d93fcb05992108bdda4df
-SHA1: 8b22eceb7f5bfcf22547c47442bebfaeaec9f217
-SHA256: 40c699ecb1f16cef41fcc1fff57d2930d714d85b406b57972ecbac9e1a9590a8
-Section: Utilities
-Priority: optional
-Description: 终端切换Surge流量模式。使用方法：终端输入surgectl direct切换直连、surgectl rule切换规则、surgectl proxy切换全局、surgectl status查看当前模式
-Author: 追风少年
-Name: SurgeCTL (追风少年)
 
 Package: roothide.patches.filza
 Version: 0.5-4
