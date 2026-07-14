@@ -322,6 +322,24 @@ Description: 这是一款全新的开关主题，用皮卡丘的元素来装饰�
 Author: 白衣
 Name: SwitchTheme-皮卡丘
 
+Package: com.be-huge.floating-view
+Version: 1.6.0-licensed
+Architecture: iphoneos-arm64
+Maintainer: be-huge (Modified)
+Installed-Size: 2700
+Depends: dev.theos.orion (>= 1.0.0), firmware (>= 12.2)
+Filename: ./debs/com.be-huge.floating-view_1.6.0-licensed_iphoneos-arm64.deb
+Size: 654528
+MD5sum: 158603b5a1daf0be4ce47c97542d1487
+SHA1: e6d58a8c63a7fbf6f17cc34e757f745f5e718af2
+SHA256: d2ffc5d555456b4d58f4c0b2e6ea1917f98d3ca75e55d70ec318d10f6a1b523c
+Section: Tweaks
+Description: 分屏，不必太复杂，一切从简即可。
+Author: be-huge
+Icon: https://s1.imagehub.cc/images/2025/01/11/a6ee9b7d3555d062c59b68c2c71c7406.png
+Name: floatingView
+Sileodepiction: https://raw.githubusercontent.com/Wkkyy00/SileoDepiction/refs/heads/main/floatingView.json
+
 Package: com.be-huge.insulation
 Version: 0.1.36
 Architecture: iphoneos-arm64
