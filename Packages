@@ -437,6 +437,40 @@ Description: TrollOpen 的越狱版本，支持 ios16 及以上，免费公开�
 Author: Charlie Leung
 Name: TrollOpen
 
+Package: com.colorblack.bottomx
+Version: 0.2.70
+Architecture: iphoneos-arm64
+Maintainer: Color Black
+Installed-Size: 3428
+Depends: mobilesubstrate | ellekit, preferenceloader, firmware (>= 14.0)
+Filename: ./debs/com.colorblack.bottomx_0.2.70_iphoneos-arm64.deb
+Size: 828512
+MD5sum: ce5fe49d17c8ab0b0a103c64a900e795
+SHA1: 4f20ab549c00950a981e1a92fd443d7216fa6071
+SHA256: 5833c898d4850456a06f66c233661b41fd9a34e59948a112376b64e765deda8e
+Section: Tweaks
+Description: 点击底部小白条逐级返回，到app最顶层就会返回桌面，新增学习返回模式，视觉返回保留。; 感兴趣可以加 QQ 群 2059 28931
+Author: Color Black
+Icon: https://huayuarc.github.io/icon/Bottom.png
+Name: Bottom-x
+
+Package: com.colorblack.bottomx
+Version: 0.2.70
+Architecture: iphoneos-arm64e
+Maintainer: Color Black
+Installed-Size: 3428
+Depends: mobilesubstrate | ellekit, preferenceloader, firmware (>= 14.0)
+Filename: ./debs/com.colorblack.bottomx_0.2.70_iphoneos-arm64e.deb
+Size: 828516
+MD5sum: 658adde915fe0c881f2750894b5055d5
+SHA1: 22293d9830f76dd2500a119b2eff1d32cdcaefaa
+SHA256: b90d39a16183cdbd2ea894ac58d78c9def15f80cbead0f3fb838f1d8ce2da995
+Section: Tweaks
+Description: 点击底部小白条逐级返回，到app最顶层就会返回桌面，新增学习返回模式，视觉返回保留。; 感兴趣可以加 QQ 群 2059 28931
+Author: Color Black
+Icon: https://huayuarc.github.io/icon/Bottom.png
+Name: Bottom-x
+
 Package: com.crctdd.surgectl
 Version: 0.0.1
 Architecture: iphoneos-arm64
