@@ -182,6 +182,24 @@ Icon: https://axs66.github.io/pro/icon/togglow.png
 Name: 控制中心发光
 Sileodepiction: https://axs66.github.io/pro/sileodepiction/ccglow/js.json
 
+Package: com.Axs.ccvideo
+Version: 0.0.1
+Architecture: iphoneos-arm64
+Maintainer: Rascal
+Installed-Size: 280
+Depends: firmware (>= 15.0), mobilesubstrate | ellekit
+Filename: ./debs/com.zfsn.kzzxsp_0.0.1_iphoneos-arm64.deb
+Size: 41032
+MD5sum: eca9a5ea20890ea0f5947ab1e7df86dd
+SHA1: c4b50acdbaf718b01306b2255d8e530e8b3ff228
+SHA256: 8d148610f6f4ce039f11460b299cb3c000863ea8bce219e34a1570bb9797b219
+Section: 控制中心
+Description: 在手机设置，控制中心里面添加模块设置。
+Author: Rascal
+Icon: https://axs66.github.io/pro/icon/ccvideo.png
+Name: 控制中心视频
+Sileodepiction: https://axs66.github.io/pro/sileodepiction/ccvideo/js.json
+
 Package: com.Axs.kongzhidiy
 Version: 2.3.3-end
 Architecture: iphoneos-arm64
