@@ -345,6 +345,32 @@ Icon: https://axs66.github.io/pro/icon/screenrecording.png
 Name: 全局水印&套壳『截屏.录屏』
 Sileodepiction: https://axs66.github.io/pro/sileodepiction/screenrecording/js.json
 
+Package: com.axs.snapper3tag
+Version: 5.2.0-16
+Architecture: iphoneos-arm64
+Maintainer: Axs
+Installed-Size: 240
+Depends: mobilesubstrate
+Filename: ./debs/com.axs.snapper3tag_5.2.0-16_iphoneos-arm64.deb
+Size: 26878
+MD5sum: c2180541e3ea1f5d08f838000f93cdde
+SHA1: 999dc32113742814a148fda146c906663c89b4ec
+SHA256: ebb9c7aeb413e52b4a991b14eab3b4beb2e3a9dcbeea8079dc80ff49265bb1a0
+Section: Axs-Tweaks
+Description: Snapper3 截图标记扩展插件。
+ * 颜色选择器：红/黄/蓝/绿/白/黑等6种颜色；
+ * 箭头标记：手指拖拽绘制方向箭头；
+ * 自由画线：手指跟随绘制任意曲线；
+ * 矩形图标：点1次是矩形描边、点2次是矩形填充；
+ * 撤回操作：一键撤销上一步标注；
+ * 保存相册：渲染并写入系统相册；
+ * 复制剪贴板：一键复制标注后截图；
+ * 自定义图标：将 tag.png / tag_menu.png 放入 /var/mobile/Axs/Snapper3图标/ 即可替换。
+Author: Axs
+Icon: https://axs66.github.io/pro/icon/snapper.png
+Name: Snapper3Tag
+Sileodepiction: https://axs66.github.io/pro/sileodepiction/snapper3tag/js.json
+
 Package: com.axs.switchicon
 Version: 5.2.0-131
 Architecture: iphoneos-arm64
@@ -373,6 +399,24 @@ Author: Axs
 Icon: https://axs66.github.io/pro/icon/switchicon.png
 Name: Switch Icon
 Sileodepiction: https://axs66.github.io/pro/sileodepiction/switchicon/js.json
+
+Package: com.baiy.keyboardhook
+Version: 2.0-6+debug
+Architecture: iphoneos-arm64
+Maintainer: baiy(QQ：961666883)
+Installed-Size: 524
+Depends: mobilesubstrate, firmware (>= 15.0)
+Filename: ./debs/com.baiy.keyboardhook_2.0-6+debug_iphoneos-arm64.deb
+Size: 45224
+MD5sum: 9979433a6b3e3a65b9767eaeb43926bd
+SHA1: 67c70db3d673fc6d49ebcf9307829656eb7c2436
+SHA256: e7af048711a524ee734dfe74131c340cda3a0bc2a92c114fcd7c3484606c22eb
+Section: 你的iPhone不止于此
+Description: 关于系统输入法和微信输入法的一些自定义，让键盘更个性化！
+Author: baiy
+Icon: https://qi-ting-zhang.github.io/sileo/images/icon/jp.png
+Name: 微信键盘自定义
+Sileodepiction: https://qi-ting-zhang.github.io/sileo/sileodepiction/jp.json
 
 Package: com.baiy.switchtheme
 Version: 1.0.0
@@ -2369,6 +2413,78 @@ Icon: https://sini921.github.io/repo/sileodepiction/icon/disabledwarning.png
 Name: DisabledWarning(roothide)
 Sileodepiction: https://sini921.github.io/repo/sileodepiction/disabledwarning/js.json
 
+Package: com.sini921.lockscreenhelper
+Version: 0.0.1-12
+Architecture: iphoneos-arm64e
+Maintainer: SINI
+Installed-Size: 668
+Depends: mobilesubstrate (>= 0.9.5000), com.opa334.altlist
+Filename: ./debs/com.sini921.lockscreenhelper_0.0.1-12_iphoneos-arm64e.deb
+Size: 74016
+MD5sum: f0ae4903e1a83dd59949aa33b00aea61
+SHA1: 7e9c95370a715ab6f325ca955da2e9da900750ec
+SHA256: 8029ab8a56f96fd1d9f54ff084df2669cd43243a9a5dff8a795bd97274d26d7c
+Section: 越狱插件
+Description: 锁屏界面相关的简单优化
+Author: SINI
+Icon: https://sini921.github.io/repo/sileodepiction/icon/lockscreenhelper.png
+Name: LockScreenHelper(roothide)
+Sileodepiction: https://sini921.github.io/repo/sileodepiction/lockscreenhelper/js.json
+
+Package: com.sini921.lockscreenhelper
+Version: 0.0.1-12
+Architecture: iphoneos-arm64
+Maintainer: SINI
+Installed-Size: 668
+Depends: mobilesubstrate (>= 0.9.5000), com.opa334.altlist
+Filename: ./debs/com.sini921.lockscreenhelper_0.0.1-12_iphoneos-arm64.deb
+Size: 75834
+MD5sum: 8ab83cd8fa522578fe361f05b0048f41
+SHA1: d4210379a4bf5868d61742d651d81ee39a8a8959
+SHA256: 4768a3e9a52f651d129b7eb6264cf5cd9d45aa8fc4fee5a6df89f947dc190384
+Section: 越狱插件
+Description: 锁屏界面相关的简单优化
+Author: SINI
+Icon: https://sini921.github.io/repo/sileodepiction/icon/lockscreenhelper.png
+Name: LockScreenHelper(rootless)
+Sileodepiction: https://sini921.github.io/repo/sileodepiction/lockscreenhelper/js.json
+
+Package: com.sini921.quickpowerbutton
+Version: 0.0.1-39
+Architecture: iphoneos-arm64e
+Maintainer: SINI
+Installed-Size: 600
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.sini921.quickpowerbutton_0.0.1-39_iphoneos-arm64e.deb
+Size: 89190
+MD5sum: 3af01b647477d00a9236a1e74a58a15b
+SHA1: e624fd8ec36cbb5146bed5e6e76296cbab310899
+SHA256: c8e6c5caa0152e347f07af8244e0311c373adc3aff7afd8bbb1168c285dd8337
+Section: 越狱插件
+Description: 在锁屏界面手电筒与相机中间添加一个快捷按钮，点击后弹出电源选项
+Author: SINI
+Icon: https://sini921.github.io/repo/sileodepiction/icon/quickpowerbutton.png
+Name: QuickPowerButton(roothide)
+Sileodepiction: https://sini921.github.io/repo/sileodepiction/quickpowerbutton/js.json
+
+Package: com.sini921.quickpowerbutton
+Version: 0.0.1-39
+Architecture: iphoneos-arm64
+Maintainer: SINI
+Installed-Size: 620
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.sini921.quickpowerbutton_0.0.1-39_iphoneos-arm64.deb
+Size: 91924
+MD5sum: ad28cb686629c63c2bd1c35b0f398b19
+SHA1: e991b33c2f0a873aeef2c1608043c4f6d5518e17
+SHA256: d90c6de29d8dd1e02fdb399ce63a73b322e0df334e6e6bc343208bc6366a55e8
+Section: 越狱插件
+Description: 在锁屏界面手电筒与相机中间添加一个快捷按钮，点击后弹出电源选项
+Author: SINI
+Icon: https://sini921.github.io/repo/sileodepiction/icon/quickpowerbutton.png
+Name: QuickPowerButton(rootless)
+Sileodepiction: https://sini921.github.io/repo/sileodepiction/quickpowerbutton/js.json
+
 Package: com.subdiox.storeswitcher2
 Version: 1.0.1
 Architecture: iphoneos-arm64e
@@ -2653,6 +2769,74 @@ Description: 给图标添加一层阴影图片。
 Author: zqbb
 Icon: https://s1.imagehub.cc/images/2025/12/26/29fda3e52ac78c6958ecf3b5dac18673.png
 Name: Hello Shadow
+
+Package: com.wkk.kb2hook
+Version: 1.0-1
+Architecture: iphoneos-arm64e
+Maintainer: wkk
+Installed-Size: 168
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.wkk.kb2hook_1.0-1_iphoneos-arm64e.deb
+Size: 3020
+MD5sum: 5dcb227d027cd80abee983ec8f87fe27
+SHA1: 7324f817bc53f0e47c47875372a21185c1383fa0
+SHA256: 566f350f8e45e6f66952dde6ebaff3aa0756763eb362a876a971a0108b20713a
+Section: Tweaks
+Description: 圆角度为11，源里另一个为10，有些人喜欢更圆润一点，自行选择吧，两个版本均不会抽搐/失效/无需重启用户空间！
+Author: wkk
+Icon: https://s1.imagehub.cc/images/2025/12/26/29fda3e52ac78c6958ecf3b5dac18673.png
+Name: 系统键盘圆角2
+
+Package: com.wkk.kb2hook
+Version: 1.0-1
+Architecture: iphoneos-arm64
+Maintainer: wkk
+Installed-Size: 168
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.wkk.kb2hook_1.0-1_iphoneos-arm64.deb
+Size: 3084
+MD5sum: c89a94a66458fbd26a5bcfc76abfa88e
+SHA1: 6db997d99f735e02df26e5d58a4c7d4bcc91bf26
+SHA256: aef6e931a9bad23805ee93847493653417a1b8677376de81b39e6b7de0bbf6c8
+Section: Tweaks
+Description: 圆角度为11，源里另一个为10，有些人喜欢更圆润一点，自行选择吧，两个版本均不会抽搐/失效/无需重启用户空间！
+Author: wkk
+Icon: https://s1.imagehub.cc/images/2025/12/26/29fda3e52ac78c6958ecf3b5dac18673.png
+Name: 系统键盘圆角2
+
+Package: com.wkk.kbhook
+Version: 1.0-1
+Architecture: iphoneos-arm64
+Maintainer: wkk
+Installed-Size: 168
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.wkk.kbhook_1.0-1_iphoneos-arm64.deb
+Size: 2940
+MD5sum: ff9be7d488c1ee6fb9fe720490922b07
+SHA1: b7c4b223568c9585bd72dc2f7161d2b3591d857f
+SHA256: f7ba728f96f65d0be48baa1a9db4ea946cf96de1042ae0a1e50fe48827f32362
+Section: Tweaks
+Description: cool
+Author: wkk
+Icon: https://s1.imagehub.cc/images/2025/12/26/29fda3e52ac78c6958ecf3b5dac18673.png
+Name: 系统键盘圆角
+
+Package: com.wkk.kbhook
+Version: 1.0-1
+Architecture: iphoneos-arm64e
+Maintainer: wkk
+Installed-Size: 168
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.wkk.kbhook_1.0-1_iphoneos-arm64e.deb
+Size: 2880
+MD5sum: 10093a44d4e6ba650981513e2299572d
+SHA1: b1ed5d0b583d860186f44ae0823b2bbb0bc6b9f4
+SHA256: 808ab7828b0ef4a985a0cc2fd6778b57ca0136814d366d13451879438ded8c61
+Section: Tweaks
+Description: cool
+Author: wkk
+Icon: https://s1.imagehub.cc/images/2025/12/26/29fda3e52ac78c6958ecf3b5dac18673.png
+Name: 系统键盘圆角
 
 Package: roothide.patches.filza
 Version: 0.5-4
