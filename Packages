@@ -2550,6 +2550,57 @@ Description: 音量管理，就是这么简单。包含功能：混响、多元�
 Author: sunshinesong
 Name: VolumeManager
 
+Package: com.susudear.stayshot
+Version: 0.5.2
+Architecture: iphoneos-arm64
+Maintainer: 王云龙（苏🐶）
+Installed-Size: 2324
+Depends: mobilesubstrate, preferenceloader, firmware (>= 15.1)
+Conflicts: com.jontelang.snapper3
+Replaces: com.jontelang.snapper3
+Provides: com.jontelang.snapper3 (= 1.2.1)
+Filename: ./debs/com.zfsn.stayshot_0.52_iphoneos-arm64.deb
+Size: 226364
+MD5sum: 461aabe21f70cf562df3a2044cfe90c7
+SHA1: 6b53c1421f30048e2331a82527eed5c400817534
+SHA256: f4ca853a408aaa87d5b1058a521ead6f77a30cb6816645ed6b4c55a4fb7c4f3d
+Section: Tweaks
+Description: StayShot 独立的 iOS 截图工具，支持普通模式、冻结模式、区域截图、截图历史和屏幕浮窗。
+Author: 王云龙（苏🐶）
+Name: StayShot
+
+Package: com.susudear.stayshot.long-screenshot
+Version: 1.5.0
+Architecture: iphoneos-arm64
+Maintainer: 王云龙（苏🐶）
+Installed-Size: 784
+Depends: com.susudear.stayshot (>= 0.2.4), mobilesubstrate, firmware (>= 15.1), dev.theos.orion (>= 1.0.0)
+Filename: ./debs/com.zfsn. stayshotcjt_0.0.1_iphoneos-arm64.deb
+Size: 156172
+MD5sum: 1bd213e381c31dd13a1595c2de45a64a
+SHA1: add21f3e90b1f3ed64c3fcf5dbd56ee971e4e476
+SHA256: f81b83f9d1b7f787f5182952041eae5ab6fc113ad4121f46a3b9d7091d3ac431
+Section: Tweaks
+Description: Long screenshot action and capture controller for StayShot.
+Author: 王云龙（苏🐶）
+Name: StayShot 长截图
+
+Package: com.susudear.stayshot.markup
+Version: 1.6.1
+Architecture: iphoneos-arm64
+Maintainer: 王云龙（苏🐶）
+Installed-Size: 640
+Depends: com.susudear.stayshot (>= 0.5.1), mobilesubstrate, firmware (>= 15.1)
+Filename: ./debs/com.zfsn. stayshotjt_0.0.1_iphoneos-arm64.deb
+Size: 152008
+MD5sum: f327dba63307aca4d17653669da80000
+SHA1: 9e809857e9e2c1aebf1648ad2e04abb14d5dfdf4
+SHA256: f09a28c1b2190b7aad63db3d65419603089bc09f0086b70e66f2b7aa9b133eab
+Section: Tweaks
+Description: StayShot Edit 的冻结截图编辑扩展，支持箭头、涂鸦、高亮、马赛克和方框，并支持复制或保存编辑结果。
+Author: 王云龙（苏🐶）
+Name: StayShot Edit
+
 Package: com.thefool.ccaudioplay
 Version: 0.0.1-7+debug
 Architecture: iphoneos-arm64
