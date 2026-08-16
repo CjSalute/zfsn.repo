@@ -2956,6 +2956,41 @@ Description: 控制中心的天气模块。 显示当前天气、温度和每小
 Author: simon
 Name: CCWeather Module
 
+Package: com.simon.controlcenterlayout
+Version: 2.1
+Architecture: iphoneos-arm64e
+Maintainer: Simon
+Installed-Size: 620
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: mobilesubstrate
+Filename: ./debs/com.simon.controlcenterlayout_2.1_iphoneos-arm64e.deb
+Size: 88860
+MD5sum: d6a9d87623a9a879ad418ba900b04177
+SHA1: 7dc8adea3ef051382bf61d75221de1504bdeef24
+SHA256: 6bebd1e5bc18e1458f9f2fb14238bccf64d46f7742f237afb463c575eabda6d6
+Section: Tweaks
+Description: 用于部分自用控制中心模块2x1布局以及素材替换，半越狱不再卑微。
+Author: Simon
+Icon: https://huayuarc.github.io/icon/controlcenterlayout.jpg
+Name: 控制中心模块
+
+Package: com.simon.controlcenterlayout
+Version: 2.1
+Architecture: iphoneos-arm64
+Maintainer: Simon
+Installed-Size: 620
+Depends: mobilesubstrate
+Filename: ./debs/com.simon.controlcenterlayout_2.1_iphoneos-arm64.deb
+Size: 90612
+MD5sum: ce46d815c9300a29bc5a91158a78813c
+SHA1: 5ae9bb4f1891239b6bd3266bdcefba4695ec6dda
+SHA256: c0416a4a98fa5eedfcbf7f688187470d29d4008fb9097c54e452c21635b39504
+Section: Tweaks
+Description: 用于部分自用控制中心模块2x1布局以及素材替换，半越狱不再卑微。
+Author: Simon
+Icon: https://huayuarc.github.io/icon/controlcenterlayout.jpg
+Name: 控制中心模块
+
 Package: com.sini.3dappversionspoofer
 Version: 2.1.1
 Architecture: iphoneos-arm64
