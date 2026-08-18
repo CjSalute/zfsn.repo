@@ -533,6 +533,28 @@ Icon: https://axs66.github.io/pro/icon/screenrecording.png
 Name: 全局水印&套壳『截屏.录屏』
 Sileodepiction: https://axs66.github.io/pro/sileodepiction/screenrecording/js.json
 
+Package: com.axs.screenshellpro
+Version: 5.2.0-61
+Architecture: iphoneos-arm64
+Maintainer: Axs
+Installed-Size: 540
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader
+Filename: ./debs/com.axs.screenshellpro_5.2.0-61_iphoneos-arm64.deb
+Size: 51728
+MD5sum: 6ae4d8266a96dcd5264efc6d33c813a6
+SHA1: 629fc1fee0fc7288ad0d2beec4b3ba4c88e5f7ea
+SHA256: feceb46e0afeb5672dcebcedaa44fe2dcc0373b93f8a5ef02b8f6e13089580c4
+Section: Tweaks
+Description: 专业的 iOS 全局水印&套壳『截屏.录屏』增强工具。插件需要授权才能使用。授权请联系微信：VCR66T
+ * 1. 录屏套壳渲染极快。
+ * 2. 渲染过程中手机不发烫。
+ * 3. 插件不需要任何依赖。
+ * 4. 本插件是目前市面上最好的录屏套壳渲染工具。
+Author: Axs
+Icon: https://axs66.github.io/pro/icon/screenshellpro.png
+Name: ScreenShell Pro
+Sileodepiction: https://axs66.github.io/pro/sileodepiction/screenshellpro/js.json
+
 Package: com.axs.snapper3tag
 Version: 5.2.0-137
 Architecture: iphoneos-arm64
