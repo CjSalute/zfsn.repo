@@ -2687,6 +2687,22 @@ Author: Miguelaka95
 Name: BetterCC(Rootless)
 Sponsor: 来了老弟 h_h_x_t
 
+Package: com.monkey.mokeycs
+Version: 1.0.0-88+debug
+Architecture: iphoneos-arm64
+Maintainer: mokey
+Installed-Size: 240
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.zfsn.shi'jiantexiao_0.0.1_iphoneos-arm64.deb
+Size: 32226
+MD5sum: 5f7500d65c2a5b5dfd70216e98257579
+SHA1: 15da023e0ef91ed2fff09315cab5b820eeaacbea
+SHA256: 04d5ac9bac73196fae31f4e031c7058da821f5c0c21585a8508336fdb06adafb
+Section: Tweaks
+Description: mokeycs
+Author: mokey
+Name: mokeycs
+
 Package: com.nathan.internalstoragesettings
 Version: 1.0.1
 Architecture: iphoneos-arm
