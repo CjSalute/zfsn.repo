@@ -2505,6 +2505,54 @@ Description: 支持录屏/截图套壳，水印以及区域截图、长截图等
 Author: iosdump
 Name: SHELLX
 
+Package: com.iosdump.shellx
+Version: 2.0.9
+Architecture: iphoneos-arm
+Maintainer: iosdump
+Installed-Size: 2592
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/com.iosdump.shellx_2.0.9_iphoneos-arm.deb
+Size: 831218
+MD5sum: b6aaa45d8df34617bd8f243ba35cbae2
+SHA1: a5920bb0ac6cb90dfc1da48a9de12304980c9a8b
+SHA256: b9ad05028fa6f246226dfbba3d2574e4cea66e14d6a4586891c40f4ac663ab6b
+Section: Tweaks
+Description: 支持录屏/截图套壳，水印以及区域截图、长截图等，兼容iOS14-17所有越狱
+Author: iosdump
+Name: SHELLX
+
+Package: com.iosdump.shellx
+Version: 2.0.9
+Architecture: iphoneos-arm64e
+Maintainer: iosdump
+Installed-Size: 2560
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/com.iosdump.shellx_2.0.9_iphoneos-arm64e.deb
+Size: 828452
+MD5sum: 97a5710a7d1a3bf17b9a547304535bbe
+SHA1: 38cb48058deb4c80e6e7f61b933c54f4dbbea9b4
+SHA256: 143eaf359fcb22e8fce2ecf2f30e99a0714e71cc101a2d8069eab7c0e22b5c3a
+Section: Tweaks
+Description: 支持录屏/截图套壳，水印以及区域截图、长截图等，兼容iOS14-17所有越狱
+Author: iosdump
+Name: SHELLX
+
+Package: com.iosdump.shellx
+Version: 2.0.9
+Architecture: iphoneos-arm64
+Maintainer: iosdump
+Installed-Size: 2592
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/com.iosdump.shellx_2.0.9_iphoneos-arm64.deb
+Size: 830264
+MD5sum: a0761523df6ffdac447ef5f730cde1a2
+SHA1: 1c490e0648d86291ab8de66aecd12679c4159b53
+SHA256: 0f3c959552440fc57671991d2b2e8b1d7e9c744388eb0995084de6f1229c5d25
+Section: Tweaks
+Description: 支持录屏/截图套壳，水印以及区域截图、长截图等，兼容iOS14-17所有越狱
+Author: iosdump
+Name: SHELLX
+
 Package: com.iosdump.trollcmtweak
 Version: 1.1.7
 Architecture: iphoneos-arm
@@ -3645,6 +3693,40 @@ Description: cool
 Author: wkk
 Icon: https://s1.imagehub.cc/images/2025/12/26/29fda3e52ac78c6958ecf3b5dac18673.png
 Name: 系统键盘圆角
+
+Package: com.wkk.keyboardx
+Version: 1.0-6
+Architecture: iphoneos-arm64
+Maintainer: wkk
+Installed-Size: 516
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader
+Filename: ./debs/com.wkk.keyboardx_1.0-6_iphoneos-arm64.deb
+Size: 64172
+MD5sum: e320de66827a74f0cee9ef0225578260
+SHA1: 44eed63a166b40f56a46081aaeaf87930a128bf9
+SHA256: a379b10a890d5e4b786e9a827e7e999ce980f3ab69d5480defcccdd03c9f8128
+Section: Tweaks
+Description: 键盘调整。
+Author: wkk
+Icon: https://s1.imagehub.cc/images/2025/12/26/29fda3e52ac78c6958ecf3b5dac18673.png
+Name: KeyboardX
+
+Package: com.wkk.systembox
+Version: 1.3-5
+Architecture: iphoneos-arm64
+Maintainer: wkk
+Installed-Size: 1244
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/com.wkk.systembox_1.3-5_iphoneos-arm64.deb
+Size: 226700
+MD5sum: 0b0e7f1d60fb4ae6c50ee30f477e97d1
+SHA1: 119bf4cdbc13addce170966885fc79c1a19f9b19
+SHA256: dbf92c77fcb2785134b724c9483562ec867b4e181a9a9362d9f2ef8cff829dc4
+Section: Tweaks
+Description: cool
+Author: wkk
+Icon: https://s1.imagehub.cc/images/2025/12/26/29fda3e52ac78c6958ecf3b5dac18673.png
+Name: SystemX
 
 Package: roothide.patches.filza
 Version: 0.5-4
