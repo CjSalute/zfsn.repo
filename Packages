@@ -1485,6 +1485,23 @@ Description: Blued 去广告、闪照破解、本地VIP、强制保存、极速�
 Author: Mr.Eric
 Name: BluedHook
 
+Package: com.flex2areo.appprotect
+Version: 2.4.5
+Architecture: iphoneos-arm64
+Maintainer: aReo
+Installed-Size: 2808
+Depends: mobilesubstrate,preferenceloader
+Conflicts: com.flex2areo.appprotectroothide,  com.flex2areo.appprotectrootless
+Filename: ./debs/com.flex2areo.appprotect_2.4.5_iphoneos-arm64.deb
+Size: 747988
+MD5sum: 8cd5063493b3d5aa12bcabf3d8460d5e
+SHA1: 7cfde4c0ba9fea237fd76d1dba4f7685e45aba9f
+SHA256: 65c6742bb949d149a3e7f7f521de20edc09450348749f17eb9ae88ad6a8fe275
+Section: Tweaks
+Description: MacXK破解，不要得罪一个你认知以外的圈外人，不破不代表不能破。
+Author: aReo
+Name: AppProtect(Rootless)
+
 Package: com.flex2areo.apptools15rootless
 Version: 2.8.0
 Architecture: iphoneos-arm64
