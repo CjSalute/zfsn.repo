@@ -917,6 +917,59 @@ Icon: https://axs66.github.io/pro/icon/snapper.png
 Name: Snapper3 Expand
 Sileodepiction: https://axs66.github.io/pro/sileodepiction/snapper3expand/js.json
 
+Package: com.axs.snapper3tag
+Version: 5.2.0-256
+Architecture: iphoneos-arm64
+Maintainer: Axs <qiaozhini000@163.com>
+Installed-Size: 932
+Depends: mobilesubstrate
+Filename: ./debs/com.axs.snapper3tag_5.2.0-256_iphoneos-arm64.deb
+Size: 143908
+MD5sum: b2b99ac2ad16276b03764eeb3993bce3
+SHA1: 5ab719276d26d67ad8a6f36274d8633437f67cd3
+SHA256: 6e4b9608d76202b888fbd5e286e6179840c99acb5887ffe847780a600a46669a
+Section: Axs-Tweaks
+Description: Snapper3 功能扩展，目前包含：截图标记 + 长截图 + OCR识别 + 翻译 + AI互译 + AI问答 + Sileo长按翻译，修复了原snapper3主体插件第7个图标遮挡一半的bug；将菜单工具栏最后一个“关闭”图标进行固定，增加滑动视觉效果。
+ * 一、【截图标记】
+ * 颜色选择：红/黄/蓝/绿/白/黑等6种颜色；
+ * 箭头标记：手指拖拽绘制方向箭头；
+ * 自由画线：手指跟随绘制任意曲线；
+ * 矩形图标：矩形框选+矩形填充；
+ * 圆形图标：圆形框选+圆形填充；
+ * 撤回操作：一键撤销上一步标注；
+ * 删除操作：一键删除所有标注；
+ * 保存相册：渲染并写入系统相册；
+ * 复制剪贴板：一键复制标注后截图；
+ * 二、【长截图 Pro】
+ * 点击长截图图标一键截长图；
+ * 智能帧匹配，自动拼接；
+ * 支持保存到相册、复制到剪贴板；
+ * 三、【OCR识别】
+ * 使用 PaddleOCR模型识别截图文字；
+ * 半屏浮层展示，支持涂抹选择、一键复制；
+ * 需自备API Token。
+ * 四、【翻译】
+ * 百度翻译 API，自动检测语言双向翻译；
+ * 支持图片翻译和文本翻译两种通道；
+ * 半屏浮层展示，支持涂抹选择、一键复制；
+ * 需自备百度开发者信息中的 AppID 和 密钥。
+ * 五、【Ai互译+问答】
+ * 支持中英文互译和中文问答；
+ * 半屏浮层展示，支持涂抹选择、一键复制；
+ * 需自备阿里云 API Key。
+ * 六、【自定义图标】
+ * 创建 "/var/mobile/Axs/Snapper3图标/自定义文件夹" ，放入以下对应素材，即可替换默认图标：
+ *   截图标记：tag.png / tag_menu.png
+ *   长截图  ：long.png / long_menu.png
+ *   ocr识别 ：ocr.png / ocr_menu.png
+ *   翻译    ：trans.png / trans_menu.png
+ *   Ai互译  ：huyi.png / huyi_menu.png
+ *   Ai回答  ：wenda.png / wenda_menu.png
+Author: Axs <qiaozhini000@163.com>
+Icon: https://axs66.github.io/pro/icon/snapper.png
+Name: Snapper3 Expand
+Sileodepiction: https://axs66.github.io/pro/sileodepiction/snapper3expand/js.json
+
 Package: com.axs.switchicon
 Version: 5.2.0-131
 Architecture: iphoneos-arm64
@@ -1431,6 +1484,22 @@ Section: Tweaks
 Description: Blued 去广告、闪照破解、本地VIP、强制保存、极速版崩溃修复
 Author: Mr.Eric
 Name: BluedHook
+
+Package: com.flex2areo.apptools15rootless
+Version: 2.8.0
+Architecture: iphoneos-arm64
+Maintainer: aReo
+Installed-Size: 4184
+Depends: mobilesubstrate
+Filename: ./debs/com.flex2areo.apptools15rootless_2.8.0_MacXK_iphoneos-arm64.deb
+Size: 1311520
+MD5sum: 6c434ba0e1e29d812814097587e3fd1b
+SHA1: b6c735bab0aa46f9e592114207595477f4e5a44b
+SHA256: 746e00cfa3c061ad358f193f080457c68d435317ccb8fd20771d5aec627621cd
+Section: Tweaks
+Description: MacXK破解，不要拿你的无知去评价一个你认知以外的人。不盘你不代表盘不了，有没有可能是不屑一顾？
+Author: aReo
+Name: AppTools15-17(Rootless)
 
 Package: com.futur3sn0w.ccaster
 Version: 0.2.2
@@ -2831,6 +2900,108 @@ Size: 989476
 MD5sum: ced3275882b568b934c516c55a146663
 SHA1: a2f8964aa42e152179177c760a24186ab9dac47d
 SHA256: e3dbac4544b7c8926001e2592763dd5b774d2f96ae8c5c4ae9b8e7e4440c5d73
+Section: Tweaks
+Description: 支持录屏/截图套壳，水印以及区域截图、长截图等，兼容iOS14-17所有越狱
+Author: iosdump
+Name: SHELLX
+
+Package: com.iosdump.shellx
+Version: 2.3.1
+Architecture: iphoneos-arm64
+Maintainer: iosdump
+Installed-Size: 6492
+Depends: mobilesubstrate, preferenceloader, com.opa334.ccsupport
+Conflicts: com.jontelang.snapper3, byg.iosios.net.snapper3, com.jontelang.snapper, com.jontelang.snapper2.packix, xyz.cypwn.snapperfr33
+Filename: ./debs/com.iosdump.shellx_2.3.1_iphoneos-arm64.deb
+Size: 2839578
+MD5sum: 72e454ad9102e88cf272df8cf0cff0df
+SHA1: 97b4591654982e5d62270efb2cea6a4c32867833
+SHA256: 80b70cff135a1f380afaa83ec11e9c31cd7a8b50baca6fb48ffa17040cea667e
+Section: Tweaks
+Description: 支持录屏/截图套壳，水印以及区域截图、长截图等，兼容iOS14-17所有越狱
+Author: iosdump
+Name: SHELLX
+
+Package: com.iosdump.shellx
+Version: 2.3.1
+Architecture: iphoneos-arm
+Maintainer: iosdump
+Installed-Size: 6492
+Depends: mobilesubstrate, preferenceloader, com.opa334.ccsupport
+Conflicts: com.jontelang.snapper3, byg.iosios.net.snapper3, com.jontelang.snapper, com.jontelang.snapper2.packix, xyz.cypwn.snapperfr33
+Filename: ./debs/com.iosdump.shellx_2.3.1_iphoneos-arm.deb
+Size: 2842416
+MD5sum: 4c32ff1155df0fee9295b4a2b23cc90e
+SHA1: 01b0a59f6db738d35a4c4fb7313b245dd1453acc
+SHA256: f806dedea1ce76933df007c9e45b2f3e43fdb014f2a905b77d7d272beef5e06e
+Section: Tweaks
+Description: 支持录屏/截图套壳，水印以及区域截图、长截图等，兼容iOS14-17所有越狱
+Author: iosdump
+Name: SHELLX
+
+Package: com.iosdump.shellx
+Version: 2.3.1
+Architecture: iphoneos-arm64e
+Maintainer: iosdump
+Installed-Size: 6476
+Depends: mobilesubstrate, preferenceloader, com.opa334.ccsupport
+Conflicts: com.jontelang.snapper3, byg.iosios.net.snapper3, com.jontelang.snapper, com.jontelang.snapper2.packix, xyz.cypwn.snapperfr33
+Filename: ./debs/com.iosdump.shellx_2.3.1_iphoneos-arm64e.deb
+Size: 2839618
+MD5sum: 1f820190020eb6e156ab9f711996abb5
+SHA1: 22df9c02032afb9ffe957e2ed1f253091f734df8
+SHA256: 46ee99395ba18a10daa21dd40a99ed612038b7fe813b4352ebfc34c73a044c14
+Section: Tweaks
+Description: 支持录屏/截图套壳，水印以及区域截图、长截图等，兼容iOS14-17所有越狱
+Author: iosdump
+Name: SHELLX
+
+Package: com.iosdump.shellx
+Version: 2.4.1
+Architecture: iphoneos-arm64e
+Maintainer: iosdump
+Installed-Size: 6572
+Depends: mobilesubstrate, preferenceloader, com.opa334.ccsupport
+Conflicts: com.jontelang.snapper3, byg.iosios.net.snapper3, com.jontelang.snapper, com.jontelang.snapper2.packix, xyz.cypwn.snapperfr33
+Filename: ./debs/com.iosdump.shellx_2.4.1_iphoneos-arm64e.deb
+Size: 2862880
+MD5sum: caa446da885348a39494dba1a57a683a
+SHA1: e3003c539f6e25897bd1da1e93269e1f357d26ca
+SHA256: 2c9cb725e7f7aa86b617482a7fac52ec7f211b6c519875ea92dbe9bbe2b72ec9
+Section: Tweaks
+Description: 支持录屏/截图套壳，水印以及区域截图、长截图等，兼容iOS14-17所有越狱
+Author: iosdump
+Name: SHELLX
+
+Package: com.iosdump.shellx
+Version: 2.4.1
+Architecture: iphoneos-arm64
+Maintainer: iosdump
+Installed-Size: 6588
+Depends: mobilesubstrate, preferenceloader, com.opa334.ccsupport
+Conflicts: com.jontelang.snapper3, byg.iosios.net.snapper3, com.jontelang.snapper, com.jontelang.snapper2.packix, xyz.cypwn.snapperfr33
+Filename: ./debs/com.iosdump.shellx_2.4.1_iphoneos-arm64.deb
+Size: 2864034
+MD5sum: db4d15adf86cacc9f5b3ddf560853299
+SHA1: 8e9f64913354d3992cc6d00dd94e4a75a922eabc
+SHA256: da9dc31089a4ac1e70344e50a0c0048c9f891e83c2fda36aeed02fa8aafed0b4
+Section: Tweaks
+Description: 支持录屏/截图套壳，水印以及区域截图、长截图等，兼容iOS14-17所有越狱
+Author: iosdump
+Name: SHELLX
+
+Package: com.iosdump.shellx
+Version: 2.4.1
+Architecture: iphoneos-arm
+Maintainer: iosdump
+Installed-Size: 6592
+Depends: mobilesubstrate, preferenceloader, com.opa334.ccsupport
+Conflicts: com.jontelang.snapper3, byg.iosios.net.snapper3, com.jontelang.snapper, com.jontelang.snapper2.packix, xyz.cypwn.snapperfr33
+Filename: ./debs/com.iosdump.shellx_2.4.1_iphoneos-arm.deb
+Size: 2862580
+MD5sum: 01d2d3d9a45f015083d97a2a082a9b8a
+SHA1: 64d4840b40516448573b4f65bf9548c4b30b46de
+SHA256: c5b5ab9625e102c8ee029cfeacdfa8d4676e9103d0ec34ad387b37c244114f8f
 Section: Tweaks
 Description: 支持录屏/截图套壳，水印以及区域截图、长截图等，兼容iOS14-17所有越狱
 Author: iosdump
