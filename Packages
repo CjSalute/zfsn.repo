@@ -1415,6 +1415,40 @@ Tag: supports::roothide
 Author: doimty
 Name: ProMotion 120Hz
 
+Package: com.doimty.promotion
+Version: 1.0.8
+Architecture: iphoneos-arm64e
+Maintainer: doimty
+Installed-Size: 236
+Depends: mobilesubstrate
+Filename: ./debs/com.doimty.promotion_1.0.8_iphoneos-arm64e.deb
+Size: 25936
+MD5sum: 357609839a3d5471004855e357463729
+SHA1: 4f643641c669f3ee781f673acfddf2b00fafb2c1
+SHA256: 163356804400a7144f7794823f357648bb8a103d3ecebe93ce35193ff223af68
+Section: Tweaks
+Description: Force global 120Hz ProMotion, bypass the 80Hz system cap. iPhone 13 Pro and above only.
+Tag: supports::roothide
+Author: doimty
+Name: ProMotion 120Hz
+
+Package: com.doimty.promotion
+Version: 1.0.8
+Architecture: iphoneos-arm64
+Maintainer: doimty
+Installed-Size: 236
+Depends: mobilesubstrate
+Filename: ./debs/com.doimty.promotion_1.0.8_iphoneos-arm64.deb
+Size: 26010
+MD5sum: e6015dda214d7ccf1cce48a44390bd23
+SHA1: 7cc58dd4d089cbdd23993559e176f3cf6e230c80
+SHA256: 697bc17507d7ee46914164ef15580f375e9a01d2a4cb996ce762ea76df4eceae
+Section: Tweaks
+Description: Force global 120Hz ProMotion, bypass the 80Hz system cap. iPhone 13 Pro and above only.
+Tag: supports::roothide
+Author: doimty
+Name: ProMotion 120Hz
+
 Package: com.dxl.umbrella
 Version: 1.2
 Architecture: iphoneos-arm64e
