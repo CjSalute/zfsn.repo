@@ -508,6 +508,21 @@ Moderndepiction: https://repo.anthopak.dev/depiction/native/com.anthopak.pancake
 Name: PanCake (简体中文版)
 Sileodepiction: https://repo.anthopak.dev/depiction/native/com.anthopak.pancake-rootless.json
 
+Package: com.aptzh
+Version: 1.2-1-5+debug
+Architecture: iphoneos-arm64
+Maintainer: Custom
+Installed-Size: 240
+Filename: ./debs/com.aptzh_1.2-1-5+debug_iphoneos-arm64.deb
+Size: 25968
+MD5sum: 2f5078c7e359d30a2c34b1e8368a7c9c
+SHA1: 79ad666be659888024ddca9d69e612bb49ee0662
+SHA256: abe7f20f6378c41133f6bd7c26b8dfd2fca0acbc5a884801bcfbb553876dbeb2
+Section: Tweaks
+Description: Sileo软件源刷新、dpkg安装日志完整汉化，覆盖全部报错与输出文本
+Author: Custom
+Name: Sileo APT/DPKG汉化
+
 Package: com.axs.axon
 Version: 5.2.0-55
 Architecture: iphoneos-arm64
@@ -4965,6 +4980,44 @@ Description: 为ShowMyTouches提供简体中文
 Author: 灰灰 <krylov0@outlook.com>
 Icon: http://q1.qlogo.cn/g?b=qq&nk=84666997&s=640
 Name: zh-Hans for ShowMyTouches
+
+Package: dylv.liquidass
+Version: 0.1.1b
+Architecture: iphoneos-arm64
+Maintainer: dylv
+Installed-Size: 8144
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 14.0), firmware (<< 26.0), preferenceloader
+Conflicts: dylv.blurless
+Replaces: dylv.blurless
+Filename: ./debs/dylv.liquidass_0.1.1b_iphoneos-arm64.deb
+Size: 3599008
+MD5sum: 1cc20eee2cfec051710f6696693901d1
+SHA1: 24aae7debf71330c5fb54369efab2f64cbd6adc7
+SHA256: 69241b6dee588d17740051c533cef8e8225384c27cf26fa74c6545d48d975d17
+Section: Tweaks
+Description: next level diarrhea
+Author: dylv
+Icon: https://winaviation.github.io/repo/depictions/dylv.liquidass/icon.png
+Name: Liquid (Gl)ass
+
+Package: dylv.liquidass
+Version: 0.1.1b
+Architecture: iphoneos-arm64e
+Maintainer: dylv
+Installed-Size: 8144
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 14.0), firmware (<< 26.0), preferenceloader
+Conflicts: dylv.blurless
+Replaces: dylv.blurless
+Filename: ./debs/dylv.liquidass_0.1.1b_iphoneos-arm64e.deb
+Size: 3598768
+MD5sum: 4a62d992d080eb3c458458c55ccb9bb2
+SHA1: 8c9ce4ee4e96e2f2d6fc77d6b17b68910a75e1d6
+SHA256: 954eafcc9cc2bb9dbe788e9014b553df472a28007dcf17a4475ad13523b01cb6
+Section: Tweaks
+Description: next level diarrhea
+Author: dylv
+Icon: https://winaviation.github.io/repo/depictions/dylv.liquidass/icon.png
+Name: Liquid (Gl)ass
 
 Package: roothide.patches.filza
 Version: 0.5-4
