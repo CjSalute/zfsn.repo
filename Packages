@@ -1518,6 +1518,47 @@ Icon: https://TrollStoreX.Github.io/sileodepiction/Liquidass/icon.png
 Name: Liquidass iOS 26 玻璃特效
 Sileodepiction: https://TrollStoreX.Github.io/sileodepiction/Liquidass/js.json
 
+Package: com.dylv.liquidglass
+Version: 0.1.2.1
+Architecture: iphoneos-arm64
+Maintainer: dylv
+Installed-Size: 4848
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 14.0), preferenceloader
+Conflicts: com.iosdump.customccbg
+Replaces: com.iosdump.customccbg
+Provides: com.iosdump.customccbg
+Filename: ./debs/com.dylv.liquidglass_0.1.2.1_iphoneos-arm64.deb
+Size: 1660034
+MD5sum: da9a0ad598264861753639307d23fb89
+SHA1: f7f9e0ddd2fcf0fbe23b5172b189ab84893bebd8
+SHA256: ca2f3d9ad536d0f71decc347414986ec29d04970d1d36e7ca5115d21f17cc271
+Section: Tweaks
+Description: 液态玻璃体玻璃，基于LiquidAss项目修改
+Author: dylv
+Icon: https://winaviation.github.io/repo/depictions/dylv.liquidass/icon.png
+Name: 液态玻璃
+
+Package: com.dylv.liquidglass
+Version: 0.1.2.1
+Architecture: iphoneos-arm64e
+Maintainer: dylv
+Installed-Size: 4816
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 14.0), preferenceloader
+Conflicts: com.iosdump.customccbg
+Replaces: com.iosdump.customccbg
+Provides: com.iosdump.customccbg
+Filename: ./debs/com.dylv.liquidglass_0.1.2.1_iphoneos-arm64e.deb
+Size: 3917334
+MD5sum: bc04ba69b0b975351ba89838eea55351
+SHA1: d138572c630f8d4abb6f48ae55a56741c4c34b2e
+SHA256: 40a848c94e84a897a8959e93a6d9f08bc700468fd07dce892f55b5492a4c893b
+Section: Tweaks
+Description: 液态玻璃体玻璃，基于LiquidAss项目修改
+Author: dylv
+Icon: https://winaviation.github.io/repo/depictions/dylv.liquidass/icon.png
+Name: 液态玻璃
+
 Package: com.eric.bluedhook
 Version: 0.3.0-1+debug
 Architecture: iphoneos-arm64
@@ -2306,6 +2347,110 @@ Size: 3931882
 MD5sum: 6605d86eda61c917bdbf4e39c96db711
 SHA1: cb1193b5b65890a3d5bd638aac7f23a43ad30fd2
 SHA256: 0d073563e9c8e2f14cb4d520f69ed8cb55fbb4b6b8d7bdd0f71af756c8168d9a
+Section: Tweaks
+Description: 在主屏幕查看应用数据与管理应用
+Author: iosdump
+Icon: file:///Library/PreferenceBundles/AppDataPrefs.bundle/AppData@3x.png
+Name: AppData
+
+Package: com.iosdump.appdata
+Version: 2.7.0
+Architecture: iphoneos-arm
+Maintainer: iosdump
+Depends: firmware (>= 11.0), mobilesubstrate, preferenceloader
+Conflicts: com.netskao.appdatas, com.netskao.appdata, cn.zqbb.appdata, com.fouadraheb.appdata
+Filename: ./debs/com.iosdump.appdata_2.7.0_iphoneos-arm.deb
+Size: 2087730
+MD5sum: 32830249cc72fcc1c9aefd88de7f1f5a
+SHA1: 3e51716a1fc0e94a4bce159d6fe2133d8f56f2ff
+SHA256: 89549df7a3bbbb0e67a7aa60f5b22b7d978aee51911734ffaa79ae463dbdce79
+Section: Tweaks
+Description: 在主屏幕查看应用数据与管理应用
+Author: iosdump
+Icon: file:///Library/PreferenceBundles/AppDataPrefs.bundle/AppData@3x.png
+Name: AppData
+
+Package: com.iosdump.appdata
+Version: 2.7.0
+Architecture: iphoneos-arm64e
+Maintainer: iosdump
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: firmware (>= 11.0), mobilesubstrate, preferenceloader
+Conflicts: com.netskao.appdatas, com.netskao.appdata, cn.zqbb.appdata, com.fouadraheb.appdata
+Filename: ./debs/com.iosdump.appdata_2.7.0_iphoneos-arm64e.deb
+Size: 3948710
+MD5sum: 217d8584803fb530f72fddc1c99073a0
+SHA1: 1b5a69ab854a0f8078672a7a96f3499957f3cf3d
+SHA256: de7af5b0b376fb16c09c94e55401c7784ed9ee429f3d260d29bac0602fdd62cc
+Section: Tweaks
+Description: 在主屏幕查看应用数据与管理应用
+Author: iosdump
+Icon: file:///Library/PreferenceBundles/AppDataPrefs.bundle/AppData@3x.png
+Name: AppData
+
+Package: com.iosdump.appdata
+Version: 2.7.0
+Architecture: iphoneos-arm64
+Maintainer: iosdump
+Depends: firmware (>= 11.0), mobilesubstrate, preferenceloader
+Conflicts: com.netskao.appdatas, com.netskao.appdata, cn.zqbb.appdata, com.fouadraheb.appdata
+Filename: ./debs/com.iosdump.appdata_2.7.0_iphoneos-arm64.deb
+Size: 2087954
+MD5sum: f5819ac1c23fef18c31dff18f14bb71e
+SHA1: f2912bf737589732d2ba60fce1dc2d1b64b3aade
+SHA256: a3e3ad6ccb4d9f5f692abb417f4c99b9c08f4a7475db60629f68bcbb8e7cc885
+Section: Tweaks
+Description: 在主屏幕查看应用数据与管理应用
+Author: iosdump
+Icon: file:///Library/PreferenceBundles/AppDataPrefs.bundle/AppData@3x.png
+Name: AppData
+
+Package: com.iosdump.appdata
+Version: 2.7.1
+Architecture: iphoneos-arm64
+Maintainer: iosdump
+Depends: firmware (>= 11.0), mobilesubstrate, preferenceloader
+Conflicts: com.netskao.appdatas, com.netskao.appdata, cn.zqbb.appdata, com.fouadraheb.appdata
+Filename: ./debs/com.iosdump.appdata_2.7.1_iphoneos-arm64.deb
+Size: 2091120
+MD5sum: 3acf5c048675db86660d4e611ef095c9
+SHA1: 7c5521cf2f18ee3c957acaebd0880e268258467f
+SHA256: 083005ad3105d11bf5a9f388da31922e673aa95644cc17181878bc3f0d358483
+Section: Tweaks
+Description: 在主屏幕查看应用数据与管理应用
+Author: iosdump
+Icon: file:///Library/PreferenceBundles/AppDataPrefs.bundle/AppData@3x.png
+Name: AppData
+
+Package: com.iosdump.appdata
+Version: 2.7.1
+Architecture: iphoneos-arm64e
+Maintainer: iosdump
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: firmware (>= 11.0), mobilesubstrate, preferenceloader
+Conflicts: com.netskao.appdatas, com.netskao.appdata, cn.zqbb.appdata, com.fouadraheb.appdata
+Filename: ./debs/com.iosdump.appdata_2.7.1_iphoneos-arm64e.deb
+Size: 3944654
+MD5sum: e1c2d0092e43d6a85ad008a640334a71
+SHA1: f54f0389e1c318ef5ed94a6f37f8ddc228d26ee4
+SHA256: dfcb80c6334469c93fbea92f5be5f77670068cbbd1a8c691464ae4ed4e373905
+Section: Tweaks
+Description: 在主屏幕查看应用数据与管理应用
+Author: iosdump
+Icon: file:///Library/PreferenceBundles/AppDataPrefs.bundle/AppData@3x.png
+Name: AppData
+
+Package: com.iosdump.appdata
+Version: 2.7.1
+Architecture: iphoneos-arm
+Maintainer: iosdump
+Depends: firmware (>= 11.0), mobilesubstrate, preferenceloader
+Conflicts: com.netskao.appdatas, com.netskao.appdata, cn.zqbb.appdata, com.fouadraheb.appdata
+Filename: ./debs/com.iosdump.appdata_2.7.1_iphoneos-arm.deb
+Size: 2090868
+MD5sum: 41f35ee91fcb9e8b982cc35bec906cf5
+SHA1: 135f033ebc18ada062c30c410fe645f4309a49f9
+SHA256: 94ee7e8997a66634291e1ab79576f8370b4fb2bb94588a94fbd6b3511abefab7
 Section: Tweaks
 Description: 在主屏幕查看应用数据与管理应用
 Author: iosdump
@@ -3540,6 +3685,57 @@ Description: 支持录屏/截图套壳，水印以及区域截图、长截图等
 Author: iosdump
 Name: SHELLX
 
+Package: com.iosdump.shellx
+Version: 2.5.1
+Architecture: iphoneos-arm
+Maintainer: iosdump
+Installed-Size: 6936
+Depends: mobilesubstrate, preferenceloader, com.opa334.ccsupport
+Conflicts: com.jontelang.snapper3, byg.iosios.net.snapper3, com.jontelang.snapper, com.jontelang.snapper2.packix, xyz.cypwn.snapperfr33
+Filename: ./debs/com.iosdump.shellx_2.5.1_iphoneos-arm.deb
+Size: 3096078
+MD5sum: 677637e457947439ccc4ca12ed2b2d7b
+SHA1: 334060e86bf39929a8708d867e3db3edaff469f1
+SHA256: 99790800ed8c8bb644e153dc153dfdc9b08047a59a32bd9dd214bfb36eb7261d
+Section: Tweaks
+Description: 支持录屏/截图套壳，水印以及区域截图、长截图等，兼容iOS14-17所有越狱
+Author: iosdump
+Name: SHELLX
+
+Package: com.iosdump.shellx
+Version: 2.5.1
+Architecture: iphoneos-arm64e
+Maintainer: iosdump
+Installed-Size: 6920
+Depends: mobilesubstrate, preferenceloader, com.opa334.ccsupport
+Conflicts: com.jontelang.snapper3, byg.iosios.net.snapper3, com.jontelang.snapper, com.jontelang.snapper2.packix, xyz.cypwn.snapperfr33
+Filename: ./debs/com.iosdump.shellx_2.5.1_iphoneos-arm64e.deb
+Size: 3092682
+MD5sum: 210767bb151af63b7acbe249fcb956d1
+SHA1: b7af3085dbc37ffb7da2b3706b42c36cdc46ed89
+SHA256: df913635eb390a3f3734714771ec03bb81f7691602f5203c7eca77c41666fe13
+Section: Tweaks
+Description: 支持录屏/截图套壳，水印以及区域截图、长截图等，兼容iOS14-17所有越狱
+Author: iosdump
+Name: SHELLX
+
+Package: com.iosdump.shellx
+Version: 2.5.1
+Architecture: iphoneos-arm64
+Maintainer: iosdump
+Installed-Size: 6936
+Depends: mobilesubstrate, preferenceloader, com.opa334.ccsupport
+Conflicts: com.jontelang.snapper3, byg.iosios.net.snapper3, com.jontelang.snapper, com.jontelang.snapper2.packix, xyz.cypwn.snapperfr33
+Filename: ./debs/com.iosdump.shellx_2.5.1_iphoneos-arm64.deb
+Size: 3097560
+MD5sum: 28d3822bc50edd361ce41832f6ac5266
+SHA1: 1a20ea3d836d27cd165d3bf3810ff843639939cf
+SHA256: 8e251b32c5d6f9bde1b69bb9670c61a75b74fe6ebc505052cdc4a97870a67ec1
+Section: Tweaks
+Description: 支持录屏/截图套壳，水印以及区域截图、长截图等，兼容iOS14-17所有越狱
+Author: iosdump
+Name: SHELLX
+
 Package: com.iosdump.trollcmtweak
 Version: 1.1.7
 Architecture: iphoneos-arm
@@ -4675,6 +4871,46 @@ Dev: Tsangbaby
 Icon: https://tsangbaby.github.io/Icon/Pullover-X.png
 Name: PullOver X
 
+Package: com.tsangbaby.pulloverx
+Version: 1.9.4
+Architecture: iphoneos-arm64e
+Maintainer: Tsangbaby
+Depends: firmware (>= 14.0), mobilesubstrate, preferenceloader
+Conflicts: com.mlgm.pulloverx, com.dao.pulloverpro, com.c1d3r.pulloverpro
+Replaces: com.mlgm.pulloverx, com.dao.pulloverpro, com.c1d3r.pulloverpro
+Filename: ./debs/PullOverX_1.9.4_Final_Roothide.deb
+Size: 480738
+MD5sum: bfd0a89760b894ff97dd87c37bf85957
+SHA1: 377ea09b8c1973cfe6099e3e86edd51a85ae46ff
+SHA256: 151383bcb3e4b0321210f87061b228b2b7deb9e593e591df70e5964acdf69a99
+Section: Tweaks
+Priority: optional
+Description: 悬浮多任务窗口工具，基于 Pullover Pro 进行修改
+Author: Tsangbaby
+Dev: Tsangbaby
+Icon: https://tsangbaby.github.io/Icon/Pullover-X.png
+Name: PullOver X
+
+Package: com.tsangbaby.pulloverx
+Version: 1.9.4
+Architecture: iphoneos-arm64
+Maintainer: Tsangbaby
+Depends: firmware (>= 14.0), mobilesubstrate, preferenceloader
+Conflicts: com.mlgm.pulloverx, com.dao.pulloverpro, com.c1d3r.pulloverpro
+Replaces: com.mlgm.pulloverx, com.dao.pulloverpro, com.c1d3r.pulloverpro
+Filename: ./debs/PullOverX_1.9.4_Final_Rootless.deb
+Size: 484454
+MD5sum: 66cbca30ccb834319906596bc97507fc
+SHA1: d9ae37aea061294be60bcb7512f8a7471795df79
+SHA256: b437823e88af61d0b54487c68e7fc74f839f6a2aa406c2800de255745bde3892
+Section: Tweaks
+Priority: optional
+Description: 悬浮多任务窗口工具，基于 Pullover Pro 进行修改
+Author: Tsangbaby
+Dev: Tsangbaby
+Icon: https://tsangbaby.github.io/Icon/Pullover-X.png
+Name: PullOver X
+
 Package: com.vita.wchook
 Version: 1.0-1
 Architecture: iphoneos-arm64e
@@ -4980,6 +5216,24 @@ Description: 为ShowMyTouches提供简体中文
 Author: 灰灰 <krylov0@outlook.com>
 Icon: http://q1.qlogo.cn/g?b=qq&nk=84666997&s=640
 Name: zh-Hans for ShowMyTouches
+
+Package: com.zfsn.dynamicislandanimation
+Version: 2.4
+Architecture: iphoneos-arm64
+Maintainer: Simon
+Installed-Size: 560
+Depends: mobilesubstrate
+Filename: ./debs/com.zfsn.dynamicislandanimation_2.4_iphoneos-arm64.deb
+Size: 80488
+MD5sum: 9ec461ed6938b68ad06a04b6aa1fbc91
+SHA1: 3ee3aa56195c660e1a06bae70a48e62f18ff3388
+SHA256: 6da659a4a751e3d16a6a72a80d0c0e5b4e5b47b8913d2c7fe935905f4830f815
+Section: 灵动岛
+Description: 用于灵动岛专辑及屏幕录制动态跳舞动画整合 无需挂载不再卑微！
+Author: Simon
+Icon: https://zfsn.github.io/pro/icon/dynamicislandanimation.png
+Name: 灵动岛跳舞动画PLUS(a🐶破解版)
+Sileodepiction: https://zfsn.github.io/pro/sileodepiction/dynamicislandanimation/js.json
 
 Package: dylv.liquidass
 Version: 0.1.1b
