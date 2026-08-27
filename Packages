@@ -1130,6 +1130,22 @@ Description: 解除温控，一切从简即可。支持命令行切换模式：i
 Author: be-huge & doimty
 Name: insulation
 
+Package: com.cc.ldd
+Version: 2.0.0
+Architecture: iphoneos-arm64
+Maintainer: cc
+Installed-Size: 452
+Depends: mobilesubstrate
+Filename: ./debs/com.cc.ldd_2.0.0_iphoneos-arm64.deb
+Size: 37948
+MD5sum: c8149647afa61f56993192e2951de3e7
+SHA1: 6c75a98f2abd7021bd511b214e2be8ee4b715e14
+SHA256: 85e2ac87588b6a6b768067c5d4eb60e5e4ee02ba99366bddc11c5ef9ddfa1aa9
+Section: Tweaks
+Description: 自定义灵动岛背景边框背景!
+Author: cc
+Name: Liuf's 灵动岛
+
 Package: com.charlieleung.snapvision
 Version: 0.0.1
 Architecture: iphoneos-arm64
@@ -5234,6 +5250,22 @@ Author: Simon
 Icon: https://zfsn.github.io/pro/icon/dynamicislandanimation.png
 Name: 灵动岛跳舞动画PLUS(a🐶破解版)
 Sileodepiction: https://zfsn.github.io/pro/sileodepiction/dynamicislandanimation/js.json
+
+Package: com.zfsn.switchtheme
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: cc
+Installed-Size: 240
+Depends: mobilesubstrate
+Filename: ./debs/com.zfsn.switchtheme_1.0.0_iphoneos-arm64.deb
+Size: 27680
+MD5sum: 195f68284d3e8fd54447e08d71f52ea7
+SHA1: c92ec7c71d84785315d448cca647f7e245d62877
+SHA256: 3a6ab0ee1f75dfb347a59e410c28fbe6c33ac4aa320451d5576719f6dd70270d
+Section: Tweaks
+Description: 灵感源自牙齿线条的极简开关，圆润而洁净，温润而纯粹。滑动之间，如唇齿轻启，带来指尖柔滑的精致体验
+Author: cc
+Name: SwitchTheme——牙齿
 
 Package: dylv.liquidass
 Version: 0.1.1b
