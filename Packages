@@ -1231,6 +1231,38 @@ Author: Color Black
 Icon: https://huayuarc.github.io/icon/Bottom.png
 Name: Bottom-x
 
+Package: com.crctdd.gifmake
+Version: 0.0.1
+Architecture: iphoneos-arm64
+Maintainer: crctdd
+Installed-Size: 168
+Depends: firmware (>= 14.0)
+Filename: ./debs/com.crctdd.gifmake_0.0.1_iphoneos-arm64.deb
+Size: 8692
+MD5sum: 7c2446fbc58403dc9541c4d7dc26c7a3
+SHA1: d0a207dd4b94990839262aa2f6c6b0d34650e511
+SHA256: 943f8a6820cad3f728a7de7c510bfd59383cc1f32c841c70ca8e4212459788c0
+Section: Utilities
+Description: 终端cd 图片目录，回车，gifmake，回车，可获得一张.gif。输入fps 30，就是30帧。输入speed 1.5，就是动画速度1.5倍。
+Author: crctdd
+Name: GIFMake（图片合成GIF）
+
+Package: com.crctdd.gifmake
+Version: 0.0.1
+Architecture: iphoneos-arm64e
+Maintainer: crctdd
+Installed-Size: 168
+Depends: firmware (>= 14.0)
+Filename: ./debs/com.crctdd.gifmake_0.0.1_iphoneos-arm64e.deb
+Size: 8624
+MD5sum: 9cbc844c0850912ffadb94b21dac940d
+SHA1: df3bbcb4b690925081105c66a5f73acb62035ce9
+SHA256: 5920bcc8e2107a104e1a6240f40bae6ff1ba82687d5ed1a334522453799c2a04
+Section: Utilities
+Description: 终端cd 图片目录，回车，gifmake，回车，可获得一张.gif。输入fps 30，就是30帧。输入speed 1.5，就是动画速度1.5倍。
+Author: crctdd
+Name: GIFMake(图片合成GIF)
+
 Package: com.crctdd.surgectl
 Version: 0.0.1
 Architecture: iphoneos-arm64e
