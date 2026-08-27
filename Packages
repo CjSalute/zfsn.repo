@@ -5217,6 +5217,22 @@ Author: wkk
 Icon: https://s1.imagehub.cc/images/2025/12/26/29fda3e52ac78c6958ecf3b5dac18673.png
 Name: SystemX
 
+Package: com.yourcompany.liquidsiri
+Version: 1.1.2-1+debug
+Architecture: iphoneos-arm64
+Maintainer: Thijs mussig
+Installed-Size: 2760
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/com.yourcompany.liquidsiri_1.1.2-1+debug_iphoneos-arm64.deb
+Size: 905852
+MD5sum: a38d99f75e78414a9a3426a4589b0b06
+SHA1: 924e0e48e8b265320315037cdbaac62875f4cb7d
+SHA256: dd3a37c36093e131a0dcdff1fc1b96b75bdc42f1e3e69642c2631eb6df5da3dc
+Section: Tweaks
+Description: (液态siri) Make your Siri look smart with Liquid Glass! Compatible with iOS 14.0 - 16.x.
+Author: Thijs mussig
+Name: LiquidSiri
+
 Package: com.yourepo.0xash.zh-hansforshowmytouches
 Version: 0.0.1
 Architecture: iphoneos-arm64
@@ -5250,6 +5266,54 @@ Author: Simon
 Icon: https://zfsn.github.io/pro/icon/dynamicislandanimation.png
 Name: 灵动岛跳舞动画PLUS(a🐶破解版)
 Sileodepiction: https://zfsn.github.io/pro/sileodepiction/dynamicislandanimation/js.json
+
+Package: com.zfsn.hidelocktime
+Version: 1.0.7-1+debug
+Architecture: iphoneos-arm64
+Maintainer: zfsn
+Installed-Size: 76
+Depends: ellekit
+Filename: ./debs/com.zfsn.hidelocktime_1.0.7-1+debug_iphoneos-arm64.deb
+Size: 3828
+MD5sum: 08c965440d35aa7f8aea4260ece61955
+SHA1: 8ee15e99277a67f5d03b2bcfd1e07ce2a87c9eab
+SHA256: 16c552356d398cd5616fdce27d4b9dc7a07d7d729a663f261b7f47a4d6fda7c4
+Section: Tweaks
+Description: 永久隐藏锁屏与通知中心的时间/日期显示（稳定防刷新重现）
+Author: zfsn
+Name: HideLockTime(隐藏锁屏时间)
+
+Package: com.zfsn.spectrums
+Version: 1.0
+Architecture: iphoneos-arm64e
+Maintainer: zfsn
+Installed-Size: 616
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/com.zfsn.spectrums_1.0_iphoneos-arm64e.deb
+Size: 96400
+MD5sum: adf9aa4d7976ba26833f042fe64f0368
+SHA1: 1287014d3f06e14abd05545f1e48863d127c9120
+SHA256: 306eeec372659df08ba625979fe0008de9ead2a31a3b811b4ccdcf8a49c4ac09
+Section: Tweaks
+Description: 去掉音轨在17系统上面的小黑块，动感专辑圆环均衡器，17系统不再卑微！
+Author: zfsn
+Name: spectrums（灵动岛音乐专辑动感模式）
+
+Package: com.zfsn.spectrums
+Version: 1.0
+Architecture: iphoneos-arm64
+Maintainer: zfsn
+Installed-Size: 616
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/com.zfsn.spectrums_1.0_iphoneos-arm64.deb
+Size: 96568
+MD5sum: 56eea35d997e996721e2bd8d7707ed06
+SHA1: 5495df312d64d6a216b341de644b2b0a963bc118
+SHA256: 0526ee366f0d429e8e9a614acfbb57712ddb70307d2a0fc87dd9789ec01f3b3e
+Section: Tweaks
+Description: 去掉音轨在17系统上面的小黑块，动感专辑圆环均衡器，17系统不再卑微！
+Author: zfsn
+Name: spectrums（灵动岛音乐专辑动感模式）
 
 Package: com.zfsn.switchtheme
 Version: 1.0.0
