@@ -3784,6 +3784,40 @@ Description: 支持录屏/截图套壳，水印以及区域截图、长截图等
 Author: iosdump
 Name: SHELLX
 
+Package: com.iosdump.shellx
+Version: 2.6.1
+Architecture: iphoneos-arm64e
+Maintainer: iosdump
+Installed-Size: 7524
+Depends: mobilesubstrate, preferenceloader, com.opa334.ccsupport
+Conflicts: com.jontelang.snapper3, byg.iosios.net.snapper3, com.jontelang.snapper, com.jontelang.snapper2.packix, xyz.cypwn.snapperfr33
+Filename: ./debs/com.iosdump.shellx_2.6.1_iphoneos-arm64e.deb
+Size: 3235676
+MD5sum: 06e7abf6ef10862b58646d1a96729752
+SHA1: d5c387d1787607b2a70d0a7b9bba1f8d3936505f
+SHA256: 7bdc99c19398e901a855ec25ae21f0fd4017bb6c6d4bf7e052e1b12133fec71f
+Section: Tweaks
+Description: 支持录屏/截图套壳，水印以及区域截图、长截图等，兼容iOS14-17所有越狱
+Author: iosdump
+Name: SHELLX
+
+Package: com.iosdump.shellx
+Version: 2.6.1
+Architecture: iphoneos-arm64
+Maintainer: iosdump
+Installed-Size: 7524
+Depends: mobilesubstrate, preferenceloader, com.opa334.ccsupport
+Conflicts: com.jontelang.snapper3, byg.iosios.net.snapper3, com.jontelang.snapper, com.jontelang.snapper2.packix, xyz.cypwn.snapperfr33
+Filename: ./debs/com.iosdump.shellx_2.6.1_iphoneos-arm64.deb
+Size: 3240514
+MD5sum: 52d01b8f7bb9400b2d28a6f387b72305
+SHA1: 4a56c03c55794db7a51c420115a9a2f29834ace1
+SHA256: 29ce8300fc17f90361208ff6ab742cc51541e50f7e65a6457aed4161291a3b62
+Section: Tweaks
+Description: 支持录屏/截图套壳，水印以及区域截图、长截图等，兼容iOS14-17所有越狱
+Author: iosdump
+Name: SHELLX
+
 Package: com.iosdump.trollcmtweak
 Version: 1.1.7
 Architecture: iphoneos-arm
@@ -4959,6 +4993,46 @@ Dev: Tsangbaby
 Icon: https://tsangbaby.github.io/Icon/Pullover-X.png
 Name: PullOver X
 
+Package: com.tsangbaby.pulloverx
+Version: 1.9.5
+Architecture: iphoneos-arm64e
+Maintainer: Tsangbaby
+Depends: firmware (>= 14.0), mobilesubstrate, preferenceloader
+Conflicts: com.mlgm.pulloverx, com.dao.pulloverpro, com.c1d3r.pulloverpro
+Replaces: com.mlgm.pulloverx, com.dao.pulloverpro, com.c1d3r.pulloverpro
+Filename: ./debs/PullOverX_1.9.5_Final_Roothide.deb
+Size: 485376
+MD5sum: c4a458ae152354d593c9b45439efe883
+SHA1: 17aad956b7556f7684d849d2e3d7491735fe58ac
+SHA256: 04d606bb9ae2993e6ea243c5364be768bb78b2711cbb3efb558eb85d43dd2808
+Section: Tweaks
+Priority: optional
+Description: 悬浮多任务窗口工具，基于 Pullover Pro 进行修改
+Author: Tsangbaby
+Dev: Tsangbaby
+Icon: https://tsangbaby.github.io/Icon/Pullover-X.png
+Name: PullOver X
+
+Package: com.tsangbaby.pulloverx
+Version: 1.9.5
+Architecture: iphoneos-arm64
+Maintainer: Tsangbaby
+Depends: firmware (>= 14.0), mobilesubstrate, preferenceloader
+Conflicts: com.mlgm.pulloverx, com.dao.pulloverpro, com.c1d3r.pulloverpro
+Replaces: com.mlgm.pulloverx, com.dao.pulloverpro, com.c1d3r.pulloverpro
+Filename: ./debs/PullOverX_1.9.5_Final_Rootless.deb
+Size: 488556
+MD5sum: 2f62103e08acd081dbc653bfed72cfe7
+SHA1: 7c8efef9d89191a765d61fbdc86cbe97baee56da
+SHA256: b973c806db04d4bec1c184be3c9aa8e31968af91598c009ee4d0f67d15ea7334
+Section: Tweaks
+Priority: optional
+Description: 悬浮多任务窗口工具，基于 Pullover Pro 进行修改
+Author: Tsangbaby
+Dev: Tsangbaby
+Icon: https://tsangbaby.github.io/Icon/Pullover-X.png
+Name: PullOver X
+
 Package: com.vita.wchook
 Version: 1.0-1
 Architecture: iphoneos-arm64e
@@ -5280,6 +5354,38 @@ Description: 为ShowMyTouches提供简体中文
 Author: 灰灰 <krylov0@outlook.com>
 Icon: http://q1.qlogo.cn/g?b=qq&nk=84666997&s=640
 Name: zh-Hans for ShowMyTouches
+
+Package: com.zfsn.bigtime
+Version: 5.2.0-34
+Architecture: iphoneos-arm64
+Maintainer: zfsn
+Installed-Size: 1096
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 14.0), preferenceloader
+Filename: ./debs/com.zfsn.bigtime_5.2.0-34_iphoneos-arm64.deb
+Size: 195236
+MD5sum: 0876b7e9c9e73b557236364eb887b03b
+SHA1: 8d9499aa7f69c1e2a747ad3a5b203c43fb44bc49
+SHA256: 66bd2da1bb396f8dec7218436fbbf5bec901067fd41bd8012fa0e135f9328175
+Section: Axs-Tweaks
+Description: 一个简单的锁屏时钟插件，需要提前在相应路径放入“26字体.otf”字体素材，才可以生效。
+ 字体素材放在 /var/mobile/Axs/字体素材
+ 帧率上限: 30
+ 边缘宽度: 24
+ 模糊强度: 3
+ 浅色染色: 0.1
+ 深色染色: 0
+ 玻璃厚度: 150
+ 折射系数: 5
+ 折射强度: 5
+ 时钟/日期垂直: 0
+ 字体粗细: 1000
+ 字体大小: 1.4
+ 字体宽度: 100
+ 字体高度: 320
+ 字体柔和: 56
+ 字体链接: https://1826045538.share.123pan.cn/123pan/giLNjv-n4jdA?pwd=AylR#
+Author: zfsn
+Name: BigTime（锁屏时间）
 
 Package: com.zfsn.dynamicislandanimation
 Version: 2.4
