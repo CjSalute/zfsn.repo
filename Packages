@@ -1954,6 +1954,42 @@ Icon: https://futur3sn0w.github.io/repo/icons/com.futur3sn0w.ccaster.png
 Name: CCAster
 Sileodepiction: https://futur3sn0w.github.io/repo/depictions/com.futur3sn0w.ccaster.json
 
+Package: com.hang.kaiguan
+Version: 2.3
+Architecture: iphoneos-arm64
+Maintainer: 航
+Installed-Size: 1820
+Depends: firmware (>= 15.0), mobilesubstrate
+Filename: ./debs/com.hang.kaiguan_2.3_iphoneos-arm64.deb
+Size: 422814
+MD5sum: 86b4ccf0012829fefa68f6134d1b625a
+SHA1: 68099b0f95190c150c43054caa5c80c1d3b20dcb
+SHA256: 073142ba2be7236e9c57db4f998123dcd3424c8bf8ac06dfb5efe9aebeed113d
+Section: Tweaks
+Description: 自用开关，有问题请卸载。
+Author: 航
+Depiction: https://pic1.imgdb.cn/item/69e5a39901316fbabf2ca364.png
+Icon: https://hang1888.github.io/debs/com.hang.kaiguan-icon.jpg
+Name: 航の开关
+
+Package: com.hang.kaiguan
+Version: 2.3
+Architecture: iphoneos-arm64e
+Maintainer: 航
+Installed-Size: 972
+Depends: firmware (>= 15.0), mobilesubstrate
+Filename: ./debs/com.hang.kaiguan_2.3_iphoneos-arm64e.deb
+Size: 304814
+MD5sum: d5d63eebfb550cf7490391f8b40883d4
+SHA1: 282bca30d55b8821899023fcdb61edaf76c544c9
+SHA256: 8844efd77173c7910ce7d885ac769c89e8281791fbd1e3330b1aa2ac0a8086fc
+Section: Tweaks
+Description: 自用开关，有问题请卸载。
+Author: 航
+Depiction: https://pic1.imgdb.cn/item/69e5a39901316fbabf2ca364.png
+Icon: https://hang1888.github.io/debs/com.hang.kaiguan-icon.jpg
+Name: 航の开关
+
 Package: com.huami.ChoicyConfigPin
 Version: 1.0-2
 Architecture: iphoneos-arm64
