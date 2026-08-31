@@ -1708,6 +1708,38 @@ Icon: https://raw.githubusercontent.com/curtinlv/PKCUpdateLog/main/img/pkc_4_135
 Name: PKC_无根
 Sponsor: Curtin <https://qr.alipay.com/2m612122dnnr9q6o488dgab>
 
+Package: com.dao.watched
+Version: 2.0
+Architecture: iphoneos-arm64
+Maintainer: Little 34306
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 15.0)
+Conflicts: com.34306.watched
+Filename: ./debs/com.dao.watched_2.0_iphoneos-arm64.deb
+Size: 5840
+MD5sum: 15cc4992585a098cb96ecb1bea4a4b4e
+SHA1: 0ec7bc15174875b3b8630601c0ccff3b4f2f59a8
+SHA256: b7f9feed71c0cd42414cd0991867a5035d1d0813839437f37303d40aaae24c4d
+Section: 嗨-工具
+Description: 让旧 iOS 版本配对新 watchOS(自测) 版本，无设置，安装即可生效；2.0：支持iOS17+，添加功能：支持照片同步、支持音乐同步、支持可安装应用同步、支持地图同步。
+Author: 34306
+Name: watched 手表配对(rootless)
+
+Package: com.dao.watched
+Version: 2.0
+Architecture: iphoneos-arm64e
+Maintainer: Little 34306
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 15.0)
+Conflicts: com.34306.watched
+Filename: ./debs/com.dao.watched_2.0_iphoneos-arm64e.deb
+Size: 5792
+MD5sum: 798e9b53c8040954725bb99c2338535d
+SHA1: 80f2efb395d3d1b472fdbc3243e157ad55f3e445
+SHA256: e291fef8696216c564f7dafd59fa0167f45d9379646b7ed9d49ec5dd077e88b5
+Section: 嗨-工具
+Description: 让旧 iOS 版本配对新 watchOS(自测) 版本，无设置，安装即可生效；2.0：支持iOS17+，添加功能：支持照片同步、支持音乐同步、支持可安装应用同步、支持地图同步。
+Author: 34306
+Name: watched 手表配对(RootHide)
+
 Package: com.doimty.promotion
 Version: 1.0.6
 Architecture: iphoneos-arm64e
