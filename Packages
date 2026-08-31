@@ -1,3 +1,21 @@
+Package: cn.llld.appfix
+Version: 0.0.36
+Architecture: iphoneos-arm64
+Maintainer: 来了老弟
+Installed-Size: 1452
+Depends: firmware (>= 14.0), ellekit | mobilesubstrate
+Filename: ./debs/cn.llld.appfix_0.0.36_iphoneos-arm64.deb
+Size: 455612
+MD5sum: 7f308f0c3a9598d3730090463bc464f1
+SHA1: fd3e68cbe3b7b2b441cda1d349b9b173ecc79967
+SHA256: de383e6a20cbebd5302a51dbe2b0934d54df52eb4d0b2aca9f31e66b2424e461
+Section: Development
+Description: appfix 应用修改器 ———  系统应用，用户应用，越狱应用的调整工具（Flex3 思路重写增强），支持自定义脚本代码，配置导出导入，一键开关，视图层级可视化 等等，不收费。
+Tag: purpose::uikit, compatible::ios14
+Author: 来了老弟
+Icon: file:///var/jb/Applications/appfix.app/AppIcon60@3x.png
+Name: 应用修改器
+
 Package: cn.llld.biaoji
 Version: 1.3
 Architecture: iphoneos-arm64e
@@ -1989,6 +2007,22 @@ Author: 航
 Depiction: https://pic1.imgdb.cn/item/69e5a39901316fbabf2ca364.png
 Icon: https://hang1888.github.io/debs/com.hang.kaiguan-icon.jpg
 Name: 航の开关
+
+Package: com.hang.zzzj
+Version: 0.0.1-8+debug
+Architecture: iphoneos-arm64
+Maintainer: hang
+Installed-Size: 180
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.hang.zzzj_0.0.1-8+debug_iphoneos-arm64.deb
+Size: 33788
+MD5sum: 226084118b0e3a132f3c6d89e3440dfc
+SHA1: b957a24eac532555ccbb6c010b5a82e5db244b0c
+SHA256: 3ef498596e36bdef1fafe8f16b8d8436354b8835e9c3f37b423206805fae6bd0
+Section: Tweaks
+Description: 转转搜索筛选助手：悬浮球面板，按机型/电池/系统版本/成色筛选，带复制链接
+Author: hang
+Name: 转转找鸡
 
 Package: com.huami.ChoicyConfigPin
 Version: 1.0-2
@@ -4298,6 +4332,43 @@ Description: Zone 插件用于设置.tendies交互壁纸/视频壁纸 支持iOS1
 Author: iosdump
 Name: Zone
 
+Package: com.jaysuen.ccflex16
+Version: 1.0.0-beta.1
+Architecture: iphoneos-arm64e
+Maintainer: JaySuen
+Installed-Size: 6444
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: mobilesubstrate, firmware (>= 15.0)
+Conflicts: com.wkk.betterccbrightness
+Replaces: com.wkk.betterccbrightness
+Filename: ./debs/com.jaysuen.ccflex16_1.0.0-beta.1_iphoneos-arm64e.deb
+Size: 179544
+MD5sum: 00785c1fd285c4c5c733a556e4556194
+SHA1: 99155e87da858fbddaa55438c1983f8dc29dd791
+SHA256: be0a4bbcbcbd3649eec4199dbb6b27c359d32b1b26b2ad40fa2855bac37f7b98
+Section: Tweaks
+Description: 可调整大小、高度自定义的控制中心 for ios16
+Author: JaySuen
+Name: EvoCenter16（控制中心布局修改）
+
+Package: com.jaysuen.ccflex16
+Version: 1.0.0-beta.1
+Architecture: iphoneos-arm64
+Maintainer: JaySuen
+Installed-Size: 6444
+Depends: mobilesubstrate, firmware (>= 15.0)
+Conflicts: com.wkk.betterccbrightness
+Replaces: com.wkk.betterccbrightness
+Filename: ./debs/com.jaysuen.ccflex16_1.0.0-beta.1_iphoneos-arm64.deb
+Size: 168996
+MD5sum: a9b3c04d94ffc7b9530b034428cdbbcf
+SHA1: b337933c03413f3d69c49e81620a92309c4d00a3
+SHA256: 741592854ef830869be9fb835ef586a4697419e2378f0b925d8c3ce4c7ff4cce
+Section: Tweaks
+Description: 可调整大小、高度自定义的控制中心 for iOS 16.
+Author: JaySuen
+Name: EvoCenter16（控制中心布局修改）
+
 Package: com.jontelang.snapper3
 Version: 1.2.1
 Architecture: iphoneos-arm64
@@ -4480,6 +4551,38 @@ Description: Filza Crack
 Author: Netskao
 Name: Filza Crack
 Sileodepiction: https://jailrepo.initnil.com/api?Package=com.netskao.filzacrack
+
+Package: com.ngkhoi.26home
+Version: 1.1.7
+Architecture: iphoneos-arm64e
+Maintainer: ngkhoi
+Installed-Size: 28608
+Depends: mobilesubstrate
+Filename: ./debs/com.ngkhoi.26home_1.1.7_iphoneos-arm64e.deb
+Size: 20394436
+MD5sum: 140dbe9910de321ab96dc4892e38873e
+SHA1: d9f8875b9d241d9780430b38f1c0fc2df7669419
+SHA256: ccba8ca7d879b30f038b3ef2c0b80173acb1612f83af98468dca9825a26cc54c
+Section: Tweaks
+Description: iOS 26 Homescreen customization. (简体中文设置页)
+Author: ngkhoi
+Name: 26Home
+
+Package: com.ngkhoi.26home
+Version: 1.1.7
+Architecture: iphoneos-arm64
+Maintainer: ngkhoi
+Installed-Size: 28628
+Depends: mobilesubstrate
+Filename: ./debs/com.ngkhoi.26home_1.1.7_iphoneos-arm64.deb
+Size: 20396212
+MD5sum: 6dfff6e690a17cca155868faf47dd59e
+SHA1: b14c82b27544647b3167debc1485bd4a97a82f72
+SHA256: 590d58c6daf0822286e08fedc4aa940edbdb8dbbfaf1b9dda5ba601c4d98c28e
+Section: Tweaks
+Description: iOS 26 风格的主屏幕（桌面）体验移植/模拟到旧版 iOS 上。
+Author: ngkhoi
+Name: 仿ios26
 
 Package: com.niceios.mrshi-rootless
 Version: 1.0.0.2-235
@@ -5417,6 +5520,46 @@ Dev: Tsangbaby
 Icon: https://tsangbaby.github.io/Icon/Pullover-X.png
 Name: PullOver X
 
+Package: com.tsangbaby.pulloverx
+Version: 1.9.6
+Architecture: iphoneos-arm64e
+Maintainer: Tsangbaby
+Depends: firmware (>= 14.0), mobilesubstrate, preferenceloader
+Conflicts: com.mlgm.pulloverx, com.dao.pulloverpro, com.c1d3r.pulloverpro
+Replaces: com.mlgm.pulloverx, com.dao.pulloverpro, com.c1d3r.pulloverpro
+Filename: ./debs/PullOverX_1.9.6_Final_Roothide.deb
+Size: 509940
+MD5sum: 23eee3458d3d45ff3b38c212c3333a44
+SHA1: 5143b783abc51842115935ef7b50a55b6a535343
+SHA256: 68a08adc7af9cf9d1327366a7cede63aade0ffcc657d4c0da6c2a91974a0fe6e
+Section: Tweaks
+Priority: optional
+Description: 悬浮多任务窗口工具，基于 Pullover Pro 进行修改
+Author: Tsangbaby
+Dev: Tsangbaby
+Icon: https://tsangbaby.github.io/Icon/Pullover-X.png
+Name: PullOver X
+
+Package: com.tsangbaby.pulloverx
+Version: 1.9.6
+Architecture: iphoneos-arm64
+Maintainer: Tsangbaby
+Depends: firmware (>= 14.0), mobilesubstrate, preferenceloader
+Conflicts: com.mlgm.pulloverx, com.dao.pulloverpro, com.c1d3r.pulloverpro
+Replaces: com.mlgm.pulloverx, com.dao.pulloverpro, com.c1d3r.pulloverpro
+Filename: ./debs/PullOverX_1.9.6_Final_Rootless.deb
+Size: 513200
+MD5sum: ed5fd8a6a6e28621cb71c444854c17e4
+SHA1: 1b2da4b98109b0d981e7dc15552357ac18fdd685
+SHA256: 8d12b47dfd85b0617ef3513d0195bd411dcd7c74aa48f79d0cfde37a2f5b47c5
+Section: Tweaks
+Priority: optional
+Description: 悬浮多任务窗口工具，基于 Pullover Pro 进行修改
+Author: Tsangbaby
+Dev: Tsangbaby
+Icon: https://tsangbaby.github.io/Icon/Pullover-X.png
+Name: PullOver X
+
 Package: com.vita.wchook
 Version: 1.0-1
 Architecture: iphoneos-arm64e
@@ -5706,6 +5849,23 @@ Description: cool
 Author: wkk
 Icon: https://s1.imagehub.cc/images/2025/12/26/29fda3e52ac78c6958ecf3b5dac18673.png
 Name: SystemX
+
+Package: com.yd.liquidglass
+Version: 0.1.2.3-22+debug
+Architecture: iphoneos-arm64
+Maintainer: yd
+Installed-Size: 7016
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 14.0), preferenceloader
+Filename: ./debs/com.yd.liquidglass_0.1.2.3-22+debug_iphoneos-arm64.deb
+Size: 1895848
+MD5sum: 1385039390ee0aec938610bdcf7df082
+SHA1: a7e0dba751e477afdc091c417d2a8a8c07f8ab48
+SHA256: 4db50ec380638e469aa5874c5aacfddca4e6dcf61cb6f95ab7748202df8cca5d
+Section: Tweaks
+Description: 一刀破解58元液态玻璃
+Author: yd
+Icon: https://winaviation.github.io/repo/depictions/jl.liquidass/icon.png
+Name: 液态玻璃
 
 Package: com.yourcompany.liquidsiri
 Version: 1.1.2-1+debug
