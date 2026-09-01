@@ -6037,6 +6037,22 @@ Description: 永久隐藏锁屏与通知中心的时间/日期显示（稳定防
 Author: zfsn
 Name: HideLockTime(隐藏锁屏时间)
 
+Package: com.zfsn.keyboardhook
+Version: 2.1-3+debug
+Architecture: iphoneos-arm64
+Maintainer: zfsn
+Installed-Size: 524
+Depends: mobilesubstrate, firmware (>= 15.0)
+Filename: ./debs/com.zfsn.keyboardhook_2.1-3+debug_iphoneos-arm64.deb
+Size: 43352
+MD5sum: 7e9265e48245f37ef3fd88c9f0b2e93b
+SHA1: 0a6700ac1ec96ff381f8b646113160437d0df05f
+SHA256: 50d2574b15cbc2f8930c5c12bd3f27dcdb57b55b42ab782c41136d663312cd27
+Section: Tweaks
+Description: 破解版
+Author: zfsn
+Name: KeyboardHook原生输入法自定义
+
 Package: com.zfsn.spectrums
 Version: 1.0
 Architecture: iphoneos-arm64e
@@ -6072,18 +6088,18 @@ Name: spectrums（灵动岛音乐专辑动感模式）
 Package: com.zfsn.switchtheme
 Version: 1.0.0
 Architecture: iphoneos-arm64
-Maintainer: cc
-Installed-Size: 240
+Maintainer: zfsn
+Installed-Size: 272
 Depends: mobilesubstrate
 Filename: ./debs/com.zfsn.switchtheme_1.0.0_iphoneos-arm64.deb
-Size: 27680
-MD5sum: 195f68284d3e8fd54447e08d71f52ea7
-SHA1: c92ec7c71d84785315d448cca647f7e245d62877
-SHA256: 3a6ab0ee1f75dfb347a59e410c28fbe6c33ac4aa320451d5576719f6dd70270d
+Size: 34400
+MD5sum: 55a78ad14b5c032a3c513407286eb8c2
+SHA1: e66817b1459c227764635515fe1b11e4d4a16d7f
+SHA256: dde014b0dd3bc23c08b9513052b891aa4cd7d15a865e357b85e8285b50f1e08d
 Section: Tweaks
-Description: 灵感源自牙齿线条的极简开关，圆润而洁净，温润而纯粹。滑动之间，如唇齿轻启，带来指尖柔滑的精致体验
-Author: cc
-Name: SwitchTheme——牙齿
+Description: 破解版
+Author: zfsn
+Name: SwitchTheme（半透简约开关）
 
 Package: dylv.liquidass
 Version: 0.1.1b
