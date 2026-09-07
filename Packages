@@ -541,6 +541,21 @@ Description: Sileo软件源刷新、dpkg安装日志完整汉化，覆盖全部�
 Author: Custom
 Name: Sileo APT/DPKG汉化
 
+Package: com.aptzh
+Version: 1.3-3+debug
+Architecture: iphoneos-arm64
+Maintainer: Custom
+Installed-Size: 240
+Filename: ./debs/com.aptzh_1.3-3+debug_iphoneos-arm64.deb
+Size: 30646
+MD5sum: 4622aea8256e00383a885f190ffead3c
+SHA1: 56a92811550b4c2bb60a2b7c8680f37c2ed18726
+SHA256: d831cc0d333c8d2d11a92ea0276dfa8ebcb19bcd45b4b55db43d9bea00a86457
+Section: Tweaks
+Description: Sileo软件源刷新、dpkg安装日志完整汉化，覆盖全部报错与输出文本
+Author: Custom
+Name: Sileo APT/DPKG汉化
+
 Package: com.axs.axon
 Version: 5.2.0-55
 Architecture: iphoneos-arm64
@@ -4701,14 +4716,15 @@ Depends: mobilesubstrate, firmware (>= 15.0)
 Conflicts: com.wkk.betterccbrightness
 Replaces: com.wkk.betterccbrightness
 Filename: ./debs/com.jaysuen.ccflex16_1.0.0-beta.1_iphoneos-arm64e.deb
-Size: 179544
-MD5sum: 00785c1fd285c4c5c733a556e4556194
-SHA1: 99155e87da858fbddaa55438c1983f8dc29dd791
-SHA256: be0a4bbcbcbd3649eec4199dbb6b27c359d32b1b26b2ad40fa2855bac37f7b98
+Size: 168920
+MD5sum: 00a4037d6ef5d4de0556d57aa700d230
+SHA1: 1d98079c81281ca2cd80295b18345a4c535f0d41
+SHA256: c63bb55273af65b816a10f21ec56d8e7aadf179a299780a319153ea48acb010b
 Section: Tweaks
-Description: 可调整大小、高度自定义的控制中心 for ios16
+Description: A modern, resizable and highly customizable Control Center for iOS 16.适用于iOS 16的现代、可调整大小和高度可定制的控制中心。
 Author: JaySuen
-Name: EvoCenter16（控制中心布局修改）
+Icon: https://huayuarc.github.io/icon/ccflex16.jpg
+Name: EvoCenter16 控制中心模块
 
 Package: com.jaysuen.ccflex16
 Version: 1.0.0-beta.1
@@ -4719,14 +4735,15 @@ Depends: mobilesubstrate, firmware (>= 15.0)
 Conflicts: com.wkk.betterccbrightness
 Replaces: com.wkk.betterccbrightness
 Filename: ./debs/com.jaysuen.ccflex16_1.0.0-beta.1_iphoneos-arm64.deb
-Size: 168996
-MD5sum: a9b3c04d94ffc7b9530b034428cdbbcf
-SHA1: b337933c03413f3d69c49e81620a92309c4d00a3
-SHA256: 741592854ef830869be9fb835ef586a4697419e2378f0b925d8c3ce4c7ff4cce
+Size: 169016
+MD5sum: 9f4b3eab5e446bfd3fa1721eb5975604
+SHA1: 02750e06f299320336ac38dbc88d683ecdf783ce
+SHA256: 50428263495ecbc9220905279f781114e6ffc471029821f2747c7ddc4de714dd
 Section: Tweaks
-Description: 可调整大小、高度自定义的控制中心 for iOS 16.
+Description: A modern, resizable and highly customizable Control Center for iOS 16.适用于iOS 16的现代、可调整大小和高度可定制的控制中心。
 Author: JaySuen
-Name: EvoCenter16（控制中心布局修改）
+Icon: https://huayuarc.github.io/icon/ccflex16.jpg
+Name: EvoCenter16 控制中心模块
 
 Package: com.jl.liquidglass
 Version: 0.1.2.8
