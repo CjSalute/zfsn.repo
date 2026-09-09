@@ -5368,6 +5368,38 @@ Author: Simon
 Icon: https://huayuarc.github.io/icon/controlcenterlayout.jpg
 Name: 控制中心模块
 
+Package: com.simon.spectrums
+Version: 3.1.2
+Architecture: iphoneos-arm64e
+Maintainer: zfsn
+Installed-Size: 1348
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/com.simon.spectrums_3.1.2_iphoneos-arm64e.deb
+Size: 215388
+MD5sum: 8d045ea264e167357cdb91e8b1e7b9ce
+SHA1: 4c30a4917e9e39f033b4b16baedb40cc69a6aca7
+SHA256: fe4379704b861a3f13e652c6652998f27b26e388baa95a1d6c076c9a1867d1f5
+Section: Tweaks
+Description: 去掉音轨在17系统上面的小黑块，动感专辑圆环均衡器，17系统不再卑微！
+Author: zfsn
+Name: spectrums(灵动岛专辑动感模式)
+
+Package: com.simon.spectrums
+Version: 3.1.2
+Architecture: iphoneos-arm64
+Maintainer: zfsn
+Installed-Size: 1348
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/com.simon.spectrums_3.1.2_iphoneos-arm64.deb
+Size: 217356
+MD5sum: d7f31a46139684cfcd01624bcf2de9c5
+SHA1: 4780d4c2c8647493cce118bdce7baab7efdedd59
+SHA256: 83ca1850af15cd353b9506d03a3a16454cdd5a3b659b7706764b3e2120dafb3b
+Section: Tweaks
+Description: 去掉音轨在17系统上面的小黑块，动感专辑圆环均衡器，17系统不再卑微！
+Author: zfsn
+Name: spectrums(灵动岛专辑动感模式)
+
 Package: com.sini.3dappversionspoofer
 Version: 2.1.1
 Architecture: iphoneos-arm64
