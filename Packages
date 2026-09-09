@@ -6749,6 +6749,42 @@ Description: 全局液态玻璃效果，效果自测
 Author: MoWang
 Name: SBLiquidGlass（莫忘液态玻璃）
 
+Package: moe.waru.soko
+Version: 1.0.0-rc.1
+Architecture: iphoneos-arm64
+Maintainer: waruhachi
+Installed-Size: 728
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/moe.waru.soko_1.0.0-rc.1_iphoneos-arm64.deb
+Size: 95164
+MD5sum: e7f23a311e33f9a1a9e7ebfd0f7240fd
+SHA1: 24c2e29c26f48c3487edffe8f8932123b3eb60f0
+SHA256: d0763e9545e89a46f7afe62c126fcbd0f9952f05df343c7f2e223c0f0ae58ed0
+Section: Tweaks
+Description: 一款用于锁屏小组件位置调整的插件
+ WIDGETS=小部件
+ Reset Widget Offset=重置小部件偏移
+Author: waruhachi
+Name: Soko(锁屏小组件位置调整)
+
+Package: moe.waru.soko
+Version: 1.0.0-rc.1
+Architecture: iphoneos-arm64e
+Maintainer: waruhachi
+Installed-Size: 728
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/moe.waru.soko_1.0.0-rc.1_iphoneos-arm64e.deb
+Size: 95064
+MD5sum: f02e184e2556261ea1dd365bdeaca1b8
+SHA1: 436152745b8d35a438d21cc77f1f0f97f9b28e24
+SHA256: 70c17399b0f48145c5908a3f320ef8d3c82cf01882c6480972e96fd540d73b38
+Section: Tweaks
+Description: 一款用于锁屏小组件位置调整的插件
+ WIDGETS=小部件
+ Reset Widget Offset=重置小部件偏移
+Author: waruhachi
+Name: Soko(锁屏小组件位置调整)
+
 Package: roothide.patches.filza
 Version: 0.5-4
 Architecture: iphoneos-arm64e
