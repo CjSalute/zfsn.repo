@@ -6293,6 +6293,21 @@ Description: 重构简化代码，微信聊天左滑引用消息，无设置页�
 Author: vita
 Name: WCHook (微信左滑引用)
 
+Package: com.w3ltyyy.lead
+Version: 1.4.4
+Architecture: iphoneos-arm
+Maintainer: w3ltyyy
+Installed-Size: 25176
+Filename: ./debs/com.w3ltyyy.lead_1.4.4_iphoneos-arm.deb
+Size: 4174956
+MD5sum: 0f3929bb221b3d02e337886b3f9632be
+SHA1: 39abb6f7f7004c0fbf48fb2a7977c45844fb1e65
+SHA256: 4affa39c77a7b955140eb0881c0fe0e86fc867ffbeeb6a30038635c46f3d9da3
+Section: Tweaks
+Description: The best Tweak For Telegram iOS
+Author: w3ltyyy
+Name: Lead
+
 Package: com.wechat.x
 Version: 1.0.1
 Architecture: iphoneos-arm64
