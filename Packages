@@ -485,6 +485,31 @@ Icon: https://axs66.github.io/pro/icon/kzmh.png
 Name: 控制中心美化
 Sileodepiction: https://axs66.github.io/pro/sileodepiction/kzmh/js.json
 
+Package: com.aa22qq.lockeventringer
+Version: 9.0.0-2+debug
+Architecture: iphoneos-arm64
+Maintainer: aa22qq
+Installed-Size: 740
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 15.0)
+Filename: ./debs/com.aa22qq.lockeventringer_9.0.0-2+debug_iphoneos-arm64.deb
+Size: 21024
+MD5sum: fa66947d8780b9c75555c21e72d1f63f
+SHA1: 76dcc5a19c29b5df7b7feaf56b9fcd4a57e9f484
+SHA256: 1b54c00700adeffc5ffc84dd7fda9a56a5532c7e59b54cace7231558b550de2a
+Section: Tweaks
+Description: 自动控制 iPhone 响铃静音状态，支持命令行静音控制与设置启动停止开关，控制中心开关,灵动岛/HUD 弹窗的自定义隐藏开关，添加锁屏时振动开关，添加铃声音量跟媒体音量控制。
+  系统兼容:
+   - 支持 iOS 15.0 至 iOS 17.x
+  功能一 (LockEventRinger):
+   - 锁屏时自动开启响铃，解锁时自动恢复静音；内置状态校验逻辑，完美规避下拉通知中心。
+  功能二 (RingerManagerControl):
+   - 支持配合 Powercuts / RemoteCompanion / notifyutil 等控制静音状态与灵动岛 HUD 响应。
+   - 开启静音: notifyutil -p com.ringer.control.mute
+   - 关闭静音: notifyutil -p com.ringer.control.unmute
+   - 状态切换: notifyutil -p com.ringer.control.toggle
+Author: aa22qq
+Name: LockEventRinger静音控制
+
 Package: com.anthopak.pancake-rootless
 Version: 2.3
 Architecture: iphoneos-arm64e
@@ -579,6 +604,27 @@ Author: Axs
 Icon: https://axs66.github.io/pro/icon/axon.png
 Name: Axon
 Sileodepiction: https://axs66.github.io/pro/sileodepiction/axon/js.json
+
+Package: com.axs.duostatus
+Version: 5.2.0-19
+Architecture: iphoneos-arm64
+Maintainer: Axs
+Installed-Size: 464
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/com.axs.duostatus_5.2.0-19_iphoneos-arm64.deb
+Size: 40600
+MD5sum: c7ff7b3a2ddf56a4265ce61813e1aaea
+SHA1: a121c65cac4f3848996ad5c037749c80756e0842
+SHA256: 2d89bfd693eff79b120bb791a1d816676b554544a6b0e5445548ed419bf6a813
+Section: Axs-Tweaks
+Description: 状态栏信号/网络/电量三合一圆环图标。
+ * 1.圆环=电量、底部圆点=信号、环内=WiFi 或 5G/4G 制式
+ * 2.全部取自系统真实数据，实时刷新（充电闪电、低电量、飞行模式、无服务）
+ * 3.尺寸/位移/线宽/配色可调，改动即时生效，控制中心开合自动刷新
+Author: Axs
+Icon: https://axs66.github.io/pro/icon/duostatus.png
+Name: DuoStatus
+Sileodepiction: https://axs66.github.io/pro/sileodepiction/duostatus/js.json
 
 Package: com.axs.ios16dao
 Version: 5.2.0-205
@@ -1650,6 +1696,94 @@ Description: 解除温控，一切从简即可。支持命令行切换模式：i
 Author: be-huge & doimty
 Icon: https://huayuarc.github.io/icon/Insulation.png
 Name: insulation
+
+Package: com.binglan.dynamicfx
+Version: 1.0.7
+Architecture: iphoneos-arm64e
+Maintainer: 冰蓝
+Installed-Size: 772
+Pre-Depends: rootless-compat (>= 0.9)
+Depends: mobilesubstrate, preferenceloader, firmware (>= 15.0)
+Filename: ./debs/com.binglan.dynamicfx_1.0.7_iphoneos-arm64e.deb
+Size: 113380
+MD5sum: 7918930acf22f9b0c5da2c3966ce70c8
+SHA1: b87b68179627fb1d1c283d33468039820f8017c1
+SHA256: 98bbeb84c34e1c83d91e032c4c99973bb7647b4bba8212411ffb7d95cd534bcd
+Section: Tweaks
+Description: DynamicFX 用于美化 iPhone 灵动岛，支持自定义灵动岛背景、颜色、透明度、圆角以及过渡动画。
+Author: 冰蓝
+Icon: https://huayuarc.github.io/icon/DynamicFX.png
+Name: DynamicFX
+
+Package: com.binglan.dynamicfx
+Version: 1.0.7
+Architecture: iphoneos-arm64
+Maintainer: 冰蓝
+Installed-Size: 772
+Depends: mobilesubstrate, preferenceloader, firmware (>= 15.0)
+Filename: ./debs/com.binglan.dynamicfx_1.0.7_iphoneos-arm64.deb
+Size: 116088
+MD5sum: 52af048b8bd7bf259e8afb06f1a65828
+SHA1: 3d89f3fe3c05e3e5513c290949d9cd670f6d6754
+SHA256: f597483d84419e609e114e90bfb7fb873122b19421eb5a061808258347830f64
+Section: Tweaks
+Description: DynamicFX 是一款灵动岛美化插件，可自由修改灵动岛背景颜色、透明度、圆角大小、过渡动画。
+Author: 冰蓝
+Icon: https://huayuarc.github.io/icon/DynamicFX.png
+Name: DynamicFX
+
+Package: com.binglanqjsy.deb
+Version: 3.0.0
+Architecture: iphoneos-arm64
+Maintainer: 冰蓝
+Installed-Size: 908
+Depends: mobilesubstrate, preferenceloader, ws.hbang.common (>= 1.16)
+Filename: ./debs/com.binglanqjsy.deb_3.0.0_iphoneos-arm64.deb
+Size: 163872
+MD5sum: d646cfc06345a96844daa52aff6e838e
+SHA1: 0a5e7f67a9e10c66a299355826204fece5473cb0
+SHA256: b147ad4e908511aac94dc96cc6e9f6dc9b7b8dc34e948fa40c0188acb467c357
+Section: Tweaks
+Description: 添加全局水印相关功能，支持截图水印，录屏水印，套壳截图，套壳录屏。
+Author: 冰蓝
+Icon: https://huayuarc.github.io/icon/IceBlue.png
+Name: 全局水印
+
+Package: com.binglanqjsy.deb
+Version: 3.0.0
+Architecture: iphoneos-arm64e
+Maintainer: 冰蓝
+Installed-Size: 908
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: mobilesubstrate, preferenceloader, ws.hbang.common (>= 1.16)
+Filename: ./debs/com.binglanqjsy.deb_3.0.0_iphoneos-arm64e.deb
+Size: 160164
+MD5sum: 396fd40e77da31b4802fd9ffcb2eed79
+SHA1: a5dad85c2d1779cec65c6366e74f7d74432020f1
+SHA256: 8995054c241a419c169d4f926815db6c1857c35a552d7eef9ba71e8cb566dc7c
+Section: Tweaks
+Description: 添加全局水印相关功能，支持截图水印，录屏水印，套壳截图，套壳录屏。
+Author: 冰蓝
+Icon: https://huayuarc.github.io/icon/IceBlue.png
+Name: 全局水印
+
+Package: com.callassist.caiphoneduostatus
+Version: 1.5.10
+Architecture: iphoneos-arm64e
+Maintainer: 热心网友CallAssist
+Installed-Size: 204
+Depends: firmware (>= 16.0)
+Conflicts: com.xybp888.caanimatedstatus
+Replaces: com.xybp888.caanimatedstatus
+Filename: ./debs/com.callassist.caiphoneduostatus_1.5.10_iphoneos-arm64e.deb
+Size: 18876
+MD5sum: f74550c327bbf48da1525176d8e32e31
+SHA1: 8f2e7291e0abbe5772604f9f9f736139b11b9c03
+SHA256: 0ecc1cdcb4a569f539356f6006449eded72310e887ffac36cd1e229b5f068306
+Section: Tweaks
+Description: 本插件仅为体验版,不得用于商业收费,插件本身也不会收取任何费用,如遇收费,请立即拒绝,本插件发布后不会再进行更新,所以不用提要求和bug报告,如果不满意请自行卸载,信号,WIFI,数据,电量均为安装设备的真实交互
+Author: 热心网友CallAssist
+Name: CAiPhoneDuoStatus
 
 Package: com.cc.ldd
 Version: 2.0.0
