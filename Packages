@@ -503,6 +503,24 @@ Icon: https://axs66.github.io/pro/icon/kzmh.png
 Name: 控制中心美化
 Sileodepiction: https://axs66.github.io/pro/sileodepiction/kzmh/js.json
 
+Package: com.Axs.wxkeyboarduihook
+Version: 2.0
+Architecture: iphoneos-arm64
+Maintainer: TiaoTiao
+Installed-Size: 480
+Depends: mobilesubstrate, firmware (>= 14.0)
+Filename: ./debs/com.Axs.wxkeyboarduihook_2.0_iphoneos-arm64.deb
+Size: 106924
+MD5sum: 1d69e38fdbc8ff6406d6041ca96e1f32
+SHA1: ac530597aeec7e8f8c53caa4967bc5c717e0a7e2
+SHA256: 6c01f0e51eda7e30eaff3b72fff791d55b66d2a92aaa808c7e2f37e3b1327113
+Section: Tweaks
+Description: 微信键盘虚线
+Author: TiaoTiao
+Icon: https://axs66.github.io/pro/icon/wechat.png
+Name: 微信键盘虚线
+Sileodepiction: https://axs66.github.io/pro/sileodepiction/wxkeyboarduihook/js.json
+
 Package: com.aa22qq.lockeventringer
 Version: 9.0.0-2+debug
 Architecture: iphoneos-arm64
@@ -3262,6 +3280,58 @@ Author: iosdump
 Icon: file:///Library/PreferenceBundles/AppDataPrefs.bundle/AppData@3x.png
 Name: AppData
 
+Package: com.iosdump.appdata
+Version: 2.7.3
+Architecture: iphoneos-arm
+Maintainer: iosdump
+Depends: firmware (>= 11.0), mobilesubstrate, preferenceloader
+Conflicts: com.netskao.appdatas, com.netskao.appdata, cn.zqbb.appdata, com.fouadraheb.appdata
+Filename: ./debs/com.iosdump.appdata_2.7.3_iphoneos-arm.deb
+Size: 2076950
+MD5sum: b7507e92ebf581456c9036f9d64d0ff9
+SHA1: c1396a74c483fe8e51f8b2b84fb1c2fccb3a51f1
+SHA256: 5cd2d0bc2b7e6e6a6982227c3e607812dd685ceacf02efa70ee003fb5504c75d
+Section: Tweaks
+Description: 在主屏幕查看应用数据与管理应用
+Author: iosdump
+Icon: file:///Library/PreferenceBundles/AppDataPrefs.bundle/AppData@3x.png
+Name: AppData
+
+Package: com.iosdump.appdata
+Version: 2.7.3
+Architecture: iphoneos-arm64
+Maintainer: iosdump
+Depends: firmware (>= 11.0), mobilesubstrate, preferenceloader
+Conflicts: com.netskao.appdatas, com.netskao.appdata, cn.zqbb.appdata, com.fouadraheb.appdata
+Filename: ./debs/com.iosdump.appdata_2.7.3_iphoneos-arm64.deb
+Size: 2077070
+MD5sum: 92f9b4f84c0b842021d4ea320edebf62
+SHA1: aabfda4f5e055cc11c5c162983f2012a4f600c2b
+SHA256: 2dd3ed65fde9310febb24996a3688d174d099d671e067c6ae55d1b73e7c7efa0
+Section: Tweaks
+Description: 在主屏幕查看应用数据与管理应用
+Author: iosdump
+Icon: file:///Library/PreferenceBundles/AppDataPrefs.bundle/AppData@3x.png
+Name: AppData
+
+Package: com.iosdump.appdata
+Version: 2.7.3
+Architecture: iphoneos-arm64e
+Maintainer: iosdump
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: firmware (>= 11.0), mobilesubstrate, preferenceloader
+Conflicts: com.netskao.appdatas, com.netskao.appdata, cn.zqbb.appdata, com.fouadraheb.appdata
+Filename: ./debs/com.iosdump.appdata_2.7.3_iphoneos-arm64e.deb
+Size: 3927688
+MD5sum: a38359585fb4ca0c91b84d3cca0c88cd
+SHA1: 2183f4a9aec5a2732d15550282dbd5c993db40f6
+SHA256: a3cb7080e4631cfe51dcac084114d86de63928c7b88ed1a2a3a6c76da479940f
+Section: Tweaks
+Description: 在主屏幕查看应用数据与管理应用
+Author: iosdump
+Icon: file:///Library/PreferenceBundles/AppDataPrefs.bundle/AppData@3x.png
+Name: AppData
+
 Package: com.iosdump.customcallbg
 Version: 0.0.1
 Architecture: iphoneos-arm
@@ -4796,6 +4866,159 @@ Description: 支持录屏/截图套壳，水印以及区域截图、长截图等
 Author: iosdump
 Name: SHELLX
 
+Package: com.iosdump.shellx
+Version: 3.0.1
+Architecture: iphoneos-arm
+Maintainer: iosdump
+Installed-Size: 13476
+Depends: mobilesubstrate, preferenceloader, com.opa334.ccsupport
+Conflicts: com.jontelang.snapper3, byg.iosios.net.snapper3, com.jontelang.snapper, com.jontelang.snapper2.packix, xyz.cypwn.snapperfr33
+Filename: ./debs/com.iosdump.shellx_3.0.1_iphoneos-arm.deb
+Size: 2956604
+MD5sum: 5de516cec8d9fb1b22907fd6d9b8591d
+SHA1: 2564b36f25278f4f887d88dab4987e7264ff588a
+SHA256: aac99bed6440a9ab0bb4d1bae562bf31706761ac2e91e3676c8c035ad63e368b
+Section: Tweaks
+Description: 支持录屏/截图套壳，水印以及区域截图、长截图等，兼容iOS14-17所有越狱
+Author: iosdump
+Name: SHELLX
+
+Package: com.iosdump.shellx
+Version: 3.0.1
+Architecture: iphoneos-arm64e
+Maintainer: iosdump
+Installed-Size: 13476
+Depends: mobilesubstrate, preferenceloader, com.opa334.ccsupport
+Conflicts: com.jontelang.snapper3, byg.iosios.net.snapper3, com.jontelang.snapper, com.jontelang.snapper2.packix, xyz.cypwn.snapperfr33
+Filename: ./debs/com.iosdump.shellx_3.0.1_iphoneos-arm64e.deb
+Size: 2947520
+MD5sum: d8aa7ade1d42d38ac92ee4fe34fe052b
+SHA1: 87a2027d99b5a97a2cbbafc41a20cb9002f37b70
+SHA256: 191debef2debfbc9bcee38984402d7f60e6d946fa936638540b94c73dc245e8b
+Section: Tweaks
+Description: 支持录屏/截图套壳，水印以及区域截图、长截图等，兼容iOS14-17所有越狱
+Author: iosdump
+Name: SHELLX
+
+Package: com.iosdump.shellx
+Version: 3.0.1
+Architecture: iphoneos-arm64
+Maintainer: iosdump
+Installed-Size: 13476
+Depends: mobilesubstrate, preferenceloader, com.opa334.ccsupport
+Conflicts: com.jontelang.snapper3, byg.iosios.net.snapper3, com.jontelang.snapper, com.jontelang.snapper2.packix, xyz.cypwn.snapperfr33
+Filename: ./debs/com.iosdump.shellx_3.0.1_iphoneos-arm64.deb
+Size: 2957148
+MD5sum: 5c57e14136a3738a11627cd2d2107981
+SHA1: c3074badb4f709863394186c3ce05b346a3f18a7
+SHA256: e0176ed13a72d71d56f61f187d0e62a7dd4bfe16b92df33d39846ea255f4b6bd
+Section: Tweaks
+Description: 支持录屏/截图套壳，水印以及区域截图、长截图等，兼容iOS14-17所有越狱
+Author: iosdump
+Name: SHELLX
+
+Package: com.iosdump.shellx
+Version: 3.1.0
+Architecture: iphoneos-arm64e
+Maintainer: iosdump
+Installed-Size: 13896
+Depends: mobilesubstrate, preferenceloader, com.opa334.ccsupport
+Conflicts: com.jontelang.snapper3, byg.iosios.net.snapper3, com.jontelang.snapper, com.jontelang.snapper2.packix, xyz.cypwn.snapperfr33
+Filename: ./debs/com.iosdump.shellx_3.1.0_iphoneos-arm64e.deb
+Size: 3071012
+MD5sum: 9afb67f47577825d9a1951fce0455079
+SHA1: 1450befd20794b03ecdc4cc9430524f7a62badb6
+SHA256: b2f46ce16e4022744907527e402a2d5fc18183376fa6152b758eb0b7ac2be5dd
+Section: Tweaks
+Description: 支持录屏/截图套壳，水印以及区域截图、长截图等，兼容iOS14-17所有越狱
+Author: iosdump
+Name: SHELLX
+
+Package: com.iosdump.shellx
+Version: 3.1.0
+Architecture: iphoneos-arm64
+Maintainer: iosdump
+Installed-Size: 13912
+Depends: mobilesubstrate, preferenceloader, com.opa334.ccsupport
+Conflicts: com.jontelang.snapper3, byg.iosios.net.snapper3, com.jontelang.snapper, com.jontelang.snapper2.packix, xyz.cypwn.snapperfr33
+Filename: ./debs/com.iosdump.shellx_3.1.0_iphoneos-arm64.deb
+Size: 3074700
+MD5sum: 6d911ba083fec6cde2ca1673a76d27b7
+SHA1: 0dbe81efd37f25751639692ae73c9bf22b222b5a
+SHA256: d7791ab125c956447248b9c325886db1cc4c389e494987b6af9daccdaa5db4f5
+Section: Tweaks
+Description: 支持录屏/截图套壳，水印以及区域截图、长截图等，兼容iOS14-17所有越狱
+Author: iosdump
+Name: SHELLX
+
+Package: com.iosdump.shellx
+Version: 3.1.0
+Architecture: iphoneos-arm
+Maintainer: iosdump
+Installed-Size: 13912
+Depends: mobilesubstrate, preferenceloader, com.opa334.ccsupport
+Conflicts: com.jontelang.snapper3, byg.iosios.net.snapper3, com.jontelang.snapper, com.jontelang.snapper2.packix, xyz.cypwn.snapperfr33
+Filename: ./debs/com.iosdump.shellx_3.1.0_iphoneos-arm.deb
+Size: 3076490
+MD5sum: ffdd2dcea26b4d8f8834ac83de1eee8f
+SHA1: b6f544f83146cd3daec2940694b8c6cec30eab59
+SHA256: 7bb4d5520592300d83953a92521f767eaaf3857b29f279e1b75b9c89371ee9b6
+Section: Tweaks
+Description: 支持录屏/截图套壳，水印以及区域截图、长截图等，兼容iOS14-17所有越狱
+Author: iosdump
+Name: SHELLX
+
+Package: com.iosdump.shellx
+Version: 3.1.1
+Architecture: iphoneos-arm64
+Maintainer: iosdump
+Installed-Size: 13912
+Depends: mobilesubstrate, preferenceloader, com.opa334.ccsupport
+Conflicts: com.jontelang.snapper3, byg.iosios.net.snapper3, com.jontelang.snapper, com.jontelang.snapper2.packix, xyz.cypwn.snapperfr33
+Filename: ./debs/com.iosdump.shellx_3.1.1_iphoneos-arm64.deb
+Size: 3076012
+MD5sum: 844dc4986969b71623542fd82eadfc4d
+SHA1: 82bf42c4e8e59638513bbe9502fcde7c91055247
+SHA256: fa09ebb97940aef56217e86742af7888ba79a26e2db252c939a936c0adb24372
+Section: Tweaks
+Description: 支持录屏/截图套壳，水印以及区域截图、长截图等，兼容iOS14-17所有越狱
+Author: iosdump
+Name: SHELLX
+
+Package: com.iosdump.shellx
+Version: 3.1.1
+Architecture: iphoneos-arm64e
+Maintainer: iosdump
+Installed-Size: 13896
+Depends: mobilesubstrate, preferenceloader, com.opa334.ccsupport
+Conflicts: com.jontelang.snapper3, byg.iosios.net.snapper3, com.jontelang.snapper, com.jontelang.snapper2.packix, xyz.cypwn.snapperfr33
+Filename: ./debs/com.iosdump.shellx_3.1.1_iphoneos-arm64e.deb
+Size: 3072290
+MD5sum: 26e5153cd456a134ebad7950cbd4e152
+SHA1: de6d0a0868a0e47022d19182268800b96f8b00c1
+SHA256: fbe32de30d021c527f9505e46c0bd34507f79db36df9f1604cfbb83846e476e1
+Section: Tweaks
+Description: 支持录屏/截图套壳，水印以及区域截图、长截图等，兼容iOS14-17所有越狱
+Author: iosdump
+Name: SHELLX
+
+Package: com.iosdump.shellx
+Version: 3.1.1
+Architecture: iphoneos-arm
+Maintainer: iosdump
+Installed-Size: 13912
+Depends: mobilesubstrate, preferenceloader, com.opa334.ccsupport
+Conflicts: com.jontelang.snapper3, byg.iosios.net.snapper3, com.jontelang.snapper, com.jontelang.snapper2.packix, xyz.cypwn.snapperfr33
+Filename: ./debs/com.iosdump.shellx_3.1.1_iphoneos-arm.deb
+Size: 3077412
+MD5sum: 139f88691a8f8e064a4e33356389aab7
+SHA1: 44aa4fb2ae8c6c60d0c6afcad4292581b00b8d7a
+SHA256: f403c0c2477d7dd165a26c4e368fda0408cc4b6d36f1c5b504ab12c57e576e3b
+Section: Tweaks
+Description: 支持录屏/截图套壳，水印以及区域截图、长截图等，兼容iOS14-17所有越狱
+Author: iosdump
+Name: SHELLX
+
 Package: com.iosdump.trollcmtweak
 Version: 1.1.7
 Architecture: iphoneos-arm
@@ -5265,6 +5488,22 @@ Name: TrollStore Lite (RootHide)
 
 Package: com.opa334.trollstorelite
 Version: 2.1.1
+Architecture: iphoneos-arm
+Maintainer: opa334
+Installed-Size: 8140
+Depends: ldid
+Filename: ./debs/TrollStoreLite_2.1.1_iphoneos-arm.deb
+Size: 2217824
+MD5sum: a6ea4ef09614f38142234aa36a46acd5
+SHA1: 36c2b5c1cce861bba7a375bd575fea7a56320d62
+SHA256: bf8eba3145b54b3328b7e0cfa33cb97945ebc1e4a9f6ee3046bd387fc284b13f
+Section: Applications
+Description: TrollStore for jailbroken iOS
+Author: opa334
+Name: TrollStore Lite
+
+Package: com.opa334.trollstorelite
+Version: 2.1.1
 Architecture: iphoneos-arm64
 Maintainer: opa334
 Installed-Size: 8140
@@ -5278,6 +5517,38 @@ Section: Applications
 Description: TrollStore for jailbroken iOS
 Author: opa334
 Name: TrollStore Lite
+
+Package: com.opa334.trollstorelite
+Version: 2.1.1
+Architecture: iphoneos-arm64
+Maintainer: opa334
+Installed-Size: 8140
+Depends: ldid
+Filename: ./debs/TrollStoreLite_2.1.1_iphoneos-arm64.deb
+Size: 2215938
+MD5sum: 459b029ee77c53e9b0e1caecc49436e7
+SHA1: 1e5a3a2755b100c6ce2241709390b14b10f52456
+SHA256: 44299e292cf352608d5578a579cbdb566febef09daeac19ad8b176af2792bf27
+Section: Applications
+Description: TrollStore for jailbroken iOS
+Author: opa334
+Name: TrollStore Lite
+
+Package: com.opa334.trollstorelite
+Version: 2.1.1
+Architecture: iphoneos-arm64e
+Maintainer: opa334
+Installed-Size: 8140
+Depends: ldid
+Filename: ./debs/TrollStoreLite_2.1.1_iphoneos-arm64e.deb
+Size: 2216544
+MD5sum: aa1e854d2d5376c0b48e20277cbcbbf8
+SHA1: 4f6808c22d803004b4143e88a86a3032caf3247a
+SHA256: bfb3c636c5fe376dcaa0579b09aa1a6201949de9531bb76148dcef723d09bbb3
+Section: Applications
+Description: TrollStore for RootHide jailbroken iOS
+Author: opa334
+Name: TrollStore Lite (RootHide)
 
 Package: com.opa334.trollstorelite
 Version: 2.1.1-260903
@@ -6981,6 +7252,42 @@ Section: Tweaks
 Description: 全局液态玻璃效果，效果自测
 Author: MoWang
 Name: SBLiquidGlass（莫忘液态玻璃）
+
+Package: iya.banana.iphoneduoicon
+Version: 0.1.6
+Architecture: iphoneos-arm64
+Maintainer: Banana
+Installed-Size: 556
+Depends: firmware (>= 16.0), firmware (<< 19.0), mobilesubstrate, preferenceloader
+Conflicts: com.82flex.singlevpn
+Filename: ./debs/iya.banana.iphoneduoicon_0.1.6_iphoneos-arm64.deb
+Size: 67624
+MD5sum: 6a38eac40442dc5f8629f84c97109359
+SHA1: 8cfc5acc37cc4136d60aeab3505250d82ab08765
+SHA256: 4eea9a373987eb289feb2c55d82c59d60b5b9e5b82a6437dbb70f016a17dc285
+Section: Tweaks
+Description: Combined battery, Wi-Fi and dual-line cellular status icon.电量、Wi-Fi、蜂窝信号三合一，支持双卡独立信号显示。
+Author: Banana
+Icon: https://huayuarc.github.io/icon/iPhoneDuoIcon.png
+Name: iPhoneDuoIcon
+
+Package: iya.banana.iphoneduoicon
+Version: 0.1.6
+Architecture: iphoneos-arm64e
+Maintainer: Banana
+Installed-Size: 540
+Depends: firmware (>= 16.0), firmware (<< 19.0), mobilesubstrate, preferenceloader
+Conflicts: com.82flex.singlevpn
+Filename: ./debs/iya.banana.iphoneduoicon_0.1.6_iphoneos-arm64e.deb
+Size: 65640
+MD5sum: b82c8d5243736bfaa58ef2e7aded257d
+SHA1: 339187ab57182cef3ea84702e5cbf18934075ad0
+SHA256: d556cd18fc343e6c3bd6196563805b7581ee622ee047ecb0b48baf9bec55041a
+Section: Tweaks
+Description: Combined battery, Wi-Fi and dual-line cellular status icon.电量、Wi-Fi、蜂窝信号三合一，支持双卡独立信号显示。
+Author: Banana
+Icon: https://huayuarc.github.io/icon/iPhoneDuoIcon.png
+Name: iPhoneDuoIcon
 
 Package: moe.waru.soko
 Version: 1.0.0-rc.1
