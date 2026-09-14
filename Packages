@@ -7003,6 +7003,40 @@ Author: wkk
 Icon: https://s1.imagehub.cc/images/2025/12/26/29fda3e52ac78c6958ecf3b5dac18673.png
 Name: SystemX
 
+Package: com.yaowell.hideavcontrols
+Version: 1.0.1
+Architecture: iphoneos-arm64e
+Maintainer: yaowell
+Installed-Size: 168
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 15.0)
+Filename: ./debs/com.yaowell.hideavcontrols_1.0.1_iphoneos-arm64e.deb
+Size: 4948
+MD5sum: 1583c6db02d72096ab91cb1cee511431
+SHA1: 7d12584b6bc968b0968eec6fab753d0f492ea684
+SHA256: 08ce00d12990881edaaeec1e55b229fd260b2a0859218b1ac33d501368cac04f
+Section: Tweaks
+Description: 隐藏控制中心顶部的麦克风模式与视频效果模块 / Hide Microphone Mode and Video Effects in Control Center
+Author: yaowell
+Icon: https://huayuarc.github.io/icon/hideavcontrols.png
+Name: HideAVControls
+
+Package: com.yaowell.hideavcontrols
+Version: 1.0.1
+Architecture: iphoneos-arm64
+Maintainer: yaowell
+Installed-Size: 168
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 15.0)
+Filename: ./debs/com.yaowell.hideavcontrols_1.0.1_iphoneos-arm64.deb
+Size: 5004
+MD5sum: 1325866e1c7f3cc52a41b8f0d001335a
+SHA1: fd94b9e9cd0190b7910253c46fb9093276393626
+SHA256: bb18b1c62e4920b695be3cb5702605f8939575d68ec53d10559e0407b57fc4db
+Section: Tweaks
+Description: 隐藏控制中心顶部的麦克风模式与视频效果模块 / Hide Microphone Mode and Video Effects in Control Center
+Author: yaowell
+Icon: https://huayuarc.github.io/icon/hideavcontrols.png
+Name: HideAVControls
+
 Package: com.yd.liquidglass
 Version: 0.1.2.3-22+debug
 Architecture: iphoneos-arm64
