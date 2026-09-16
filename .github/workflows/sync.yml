@@ -38,10 +38,6 @@ jobs:
           from pathlib import Path
           from urllib.parse import quote
 
-          # ============================================================
-          # 上游源
-          # ============================================================
-
           UPSTREAM_PACKAGES = (
               "https://raw.githubusercontent.com/"
               "Wkkyy00/Wkkyy00.github.io/main/Packages"
@@ -63,23 +59,17 @@ jobs:
           # ============================================================
 
           def download_file(url, destination, retries=3):
-
               last_error = None
 
               for attempt in range(1, retries + 1):
-
                   try:
-
-                      print(
-                          f"下载尝试 {attempt}/{retries}"
-                      )
+                      print(f"下载尝试 {attempt}/{retries}")
 
                       request = urllib.request.Request(
                           url,
                           headers={
                               "User-Agent":
-                              "Mozilla/5.0 "
-                              "GitHub-Actions-Sileo-Sync"
+                              "Mozilla/5.0 GitHub-Actions-Sileo-Sync"
                           }
                       )
 
@@ -88,16 +78,9 @@ jobs:
                           timeout=60
                       ) as response:
 
-                          with open(
-                              destination,
-                              "wb"
-                          ) as output:
-
+                          with open(destination, "wb") as output:
                               while True:
-
-                                  data = response.read(
-                                      1024 * 1024
-                                  )
+                                  data = response.read(1024 * 1024)
 
                                   if not data:
                                       break
@@ -110,69 +93,26 @@ jobs:
                       ):
                           return
 
-                      raise RuntimeError(
-                          "下载文件为空"
-                      )
+                      raise RuntimeError("下载文件为空")
 
                   except Exception as e:
-
                       last_error = e
 
-                      print(
-                          f"下载失败：{e}"
-                      )
+                      print(f"下载失败：{e}")
 
                       if attempt < retries:
-
-                          print(
-                              "等待 5 秒后重试..."
-                          )
-
+                          print("等待 5 秒后重试...")
                           time.sleep(5)
 
               raise RuntimeError(
-                  f"下载失败，已重试 {retries} 次："
-                  f"{last_error}"
+                  f"下载失败，已重试 {retries} 次：{last_error}"
               )
-
-          # ============================================================
-          # 获取上游 Packages
-          # ============================================================
-
-          print(
-              "正在获取上游 Packages..."
-          )
-
-          packages_temp = Path(
-              tempfile.mktemp()
-          )
-
-          try:
-
-              download_file(
-                  UPSTREAM_PACKAGES,
-                  packages_temp
-              )
-
-              packages_text = (
-                  packages_temp
-                  .read_text(
-                      encoding="utf-8",
-                      errors="replace"
-                  )
-              )
-
-          finally:
-
-              if packages_temp.exists():
-                  packages_temp.unlink()
 
           # ============================================================
           # 解析 Packages
           # ============================================================
 
           def parse_packages(text):
-
               result = []
               current = {}
 
@@ -186,45 +126,26 @@ jobs:
 
                       continue
 
-                  # Debian Packages 中的续行
-                  if (
-                      line.startswith(" ")
-                      or line.startswith("\t")
-                  ):
+                  if line.startswith(" ") or line.startswith("\t"):
                       continue
 
                   if ":" in line:
+                      key, value = line.split(":", 1)
 
-                      key, value = line.split(
-                          ":",
-                          1
-                      )
-
-                      current[
-                          key.strip()
-                      ] = value.strip()
+                      current[key.strip()] = value.strip()
 
               if current:
                   result.append(current)
 
               return result
 
-          upstream = parse_packages(
-              packages_text
-          )
-
-          print(
-              f"上游发现 {len(upstream)} 个插件记录"
-          )
-
           # ============================================================
-          # .deb 信息
+          # dpkg 信息
           # ============================================================
 
           def deb_info(path):
 
               def get(field):
-
                   return subprocess.check_output(
                       [
                           "dpkg-deb",
@@ -239,9 +160,7 @@ jobs:
               return {
                   "Package": get("Package"),
                   "Version": get("Version"),
-                  "Architecture": get(
-                      "Architecture"
-                  )
+                  "Architecture": get("Architecture")
               }
 
           # ============================================================
@@ -249,19 +168,12 @@ jobs:
           # ============================================================
 
           def sha256(path):
-
               h = hashlib.sha256()
 
-              with open(
-                  path,
-                  "rb"
-              ) as f:
+              with open(path, "rb") as f:
 
                   while True:
-
-                      data = f.read(
-                          1024 * 1024
-                      )
+                      data = f.read(1024 * 1024)
 
                       if not data:
                           break
@@ -275,11 +187,10 @@ jobs:
           # ============================================================
 
           def file_size(path):
-
               return path.stat().st_size
 
           # ============================================================
-          # 比较版本
+          # Debian 版本比较
           # ============================================================
 
           def version_gt(new, old):
@@ -307,12 +218,82 @@ jobs:
               ).returncode == 0
 
           # ============================================================
-          # 扫描本地插件
+          # 获取上游 Packages
           # ============================================================
 
+          print("================================")
+          print("正在获取上游 Packages...")
+          print("================================")
+
+          packages_temp = Path(tempfile.mktemp())
+
+          try:
+
+              download_file(
+                  UPSTREAM_PACKAGES,
+                  packages_temp
+              )
+
+              packages_text = packages_temp.read_text(
+                  encoding="utf-8",
+                  errors="replace"
+              )
+
+          finally:
+
+              if packages_temp.exists():
+                  packages_temp.unlink()
+
+          upstream_all = parse_packages(packages_text)
+
           print(
-              "正在检查本地插件..."
+              f"上游原始插件记录：{len(upstream_all)}"
           )
+
+          # ============================================================
+          # 同一个 Package 只保留上游最高版本
+          # ============================================================
+
+          upstream = {}
+
+          for pkg in upstream_all:
+
+              package_id = pkg.get("Package", "").strip()
+              version = pkg.get("Version", "").strip()
+
+              if not package_id or not version:
+                  continue
+
+              key = package_id.lower()
+
+              if key not in upstream:
+
+                  upstream[key] = pkg
+
+              else:
+
+                  old_version = (
+                      upstream[key]
+                      .get("Version", "")
+                      .strip()
+                  )
+
+                  if version_gt(version, old_version):
+
+                      upstream[key] = pkg
+
+          print(
+              f"去重后上游插件数量：{len(upstream)}"
+          )
+
+          # ============================================================
+          # 检查本地插件
+          # ============================================================
+
+          print()
+          print("================================")
+          print("正在检查本地插件...")
+          print("================================")
 
           local = {}
 
@@ -322,10 +303,7 @@ jobs:
 
                   info = deb_info(path)
 
-                  package_id = info[
-                      "Package"
-                  ]
-
+                  package_id = info["Package"]
                   key = package_id.lower()
 
                   item = {
@@ -354,45 +332,39 @@ jobs:
               except Exception as e:
 
                   print(
-                      f"警告：无法读取 "
-                      f"{path}: {e}"
+                      f"警告：无法读取 {path}: {e}"
                   )
 
+          print(
+              f"本地插件数量：{len(local)}"
+          )
+
           # ============================================================
-          # 下载并严格验证 .deb
+          # 下载并验证上游插件
           # ============================================================
 
           def download_and_validate(pkg):
 
-              package_id = pkg.get(
-                  "Package",
-                  ""
-              ).strip()
-
-              filename = pkg.get(
-                  "Filename"
+              package_id = (
+                  pkg.get("Package", "")
+                  .strip()
               )
+
+              filename = pkg.get("Filename")
 
               if not filename:
 
                   raise RuntimeError(
-                      f"{package_id} "
-                      "没有 Filename 字段"
+                      f"{package_id} 没有 Filename 字段"
                   )
 
-              # 去除前后空格
               filename = filename.strip()
 
-              # 去除 ./ 或多余 /
-              while filename.startswith(
-                  "./"
-              ):
-
+              while filename.startswith("./"):
                   filename = filename[2:]
 
               filename = filename.lstrip("/")
 
-              # 对 URL 中的特殊字符进行编码
               encoded_filename = quote(
                   filename,
                   safe="/"
@@ -405,7 +377,7 @@ jobs:
 
               print()
               print(
-                  "正在下载："
+                  f"正在下载："
                   f"{package_id} "
                   f"{pkg.get('Version', '')}"
               )
@@ -422,7 +394,10 @@ jobs:
 
               try:
 
+                  # ----------------------------------------------------
                   # 下载
+                  # ----------------------------------------------------
+
                   download_file(
                       url,
                       temp,
@@ -433,13 +408,9 @@ jobs:
                   # 文件大小
                   # ----------------------------------------------------
 
-                  actual_size = (
-                      temp.stat().st_size
-                  )
+                  actual_size = temp.stat().st_size
 
-                  expected_size = pkg.get(
-                      "Size"
-                  )
+                  expected_size = pkg.get("Size")
 
                   if expected_size:
 
@@ -454,12 +425,13 @@ jobs:
 
                           raise RuntimeError(
                               "文件大小不一致："
-                              f"{actual_size} != "
+                              f"{actual_size} "
+                              f"!= "
                               f"{expected_size}"
                           )
 
                   print(
-                      f"✓ 文件大小检查通过："
+                      "✓ 文件大小检查通过："
                       f"{actual_size} bytes"
                   )
 
@@ -467,9 +439,7 @@ jobs:
                   # SHA256
                   # ----------------------------------------------------
 
-                  actual_sha = sha256(
-                      temp
-                  )
+                  actual_sha = sha256(temp)
 
                   expected_sha = pkg.get(
                       "SHA256"
@@ -484,39 +454,32 @@ jobs:
 
                           raise RuntimeError(
                               "SHA256 校验失败："
-                              f"{actual_sha} != "
+                              f"{actual_sha} "
+                              f"!= "
                               f"{expected_sha}"
                           )
 
                   print(
-                      f"✓ SHA256 校验通过："
+                      "✓ SHA256 校验通过："
                       f"{actual_sha}"
                   )
 
                   # ----------------------------------------------------
-                  # 读取 .deb 控制信息
+                  # 读取 DEB 信息
                   # ----------------------------------------------------
 
-                  info = deb_info(
-                      temp
-                  )
-
-                  # ----------------------------------------------------
-                  # Package
-                  # ----------------------------------------------------
+                  info = deb_info(temp)
 
                   expected_package = (
-                      pkg.get(
-                          "Package",
-                          ""
-                      ).strip()
+                      pkg.get("Package", "")
+                      .strip()
                   )
 
                   actual_package = (
-                      info["Package"].strip()
+                      info["Package"]
+                      .strip()
                   )
 
-                  # Package 名称允许大小写不同
                   if (
                       actual_package.lower()
                       != expected_package.lower()
@@ -524,23 +487,19 @@ jobs:
 
                       raise RuntimeError(
                           "Package 不一致："
-                          f"{actual_package} != "
+                          f"{actual_package} "
+                          f"!= "
                           f"{expected_package}"
                       )
 
-                  # ----------------------------------------------------
-                  # Version
-                  # ----------------------------------------------------
-
                   expected_version = (
-                      pkg.get(
-                          "Version",
-                          ""
-                      ).strip()
+                      pkg.get("Version", "")
+                      .strip()
                   )
 
                   actual_version = (
-                      info["Version"].strip()
+                      info["Version"]
+                      .strip()
                   )
 
                   if (
@@ -550,25 +509,22 @@ jobs:
 
                       raise RuntimeError(
                           "Version 不一致："
-                          f"{actual_version} != "
+                          f"{actual_version} "
+                          f"!= "
                           f"{expected_version}"
                       )
-
-                  # ----------------------------------------------------
-                  # Architecture
-                  # ----------------------------------------------------
 
                   expected_arch = (
                       pkg.get(
                           "Architecture",
                           ""
-                      ).strip()
+                      )
+                      .strip()
                   )
 
                   actual_arch = (
-                      info[
-                          "Architecture"
-                      ].strip()
+                      info["Architecture"]
+                      .strip()
                   )
 
                   if (
@@ -578,24 +534,17 @@ jobs:
 
                       raise RuntimeError(
                           "Architecture 不一致："
-                          f"{actual_arch} != "
+                          f"{actual_arch} "
+                          f"!= "
                           f"{expected_arch}"
                       )
 
-                  print(
-                      "✓ Package 检查通过"
-                  )
-
-                  print(
-                      "✓ Version 检查通过"
-                  )
-
-                  print(
-                      "✓ Architecture 检查通过"
-                  )
+                  print("✓ Package 检查通过")
+                  print("✓ Version 检查通过")
+                  print("✓ Architecture 检查通过")
 
                   # ----------------------------------------------------
-                  # .deb 完整性
+                  # DEB 完整性
                   # ----------------------------------------------------
 
                   subprocess.run(
@@ -622,10 +571,7 @@ jobs:
                       "✓ .deb 完整性检查通过"
                   )
 
-                  return (
-                      temp,
-                      filename
-                  )
+                  return temp, filename
 
               except Exception:
 
@@ -635,17 +581,26 @@ jobs:
                   raise
 
           # ============================================================
-          # 开始同步
+          # 同步
           # ============================================================
 
-          for pkg in upstream:
+          warnings = []
 
-              package_id = pkg.get(
-                  "Package"
+          added = 0
+          updated = 0
+          skipped = 0
+          conflicts = 0
+
+          for key, pkg in upstream.items():
+
+              package_id = (
+                  pkg.get("Package", "")
+                  .strip()
               )
 
-              upstream_version = pkg.get(
-                  "Version"
+              upstream_version = (
+                  pkg.get("Version", "")
+                  .strip()
               )
 
               if (
@@ -654,11 +609,7 @@ jobs:
               ):
                   continue
 
-              key = package_id.lower()
-
-              current = local.get(
-                  key
-              )
+              current = local.get(key)
 
               # ========================================================
               # 本地已经存在
@@ -666,7 +617,10 @@ jobs:
 
               if current:
 
+                  # ----------------------------------------------------
                   # 上游版本更高
+                  # ----------------------------------------------------
+
                   if version_gt(
                       upstream_version,
                       current["Version"]
@@ -674,8 +628,7 @@ jobs:
 
                       print()
                       print(
-                          "发现更新："
-                          f"{package_id}"
+                          f"发现更新：{package_id}"
                       )
 
                       print(
@@ -688,11 +641,8 @@ jobs:
                           f"{upstream_version}"
                       )
 
-                      (
-                          temp,
-                          filename
-                      ) = download_and_validate(
-                          pkg
+                      temp, filename = (
+                          download_and_validate(pkg)
                       )
 
                       new_path = (
@@ -701,15 +651,13 @@ jobs:
                       )
 
                       # ------------------------------------------------
-                      # 如果目标文件名已经存在
+                      # 文件名冲突检查
                       # ------------------------------------------------
 
                       if new_path.exists():
 
                           existing_info = (
-                              deb_info(
-                                  new_path
-                              )
+                              deb_info(new_path)
                           )
 
                           if (
@@ -727,12 +675,10 @@ jobs:
                               )
 
                       # ------------------------------------------------
-                      # 旧版本进入 archive
+                      # 保存旧版本
                       # ------------------------------------------------
 
-                      old_path = current[
-                          "Path"
-                      ]
+                      old_path = current["Path"]
 
                       if old_path.exists():
 
@@ -759,16 +705,16 @@ jobs:
 
                               archive_path = (
                                   archive_dir
-                                  / (
-                                      f"{old_path.stem}."
-                                      f"{old_sha[:8]}.deb"
-                                  )
+                                  /
+                                  f"{old_path.stem}."
+                                  f"{old_sha[:8]}.deb"
                               )
 
                           print(
                               "保留历史版本："
                               f"{current['Version']} "
-                              f"→ {archive_path}"
+                              "→ "
+                              f"{archive_path}"
                           )
 
                           shutil.move(
@@ -777,7 +723,7 @@ jobs:
                           )
 
                       # ------------------------------------------------
-                      # 新版本进入 debs
+                      # 保存新版本
                       # ------------------------------------------------
 
                       shutil.copy2(
@@ -787,72 +733,104 @@ jobs:
 
                       temp.unlink()
 
+                      updated += 1
+
                       print(
                           "✓ 更新成功："
                           f"{package_id} "
                           f"{upstream_version}"
                       )
 
-                  # ====================================================
+                  # ----------------------------------------------------
                   # 版本相同
-                  # ====================================================
+                  # ----------------------------------------------------
 
                   elif version_eq(
                       upstream_version,
                       current["Version"]
                   ):
 
-                      upstream_sha = pkg.get(
-                          "SHA256"
+                      upstream_sha = (
+                          pkg.get("SHA256")
                       )
 
-                      if upstream_sha:
+                      # -----------------------------------------------
+                      # SHA 相同
+                      # -----------------------------------------------
 
-                          if (
-                              current[
-                                  "SHA256"
-                              ].lower()
-                              != upstream_sha.lower()
-                          ):
+                      if (
+                          upstream_sha
+                          and
+                          current["SHA256"].lower()
+                          ==
+                          upstream_sha.lower()
+                      ):
 
-                              raise RuntimeError(
-                                  "\n"
-                                  "安全检查失败："
-                                  f"{package_id}\n"
-                                  f"版本："
-                                  f"{upstream_version}\n"
-                                  "\n"
-                                  "本地和上游版本相同，"
-                                  "但 SHA256 不同。\n"
-                                  "\n"
-                                  f"本地："
-                                  f"{current['SHA256']}\n"
-                                  f"上游："
-                                  f"{upstream_sha}\n"
-                                  "\n"
-                                  "为了防止上游静默替换"
-                                  "同版本文件，"
-                                  "本次同步已停止。"
-                              )
+                          skipped += 1
 
-                      print(
-                          "跳过："
-                          f"{package_id} "
-                          f"{upstream_version} "
-                          "（版本和内容相同）"
-                      )
+                          print(
+                              f"跳过：{package_id} "
+                              f"{upstream_version} "
+                              "（版本和内容相同）"
+                          )
 
-                  # ====================================================
+                      # -----------------------------------------------
+                      # SHA 不同
+                      # -----------------------------------------------
+
+                      elif upstream_sha:
+
+                          conflicts += 1
+
+                          message = (
+                              "⚠ 同版本 SHA256 不一致："
+                              f"{package_id} "
+                              f"{upstream_version}\n"
+                              f"本地："
+                              f"{current['SHA256']}\n"
+                              f"上游："
+                              f"{upstream_sha}\n"
+                              "本次保留本地文件，"
+                              "不会覆盖。"
+                          )
+
+                          print()
+                          print(
+                              "================================"
+                          )
+                          print(message)
+                          print(
+                              "================================"
+                          )
+
+                          warnings.append(message)
+
+                          skipped += 1
+
+                      else:
+
+                          skipped += 1
+
+                          print(
+                              f"跳过：{package_id} "
+                              f"{upstream_version} "
+                              "（版本相同）"
+                          )
+
+                  # ----------------------------------------------------
                   # 本地版本更高
-                  # ====================================================
+                  # ----------------------------------------------------
 
                   else:
 
+                      skipped += 1
+
                       print(
-                          "跳过："
-                          f"{package_id} "
-                          f"本地 {current['Version']} "
-                          f"> 上游 {upstream_version}"
+                          f"跳过：{package_id} "
+                          f"本地 "
+                          f"{current['Version']} "
+                          f"> 上游 "
+                          f"{upstream_version}"
                       )
 
                   continue
@@ -863,16 +841,13 @@ jobs:
 
               print()
               print(
-                  "发现新插件："
+                  f"发现新插件："
                   f"{package_id} "
                   f"{upstream_version}"
               )
 
-              (
-                  temp,
-                  filename
-              ) = download_and_validate(
-                  pkg
+              temp, filename = (
+                  download_and_validate(pkg)
               )
 
               new_path = (
@@ -880,10 +855,14 @@ jobs:
                   / Path(filename).name
               )
 
+              # --------------------------------------------------------
+              # 文件名冲突
+              # --------------------------------------------------------
+
               if new_path.exists():
 
-                  existing_info = deb_info(
-                      new_path
+                  existing_info = (
+                      deb_info(new_path)
                   )
 
                   if (
@@ -900,12 +879,18 @@ jobs:
                           f"{new_path}"
                       )
 
+              # --------------------------------------------------------
+              # 保存
+              # --------------------------------------------------------
+
               shutil.copy2(
                   temp,
                   new_path
               )
 
               temp.unlink()
+
+              added += 1
 
               print(
                   "✓ 新插件添加成功："
@@ -914,12 +899,18 @@ jobs:
               )
 
           # ============================================================
-          # 清理 debs 中重复版本
+          # 清理 debs 中重复 Package
           # ============================================================
 
           print()
           print(
+              "================================"
+          )
+          print(
               "正在检查 debs 中是否存在重复版本..."
+          )
+          print(
+              "================================"
           )
 
           package_files = {}
@@ -928,14 +919,9 @@ jobs:
 
               try:
 
-                  info = deb_info(
-                      path
-                  )
+                  info = deb_info(path)
 
-                  package_id = info[
-                      "Package"
-                  ]
-
+                  package_id = info["Package"]
                   key = package_id.lower()
 
                   package_files.setdefault(
@@ -950,7 +936,6 @@ jobs:
                   )
 
               except Exception:
-
                   continue
 
           for key, files in package_files.items():
@@ -969,7 +954,11 @@ jobs:
 
                       newest = item
 
-              for path, version, package_id in files:
+              for (
+                  path,
+                  version,
+                  package_id
+              ) in files:
 
                   if path == newest[0]:
                       continue
@@ -993,10 +982,9 @@ jobs:
 
                       target = (
                           archive_dir
-                          / (
-                              f"{path.stem}."
-                              f"{sha256(path)[:8]}.deb"
-                          )
+                          /
+                          f"{path.stem}."
+                          f"{sha256(path)[:8]}.deb"
                       )
 
                   print(
@@ -1010,16 +998,61 @@ jobs:
                       str(target)
                   )
 
+          # ============================================================
+          # 最终统计
+          # ============================================================
+
           print()
           print(
               "================================"
           )
           print(
-              "同步检查全部完成"
+              "同步检查完成"
           )
           print(
               "================================"
           )
+
+          print(
+              f"新增插件：{added}"
+          )
+
+          print(
+              f"更新插件：{updated}"
+          )
+
+          print(
+              f"跳过插件：{skipped}"
+          )
+
+          print(
+              f"SHA256 冲突：{conflicts}"
+          )
+
+          if warnings:
+
+              print()
+              print(
+                  "================================"
+              )
+
+              print(
+                  "以下插件存在同版本 SHA256 不一致："
+              )
+
+              for warning in warnings:
+
+                  print()
+                  print(warning)
+
+              print(
+                  "================================"
+              )
+
+              print(
+                  "以上插件已保留本地版本，"
+                  "不会覆盖。"
+              )
 
           PY
 
