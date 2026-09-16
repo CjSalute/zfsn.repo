@@ -141,12 +141,14 @@ jobs:
 
           # ============================================================
           # dpkg 信息
+          # 修复：stderr 与 stdout 分离
+          # 避免 dpkg-deb warning 污染 Package / Version / Architecture
           # ============================================================
 
           def deb_info(path):
 
               def get(field):
-                  return subprocess.check_output(
+                  result = subprocess.run(
                       [
                           "dpkg-deb",
                           "-f",
@@ -154,8 +156,12 @@ jobs:
                           field
                       ],
                       text=True,
-                      stderr=subprocess.STDOUT
-                  ).strip()
+                      stdout=subprocess.PIPE,
+                      stderr=subprocess.PIPE,
+                      check=True
+                  )
+
+                  return result.stdout.strip()
 
               return {
                   "Package": get("Package"),
