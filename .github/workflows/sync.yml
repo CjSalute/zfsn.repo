@@ -30,15 +30,21 @@ jobs:
 
           python3 <<'PY'
           import hashlib
-          import os
           import shutil
           import subprocess
           import tempfile
           import urllib.request
           from pathlib import Path
 
-          UPSTREAM_PACKAGES = "https://raw.githubusercontent.com/Wkkyy00/Wkkyy00.github.io/main/Packages"
-          UPSTREAM_BASE = "https://raw.githubusercontent.com/Wkkyy00/Wkkyy00.github.io/main/"
+          UPSTREAM_PACKAGES = (
+              "https://raw.githubusercontent.com/"
+              "Wkkyy00/Wkkyy00.github.io/main/Packages"
+          )
+
+          UPSTREAM_BASE = (
+              "https://raw.githubusercontent.com/"
+              "Wkkyy00/Wkkyy00.github.io/main/"
+          )
 
           DEBS = Path("debs")
           ARCHIVE = Path("archive")
@@ -47,15 +53,22 @@ jobs:
           ARCHIVE.mkdir(exist_ok=True)
 
           print("正在获取上游 Packages...")
-          
-          with urllib.request.urlopen(UPSTREAM_PACKAGES, timeout=30) as r:
-              packages_text = r.read().decode("utf-8", errors="replace")
+
+          with urllib.request.urlopen(
+              UPSTREAM_PACKAGES,
+              timeout=30
+          ) as r:
+              packages_text = r.read().decode(
+                  "utf-8",
+                  errors="replace"
+              )
 
           def parse_packages(text):
               result = []
               current = {}
 
               for line in text.splitlines():
+
                   if not line.strip():
                       if current:
                           result.append(current)
@@ -76,29 +89,42 @@ jobs:
 
           upstream = parse_packages(packages_text)
 
-          print(f"上游发现 {len(upstream)} 个插件记录")
+          print(
+              f"上游发现 {len(upstream)} 个插件记录"
+          )
 
           def deb_info(path):
+
               def get(field):
                   return subprocess.check_output(
-                      ["dpkg-deb", "-f", str(path), field],
+                      [
+                          "dpkg-deb",
+                          "-f",
+                          str(path),
+                          field
+                      ],
                       text=True
                   ).strip()
 
               return {
                   "Package": get("Package"),
                   "Version": get("Version"),
-                  "Architecture": get("Architecture"),
+                  "Architecture": get("Architecture")
               }
 
           def sha256(path):
+
               h = hashlib.sha256()
 
               with open(path, "rb") as f:
+
                   while True:
+
                       data = f.read(1024 * 1024)
+
                       if not data:
                           break
+
                       h.update(data)
 
               return h.hexdigest()
@@ -111,38 +137,57 @@ jobs:
           local = {}
 
           for path in DEBS.glob("*.deb"):
+
               try:
+
                   info = deb_info(path)
-                  pkg = info["Package"]
+
+                  package_id = info["Package"]
 
                   item = {
                       **info,
                       "Filename": path.name,
                       "Path": path,
                       "Size": file_size(path),
-                      "SHA256": sha256(path),
+                      "SHA256": sha256(path)
                   }
 
-                  if pkg not in local:
-                      local[pkg] = item
+                  # Package 名称统一使用小写进行比较
+                  key = package_id.lower()
+
+                  if key not in local:
+
+                      local[key] = item
+
                   else:
-                      old = local[pkg]
+
+                      old = local[key]
 
                       newer = subprocess.run(
-                          ["dpkg", "--compare-versions",
-                           item["Version"], "gt", old["Version"]]
+                          [
+                              "dpkg",
+                              "--compare-versions",
+                              item["Version"],
+                              "gt",
+                              old["Version"]
+                          ]
                       ).returncode == 0
 
                       if newer:
-                          local[pkg] = item
+                          local[key] = item
 
               except Exception as e:
-                  print(f"警告：无法读取 {path}: {e}")
+
+                  print(
+                      f"警告：无法读取 {path}: {e}"
+                  )
 
           def download_and_validate(pkg):
+
               filename = pkg.get("Filename")
 
               if not filename:
+
                   raise RuntimeError(
                       f"{pkg.get('Package')} 没有 Filename 字段"
                   )
@@ -151,24 +196,52 @@ jobs:
 
               url = UPSTREAM_BASE + filename
 
-              print(f"正在下载：{pkg['Package']} {pkg['Version']}")
-              print(f"地址：{url}")
+              print(
+                  f"正在下载："
+                  f"{pkg['Package']} "
+                  f"{pkg['Version']}"
+              )
 
-              temp = Path(tempfile.mktemp(suffix=".deb"))
+              print(
+                  f"地址：{url}"
+              )
+
+              temp = Path(
+                  tempfile.mktemp(
+                      suffix=".deb"
+                  )
+              )
 
               try:
-                  urllib.request.urlretrieve(url, temp)
 
-                  if not temp.exists() or temp.stat().st_size == 0:
-                      raise RuntimeError("下载文件为空")
+                  urllib.request.urlretrieve(
+                      url,
+                      temp
+                  )
+
+                  if (
+                      not temp.exists()
+                      or temp.stat().st_size == 0
+                  ):
+
+                      raise RuntimeError(
+                          "下载文件为空"
+                      )
 
                   expected_size = pkg.get("Size")
 
                   if expected_size:
-                      if temp.stat().st_size != int(expected_size):
+
+                      actual_size = temp.stat().st_size
+
+                      if actual_size != int(
+                          expected_size
+                      ):
+
                           raise RuntimeError(
-                              f"文件大小不一致："
-                              f"{temp.stat().st_size} != {expected_size}"
+                              "文件大小不一致："
+                              f"{actual_size} != "
+                              f"{expected_size}"
                           )
 
                   expected_sha = pkg.get("SHA256")
@@ -176,56 +249,116 @@ jobs:
                   actual_sha = sha256(temp)
 
                   if expected_sha:
-                      if actual_sha.lower() != expected_sha.lower():
+
+                      if (
+                          actual_sha.lower()
+                          != expected_sha.lower()
+                      ):
+
                           raise RuntimeError(
-                              f"SHA256 校验失败："
-                              f"{actual_sha} != {expected_sha}"
+                              "SHA256 校验失败："
+                              f"{actual_sha} != "
+                              f"{expected_sha}"
                           )
 
                   info = deb_info(temp)
 
-                  for field in ["Package", "Version", "Architecture"]:
-                      if pkg.get(field) and info[field] != pkg[field]:
-                          raise RuntimeError(
-                              f"{field} 不一致："
-                              f"{info[field]} != {pkg[field]}"
-                          )
+                  # Package 允许大小写不同
+                  # Version 和 Architecture 必须完全一致
+                  for field in [
+                      "Package",
+                      "Version",
+                      "Architecture"
+                  ]:
+
+                      if not pkg.get(field):
+                          continue
+
+                      expected = pkg[field]
+                      actual = info[field]
+
+                      if field == "Package":
+
+                          if (
+                              actual.lower()
+                              != expected.lower()
+                          ):
+
+                              raise RuntimeError(
+                                  f"{field} 不一致："
+                                  f"{actual} != "
+                                  f"{expected}"
+                              )
+
+                      else:
+
+                          if actual != expected:
+
+                              raise RuntimeError(
+                                  f"{field} 不一致："
+                                  f"{actual} != "
+                                  f"{expected}"
+                              )
 
                   subprocess.run(
-                      ["dpkg-deb", "--info", str(temp)],
+                      [
+                          "dpkg-deb",
+                          "--info",
+                          str(temp)
+                      ],
                       check=True,
                       stdout=subprocess.DEVNULL
                   )
 
                   subprocess.run(
-                      ["dpkg-deb", "--contents", str(temp)],
+                      [
+                          "dpkg-deb",
+                          "--contents",
+                          str(temp)
+                      ],
                       check=True,
                       stdout=subprocess.DEVNULL
                   )
 
-                  print("✓ .deb 完整性检查通过")
-                  print(f"✓ SHA256：{actual_sha}")
+                  print(
+                      "✓ .deb 完整性检查通过"
+                  )
 
-                  return temp, filename, actual_sha
+                  print(
+                      f"✓ SHA256：{actual_sha}"
+                  )
+
+                  return (
+                      temp,
+                      filename,
+                      actual_sha
+                  )
 
               except Exception:
+
                   if temp.exists():
                       temp.unlink()
+
                   raise
 
-          changed = False
-
           for pkg in upstream:
+
               package_id = pkg.get("Package")
               upstream_version = pkg.get("Version")
 
-              if not package_id or not upstream_version:
+              if (
+                  not package_id
+                  or not upstream_version
+              ):
                   continue
 
-              current = local.get(package_id)
+              key = package_id.lower()
+
+              current = local.get(key)
 
               if current:
-                  result = subprocess.run(
+
+                  newer = subprocess.run(
                       [
                           "dpkg",
                           "--compare-versions",
@@ -233,9 +366,10 @@ jobs:
                           "gt",
                           current["Version"]
                       ]
-                  )
+                  ).returncode == 0
 
-                  if result.returncode != 0:
+                  if not newer:
+
                       same = subprocess.run(
                           [
                               "dpkg",
@@ -247,134 +381,233 @@ jobs:
                       ).returncode == 0
 
                       if same:
-                          upstream_sha = pkg.get("SHA256")
+
+                          upstream_sha = pkg.get(
+                              "SHA256"
+                          )
 
                           if upstream_sha:
-                              if current["SHA256"].lower() != upstream_sha.lower():
+
+                              if (
+                                  current["SHA256"].lower()
+                                  != upstream_sha.lower()
+                              ):
+
                                   raise RuntimeError(
-                                      f"\n安全检查失败：{package_id}\n"
-                                      f"本地版本与上游版本相同，但 SHA256 不同。\n"
-                                      f"本地：{current['SHA256']}\n"
-                                      f"上游：{upstream_sha}\n"
-                                      f"为了防止静默替换，已停止同步。"
+                                      "\n安全检查失败："
+                                      f"{package_id}\n"
+                                      "本地版本与上游版本相同，"
+                                      "但 SHA256 不同。\n"
+                                      f"本地："
+                                      f"{current['SHA256']}\n"
+                                      f"上游："
+                                      f"{upstream_sha}\n"
+                                      "为了防止静默替换，"
+                                      "已停止同步。"
                                   )
 
                           print(
                               f"跳过：{package_id} "
-                              f"{current['Version']}（版本相同）"
+                              f"{current['Version']} "
+                              "（版本和内容相同）"
                           )
 
                       else:
+
                           print(
                               f"跳过：{package_id} "
-                              f"本地 {current['Version']} > "
-                              f"上游 {upstream_version}"
+                              f"本地 {current['Version']} "
+                              f"> 上游 {upstream_version}"
                           )
 
                       continue
 
               print(
-                  f"\n发现需要同步的插件："
-                  f"{package_id} {upstream_version}"
+                  "\n发现需要同步的插件："
+                  f"{package_id} "
+                  f"{upstream_version}"
               )
 
-              temp, filename, new_sha = download_and_validate(pkg)
+              (
+                  temp,
+                  filename,
+                  new_sha
+              ) = download_and_validate(pkg)
 
-              new_path = DEBS / Path(filename).name
+              new_path = DEBS / Path(
+                  filename
+              ).name
 
-              # 防止文件名冲突
+              # 文件名已经存在时检查其 Package
               if new_path.exists():
-                  try:
-                      existing_info = deb_info(new_path)
 
-                      if existing_info["Package"] != package_id:
-                          raise RuntimeError(
-                              f"文件名冲突：{new_path}"
-                          )
+                  existing_info = deb_info(
+                      new_path
+                  )
 
-                  except Exception:
-                      raise
+                  if (
+                      existing_info["Package"].lower()
+                      != package_id.lower()
+                  ):
 
-              # 如果已有旧版本，把旧版本移动到 archive
-              if current and current["Path"].exists():
-                  archive_dir = ARCHIVE / package_id
-                  archive_dir.mkdir(parents=True, exist_ok=True)
+                      temp.unlink()
+
+                      raise RuntimeError(
+                          f"文件名冲突：{new_path}"
+                      )
+
+              # 如果存在旧版本，把旧版本移动到 archive
+              if (
+                  current
+                  and current["Path"].exists()
+              ):
+
+                  archive_dir = (
+                      ARCHIVE / package_id
+                  )
+
+                  archive_dir.mkdir(
+                      parents=True,
+                      exist_ok=True
+                  )
 
                   old_path = current["Path"]
-                  archive_path = archive_dir / old_path.name
+
+                  archive_path = (
+                      archive_dir
+                      / old_path.name
+                  )
 
                   if archive_path.exists():
-                      old_sha = sha256(old_path)
+
+                      old_sha = sha256(
+                          old_path
+                      )
+
                       archive_path = (
-                          archive_dir /
-                          f"{old_path.stem}.{old_sha[:8]}.deb"
+                          archive_dir
+                          / f"{old_path.stem}."
+                          f"{old_sha[:8]}.deb"
                       )
 
                   print(
-                      f"保留历史版本："
-                      f"{current['Version']} → {archive_path}"
+                      "保留历史版本："
+                      f"{current['Version']} "
+                      f"→ {archive_path}"
                   )
 
-                  shutil.move(str(old_path), str(archive_path))
+                  shutil.move(
+                      str(old_path),
+                      str(archive_path)
+                  )
 
-              shutil.copy2(temp, new_path)
+              shutil.copy2(
+                  temp,
+                  new_path
+              )
+
               temp.unlink()
-
-              changed = True
 
               print(
                   f"✓ 已更新："
-                  f"{package_id} {upstream_version}"
+                  f"{package_id} "
+                  f"{upstream_version}"
               )
 
-          print("\n正在清理 debs 中重复版本...")
+          print(
+              "\n正在清理 debs 中的重复版本..."
+          )
 
-          # 每个 Package 只保留最高版本在 debs/
           package_files = {}
 
           for path in DEBS.glob("*.deb"):
+
               try:
+
                   info = deb_info(path)
+
                   package_id = info["Package"]
 
-                  package_files.setdefault(package_id, []).append(
-                      (path, info["Version"])
+                  key = package_id.lower()
+
+                  package_files.setdefault(
+                      key,
+                      []
+                  ).append(
+                      (
+                          path,
+                          info["Version"],
+                          package_id
+                      )
                   )
 
               except Exception:
+
                   continue
 
-          for package_id, files in package_files.items():
+          for key, files in package_files.items():
+
               if len(files) <= 1:
                   continue
 
-              files.sort(
-                  key=lambda x: x[1]
-              )
+              newest = files[0]
 
-              newest = files[-1]
+              for item in files[1:]:
 
-              for path, version in files[:-1]:
-                  archive_dir = ARCHIVE / package_id
-                  archive_dir.mkdir(parents=True, exist_ok=True)
+                  result = subprocess.run(
+                      [
+                          "dpkg",
+                          "--compare-versions",
+                          item[1],
+                          "gt",
+                          newest[1]
+                      ]
+                  )
 
-                  target = archive_dir / path.name
+                  if result.returncode == 0:
+                      newest = item
+
+              for path, version, package_id in files:
+
+                  if path == newest[0]:
+                      continue
+
+                  archive_dir = (
+                      ARCHIVE / package_id
+                  )
+
+                  archive_dir.mkdir(
+                      parents=True,
+                      exist_ok=True
+                  )
+
+                  target = (
+                      archive_dir
+                      / path.name
+                  )
 
                   if target.exists():
+
                       target = (
-                          archive_dir /
-                          f"{path.stem}.{sha256(path)[:8]}.deb"
+                          archive_dir
+                          / f"{path.stem}."
+                          f"{sha256(path)[:8]}.deb"
                       )
 
                   print(
                       f"移动历史版本："
-                      f"{package_id} {version}"
+                      f"{package_id} "
+                      f"{version}"
                   )
 
-                  shutil.move(str(path), str(target))
-                  changed = True
+                  shutil.move(
+                      str(path),
+                      str(target)
+                  )
 
-          print("\n同步阶段完成。")
+          print(
+              "\n同步阶段完成。"
+          )
 
           PY
 
