@@ -1,0 +1,402 @@
+name: 同步 Wkkyy00 插件
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 4 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检出自己的仓库
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 安装依赖
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y dpkg-dev zstd
+
+      - name: 同步并检查插件
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          python3 <<'PY'
+          import hashlib
+          import os
+          import shutil
+          import subprocess
+          import tempfile
+          import urllib.request
+          from pathlib import Path
+
+          UPSTREAM_PACKAGES = "https://raw.githubusercontent.com/Wkkyy00/Wkkyy00.github.io/main/Packages"
+          UPSTREAM_BASE = "https://raw.githubusercontent.com/Wkkyy00/Wkkyy00.github.io/main/"
+
+          DEBS = Path("debs")
+          ARCHIVE = Path("archive")
+
+          DEBS.mkdir(exist_ok=True)
+          ARCHIVE.mkdir(exist_ok=True)
+
+          print("正在获取上游 Packages...")
+          
+          with urllib.request.urlopen(UPSTREAM_PACKAGES, timeout=30) as r:
+              packages_text = r.read().decode("utf-8", errors="replace")
+
+          def parse_packages(text):
+              result = []
+              current = {}
+
+              for line in text.splitlines():
+                  if not line.strip():
+                      if current:
+                          result.append(current)
+                          current = {}
+                      continue
+
+                  if line.startswith(" ") or line.startswith("\t"):
+                      continue
+
+                  if ":" in line:
+                      key, value = line.split(":", 1)
+                      current[key.strip()] = value.strip()
+
+              if current:
+                  result.append(current)
+
+              return result
+
+          upstream = parse_packages(packages_text)
+
+          print(f"上游发现 {len(upstream)} 个插件记录")
+
+          def deb_info(path):
+              def get(field):
+                  return subprocess.check_output(
+                      ["dpkg-deb", "-f", str(path), field],
+                      text=True
+                  ).strip()
+
+              return {
+                  "Package": get("Package"),
+                  "Version": get("Version"),
+                  "Architecture": get("Architecture"),
+              }
+
+          def sha256(path):
+              h = hashlib.sha256()
+
+              with open(path, "rb") as f:
+                  while True:
+                      data = f.read(1024 * 1024)
+                      if not data:
+                          break
+                      h.update(data)
+
+              return h.hexdigest()
+
+          def file_size(path):
+              return path.stat().st_size
+
+          print("正在检查本地插件...")
+
+          local = {}
+
+          for path in DEBS.glob("*.deb"):
+              try:
+                  info = deb_info(path)
+                  pkg = info["Package"]
+
+                  item = {
+                      **info,
+                      "Filename": path.name,
+                      "Path": path,
+                      "Size": file_size(path),
+                      "SHA256": sha256(path),
+                  }
+
+                  if pkg not in local:
+                      local[pkg] = item
+                  else:
+                      old = local[pkg]
+
+                      newer = subprocess.run(
+                          ["dpkg", "--compare-versions",
+                           item["Version"], "gt", old["Version"]]
+                      ).returncode == 0
+
+                      if newer:
+                          local[pkg] = item
+
+              except Exception as e:
+                  print(f"警告：无法读取 {path}: {e}")
+
+          def download_and_validate(pkg):
+              filename = pkg.get("Filename")
+
+              if not filename:
+                  raise RuntimeError(
+                      f"{pkg.get('Package')} 没有 Filename 字段"
+                  )
+
+              filename = filename.lstrip("./")
+
+              url = UPSTREAM_BASE + filename
+
+              print(f"正在下载：{pkg['Package']} {pkg['Version']}")
+              print(f"地址：{url}")
+
+              temp = Path(tempfile.mktemp(suffix=".deb"))
+
+              try:
+                  urllib.request.urlretrieve(url, temp)
+
+                  if not temp.exists() or temp.stat().st_size == 0:
+                      raise RuntimeError("下载文件为空")
+
+                  expected_size = pkg.get("Size")
+
+                  if expected_size:
+                      if temp.stat().st_size != int(expected_size):
+                          raise RuntimeError(
+                              f"文件大小不一致："
+                              f"{temp.stat().st_size} != {expected_size}"
+                          )
+
+                  expected_sha = pkg.get("SHA256")
+
+                  actual_sha = sha256(temp)
+
+                  if expected_sha:
+                      if actual_sha.lower() != expected_sha.lower():
+                          raise RuntimeError(
+                              f"SHA256 校验失败："
+                              f"{actual_sha} != {expected_sha}"
+                          )
+
+                  info = deb_info(temp)
+
+                  for field in ["Package", "Version", "Architecture"]:
+                      if pkg.get(field) and info[field] != pkg[field]:
+                          raise RuntimeError(
+                              f"{field} 不一致："
+                              f"{info[field]} != {pkg[field]}"
+                          )
+
+                  subprocess.run(
+                      ["dpkg-deb", "--info", str(temp)],
+                      check=True,
+                      stdout=subprocess.DEVNULL
+                  )
+
+                  subprocess.run(
+                      ["dpkg-deb", "--contents", str(temp)],
+                      check=True,
+                      stdout=subprocess.DEVNULL
+                  )
+
+                  print("✓ .deb 完整性检查通过")
+                  print(f"✓ SHA256：{actual_sha}")
+
+                  return temp, filename, actual_sha
+
+              except Exception:
+                  if temp.exists():
+                      temp.unlink()
+                  raise
+
+          changed = False
+
+          for pkg in upstream:
+              package_id = pkg.get("Package")
+              upstream_version = pkg.get("Version")
+
+              if not package_id or not upstream_version:
+                  continue
+
+              current = local.get(package_id)
+
+              if current:
+                  result = subprocess.run(
+                      [
+                          "dpkg",
+                          "--compare-versions",
+                          upstream_version,
+                          "gt",
+                          current["Version"]
+                      ]
+                  )
+
+                  if result.returncode != 0:
+                      same = subprocess.run(
+                          [
+                              "dpkg",
+                              "--compare-versions",
+                              upstream_version,
+                              "eq",
+                              current["Version"]
+                          ]
+                      ).returncode == 0
+
+                      if same:
+                          upstream_sha = pkg.get("SHA256")
+
+                          if upstream_sha:
+                              if current["SHA256"].lower() != upstream_sha.lower():
+                                  raise RuntimeError(
+                                      f"\n安全检查失败：{package_id}\n"
+                                      f"本地版本与上游版本相同，但 SHA256 不同。\n"
+                                      f"本地：{current['SHA256']}\n"
+                                      f"上游：{upstream_sha}\n"
+                                      f"为了防止静默替换，已停止同步。"
+                                  )
+
+                          print(
+                              f"跳过：{package_id} "
+                              f"{current['Version']}（版本相同）"
+                          )
+
+                      else:
+                          print(
+                              f"跳过：{package_id} "
+                              f"本地 {current['Version']} > "
+                              f"上游 {upstream_version}"
+                          )
+
+                      continue
+
+              print(
+                  f"\n发现需要同步的插件："
+                  f"{package_id} {upstream_version}"
+              )
+
+              temp, filename, new_sha = download_and_validate(pkg)
+
+              new_path = DEBS / Path(filename).name
+
+              # 防止文件名冲突
+              if new_path.exists():
+                  try:
+                      existing_info = deb_info(new_path)
+
+                      if existing_info["Package"] != package_id:
+                          raise RuntimeError(
+                              f"文件名冲突：{new_path}"
+                          )
+
+                  except Exception:
+                      raise
+
+              # 如果已有旧版本，把旧版本移动到 archive
+              if current and current["Path"].exists():
+                  archive_dir = ARCHIVE / package_id
+                  archive_dir.mkdir(parents=True, exist_ok=True)
+
+                  old_path = current["Path"]
+                  archive_path = archive_dir / old_path.name
+
+                  if archive_path.exists():
+                      old_sha = sha256(old_path)
+                      archive_path = (
+                          archive_dir /
+                          f"{old_path.stem}.{old_sha[:8]}.deb"
+                      )
+
+                  print(
+                      f"保留历史版本："
+                      f"{current['Version']} → {archive_path}"
+                  )
+
+                  shutil.move(str(old_path), str(archive_path))
+
+              shutil.copy2(temp, new_path)
+              temp.unlink()
+
+              changed = True
+
+              print(
+                  f"✓ 已更新："
+                  f"{package_id} {upstream_version}"
+              )
+
+          print("\n正在清理 debs 中重复版本...")
+
+          # 每个 Package 只保留最高版本在 debs/
+          package_files = {}
+
+          for path in DEBS.glob("*.deb"):
+              try:
+                  info = deb_info(path)
+                  package_id = info["Package"]
+
+                  package_files.setdefault(package_id, []).append(
+                      (path, info["Version"])
+                  )
+
+              except Exception:
+                  continue
+
+          for package_id, files in package_files.items():
+              if len(files) <= 1:
+                  continue
+
+              files.sort(
+                  key=lambda x: x[1]
+              )
+
+              newest = files[-1]
+
+              for path, version in files[:-1]:
+                  archive_dir = ARCHIVE / package_id
+                  archive_dir.mkdir(parents=True, exist_ok=True)
+
+                  target = archive_dir / path.name
+
+                  if target.exists():
+                      target = (
+                          archive_dir /
+                          f"{path.stem}.{sha256(path)[:8]}.deb"
+                      )
+
+                  print(
+                      f"移动历史版本："
+                      f"{package_id} {version}"
+                  )
+
+                  shutil.move(str(path), str(target))
+                  changed = True
+
+          print("\n同步阶段完成。")
+
+          PY
+
+      - name: 重新生成 Packages
+        run: |
+          dpkg-scanpackages debs /dev/null > Packages
+
+          gzip -9 -c Packages > Packages.gz
+          bzip2 -9 -c Packages > Packages.bz2
+          xz -9 -c Packages > Packages.xz
+          zstd -19 -f Packages -o Packages.zst
+
+      - name: 提交更新
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add debs archive Packages Packages.gz Packages.bz2 Packages.xz Packages.zst
+
+          if git diff --cached --quiet; then
+            echo "没有新的插件或更新。"
+          else
+            git commit -m "自动同步 Wkkyy00 插件"
+            git push
+          fi
