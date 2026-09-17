@@ -1,4 +1,4 @@
-  name: 同步 Wkkyy00 + Huayuarc 插件
+name: 同步 Wkkyy00 + Huayuarc 插件
 
 on:
   workflow_dispatch:
