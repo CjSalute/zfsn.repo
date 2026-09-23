@@ -1,139 +1,70 @@
-#!/bin/bash
+name: "refresh"
 
-set -e
+on:
+  workflow_run:
+    workflows: ["pages-build-deployment"]
+    types: 
+      - completed
 
-REPO="CjSalute/zfsn.repo"
-TOKEN_FILE="$HOME/.config/zfsn/github_token"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          token: ${{ secrets.PAT_TOKEN }}  # 确保与 GitHub Secrets 中的名称一致
 
-if [ $# -ne 1 ]; then
-    echo "用法："
-    echo "upload-deb /路径/插件.deb"
-    exit 1
-fi
+      - name: Install Dependencies
+        if: success()
+        run: |
+          sudo apt update -qq
+          sudo apt install dpkg-dev bzip2 xz-utils zstd -y
 
-FILE="$1"
+      - name: Refresh Packages
+        if: success()
+        run: |
+          rm -rf ./Packages*
+          dpkg-scanpackages -m ./debs /dev/null >./Packages
+          bzip2 -v -k -9 Packages
+          xz -v -k -9 --extreme Packages
+          zstd --ultra -22 -k Packages -o Packages.zst
 
-if [ ! -f "$FILE" ]; then
-    echo "错误：文件不存在"
-    exit 1
-fi
+      - name: Configure Git
+        if: success()
+        run: |
+          git config --global user.email 'action@github.com'
+          git config --global user.name 'GitHub Action'
 
-case "$FILE" in
-    *.deb)
-        ;;
-    *)
-        echo "错误：必须选择 .deb 文件"
-        exit 1
-        ;;
-esac
+      - name: Commit Changes
+        if: success()
+        run: |
+          git add .
+          if ! git diff --staged --exit-code 1>>/dev/null; then
+            git commit -m 'Refresh Packages'
+          fi
 
-if [ ! -f "$TOKEN_FILE" ]; then
-    echo "错误：GitHub Token 不存在"
-    echo "请先创建：$TOKEN_FILE"
-    exit 1
-fi
+      - name: Push Changes
+        if: success() && github.ref == 'refs/heads/main'  # 确保在主分支上推送
+        env:
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}  # 确保与 GitHub Secrets 中的名称一致
+        run: |
+          # 使用 PAT 进行身份验证
+          git remote set-url origin https://x-access-token:${PAT_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          git push origin main  # 根据实际分支名称修改，例如 main 或 master
 
-TOKEN="$(cat "$TOKEN_FILE")"
+      - name: Download remove_all_actions
+        if: success()
+        run: |
+          sudo curl -L -o '/usr/bin/remove_all_actions' 'https://raw.githubusercontent.com/invalidunit/action/main/remove_all_actions'
+          sudo chmod -R 0755 '/usr/bin/remove_all_actions'
 
-NAME="$(basename "$FILE")"
-
-# 创建唯一临时 Release
-TAG="phone-upload-$(date +%Y%m%d-%H%M%S)-$$"
-
-echo "================================"
-echo "准备上传插件"
-echo "================================"
-echo "仓库：$REPO"
-echo "文件：$NAME"
-echo "标签：$TAG"
-echo "================================"
-
-echo "正在创建临时 Release..."
-
-RELEASE_JSON="$(
-curl --fail-with-body -sS \
-    -X POST \
-    -H "Authorization: Bearer $TOKEN" \
-    -H "Accept: application/vnd.github+json" \
-    -H "X-GitHub-Api-Version: 2022-11-28" \
-    "https://api.github.com/repos/$REPO/releases" \
-    -d "$(jq -n \
-        --arg tag "$TAG" \
-        --arg name "Phone Upload $NAME" \
-        '{
-            tag_name: $tag,
-            name: $name,
-            draft: true,
-            prerelease: true
-        }')"
-)"
-
-RELEASE_ID="$(printf '%s' "$RELEASE_JSON" | jq -r '.id')"
-
-UPLOAD_URL="$(
-    printf '%s' "$RELEASE_JSON" |
-    jq -r '.upload_url' |
-    sed 's/{?name,label}//'
-)"
-
-if [ -z "$RELEASE_ID" ] || [ "$RELEASE_ID" = "null" ]; then
-    echo "错误：创建 Release 失败"
-    exit 1
-fi
-
-echo "✓ Release 创建成功"
-echo "Release ID：$RELEASE_ID"
-
-# URL 编码文件名
-ENCODED_NAME="$(
-    printf '%s' "$NAME" |
-    jq -sRr @uri
-)"
-
-echo
-echo "正在上传 .deb..."
-echo "文件名：$NAME"
-
-curl --fail-with-body -sS \
-    -X POST \
-    -H "Authorization: Bearer $TOKEN" \
-    -H "Accept: application/vnd.github+json" \
-    -H "Content-Type: application/octet-stream" \
-    --data-binary @"$FILE" \
-    "$UPLOAD_URL?name=$ENCODED_NAME" \
-    >/dev/null
-
-echo "✓ .deb 上传成功"
-
-echo
-echo "正在发布 Release..."
-
-curl --fail-with-body -sS \
-    -X PATCH \
-    -H "Authorization: Bearer $TOKEN" \
-    -H "Accept: application/vnd.github+json" \
-    -H "X-GitHub-Api-Version: 2022-11-28" \
-    "https://api.github.com/repos/$REPO/releases/$RELEASE_ID" \
-    -d '{"draft":false}' \
-    >/dev/null
-
-echo
-echo "================================"
-echo "✓ 云端上传成功"
-echo "================================"
-echo "GitHub Actions 即将自动处理："
-echo
-echo "1. 下载 .deb"
-echo "2. 检查 Package"
-echo "3. 检查 Version"
-echo "4. 检查 Architecture"
-echo "5. SHA256 校验"
-echo "6. 判断是否为新版本"
-echo "7. 旧版本移动到 archive"
-echo "8. 新版本进入 debs"
-echo "9. 重新生成 Packages"
-echo "10. 提交 GitHub"
-echo "11. 删除临时 Release"
-echo
-echo "手机本地不需要 git pull。"
-echo "================================"
+      - name: Remove All Old Actions
+        if: success()
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}  # 使用 PAT 替代默认的 GITHUB_TOKEN
+          GH_REPO: ${{ github.repository }}
+        run: |
+          remove_all_actions
